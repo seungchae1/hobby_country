@@ -25,6 +25,7 @@
     }
     .question2{
         text-align: left;
+        font-size: 1.2rem;
         width: 60%;
         display: inline-block;
     }
@@ -76,23 +77,104 @@
 </style>
 <body>
     <div class="process">
-        <progress value="5" max="100"></progress>
-        <div class="p_num">1/20</div>
+        <progress value="10" max="100" id="pro"></progress>
+        <div class="p_num">1/10</div>
     </div>
     <div class="questions">  
-        <div class="question">Q1</div>
-        <div class="question2">어쩌궁....</div>
+        <div class="question" id="question">Q1</div>
+        <div class="question2">밖 or 집</div>
     </div>
     <div class="test_img">
         <img src="./img/img1.png">
     </div>
     <div class="options">
-        <div class="option">
-            선택지1
+        <div class="option" onclick="Select_op(1)">
+            집
         </div>
-        <div class="option">
-            선택지2
+        <div class="option"onclick="Select_op(2)">
+            밖
         </div>
     </div>
 </body>
 </html>
+
+<script>
+    let Q_count=1;
+    let Max_qc = 10;
+    let Hobby=["일기/다이어리꾸미기","여행/투어/탐방","게임","요리","수집",
+    "식물/정원","독서(소설, 자기계발서, 판타지 등)","영화/드라마","음악/콘서트","뮤지컬/공연",
+    "박물관/미술관","걷기/달리기","등산","자전거","스포츠",
+    "요가/필라테스","공예/만들기","그림","노래/작사/작곡","악기",
+    "사진","패션"];
+    var H_count= new Array(22)
+    for(let i=0; i<H_count.leght; i++)
+    {
+        H_count[i]=0;
+    }
+
+    let q_num = document.getElementsByClassName("question")[0];
+    let question = document.getElementsByClassName("question2")[0];
+    let op1=document.getElementsByClassName("option")[0];
+    let op2=document.getElementsByClassName("option")[1];
+    let img = document.getElementsByClassName("test_img")[0];
+    let pro = document.getElementById("pro");
+    let pro_num = document.getElementsByClassName("p_num")[0];
+
+    function Select_op(op)
+    {
+        switch(Q_count){
+            case 1 : 
+                question.innerHTML="여유시간어느정도?";
+                op1.innerHTML="장기간 ";
+                op2.innerHTML="단기간";
+                break;
+            case 2 : 
+                question.innerHTML="어느정도 기간 선호?";
+                op1.innerHTML="넉넉함";
+                op2.innerHTML="적음";
+                break;
+            case 3 : 
+                question.innerHTML="지갑사정?";
+                op1.innerHTML="부유하다 ";
+                op2.innerHTML="가난하다";
+                break;
+            case 4 : 
+                question.innerHTML="분위기?";
+                op1.innerHTML="잔잔 ";
+                op2.innerHTML="소란";
+                break;
+            case 5 : 
+                question.innerHTML="인원수?";
+                op1.innerHTML="혼자 ";
+                op2.innerHTML="다수";
+                break;
+            case 6 : 
+                question.innerHTML="혹시.. 좀.. 귀찮은..편.?";
+                op1.innerHTML="응";
+                op2.innerHTML="별로";
+                break;
+            case 7 : 
+                question.innerHTML="여유공간?";
+                op1.innerHTML="있음";
+                op2.innerHTML="없음";
+                break;
+            case 8 : 
+                question.innerHTML="여유시간어느정도?";
+                op1.innerHTML="넉넉함";
+                op2.innerHTML="적음";
+                break;
+            case 9 : 
+                question.innerHTML="여유시간어느정도?";
+                op1.innerHTML="넉넉함";
+                op2.innerHTML="적음";
+                break;
+            default : 
+                break;
+        }
+        Q_count++;
+        q_num.innerHTML="Q"+Q_count.toString();
+        pro.value = Q_count*10;
+        pro_num.innerHTML=Q_count.toString() + "/" + Max_qc.toString();
+        
+    }
+</script>
