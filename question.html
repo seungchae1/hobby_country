@@ -6,7 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        width: 98vw;
+        height: 97vh;
+    }
+    .questions{
+        height: 15%;
+        text-align: center;
+    }
+    .question{
+        display: inline-block;
+        width: 20%;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: bold;
+        color: #32C1E0;
+    }
+    .question2{
+        text-align: left;
+        width: 60%;
+        display: inline-block;
+    }
+    .test_img{
+        height: 40%;
+        text-align: center;
+    }
+    .test_img>img{
+        height: 100%;
+    }
+    .options{
+        padding: 0% 30% 0% 30%;
+        height: 20%;
+        text-align: center;
+    }
+    .option{
+        border-radius: 30px;
+        padding: 1.5rem 5rem 1.5rem 5rem;
+        margin-top:1.5rem;
+        text-align: center;
+        border: 3px solid #d4f1f6;
+    }
+    .option:hover{
+        background-color: #d4f1f6;
+    }
+    .process{
+        color: #32C1E0;
+        height: 10%;
+        text-align: center;
+    }
+    .process>.p_num{
+        font-size: 1.5rem;
+        display: inline;
+    }
+    .process>progress{
+        appearance: none;
+        width: 50%;
+        height: 30px;
+    }
+    .process>progress::-webkit-progress-value{
+        background: #32C1E0;
+        border-radius: 20px;
+    }
+    .process>progress::-webkit-progress-bar{
+        background: white;
+        border: 2px solid #32C1E0;
+        border-radius: 20px;
+    }
+</style>
 <body>
-    
+    <div class="process">
+        <progress value="5" max="100"></progress>
+        <div class="p_num">1/20</div>
+    </div>
+    <div class="questions">  
+        <div class="question">Q1</div>
+        <div class="question2">어쩌궁....</div>
+    </div>
+    <div class="test_img">
+        <img src="./img/img1.png">
+    </div>
+    <div class="options">
+        <div class="option">
+            선택지1
+        </div>
+        <div class="option">
+            선택지2
+        </div>
+    </div>
 </body>
 </html>
