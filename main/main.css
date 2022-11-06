@@ -1,6 +1,17 @@
+body{
+    margin-top: 50px;
+}
 .logo{
     text-decoration: none;
     color: black;
     font-size: 30px;
     margin-left: 50px;
+}
+/* 회원가입 버튼 */
+.sign_up{   
+    margin-left: 820px;
+}
+/* 로그인 버튼 */
+.login{
+    margin-right: 50px;
 }
