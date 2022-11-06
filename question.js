@@ -24,10 +24,10 @@
                     if(op==1){
                         hobby_cnt["일기/일기/다이어리꾸미기"]++; hobby_cnt["게임"]++; hobby_cnt["요리"]+=2; hobby_cnt["수집"]+=3; 
                         hobby_cnt["독서(소설, 자기계발서, 판타지 등)"]++; hobby_cnt["음악/콘서트"]++; hobby_cnt["스포츠"]++; hobby_cnt["요가/필라테스"]++; 
-                        hobby_cnt["공예/만들기"]++; hobby_cnt["그림"]++; hobby_cnt["노래/작사/작곡"]++; hobby_cnt["악기"]++; hobby_cnt["패션"]++; 
+                        hobby_cnt["공예/만들기"]++; hobby_cnt["그림"]++; hobby_cnt["노래/작사/작곡"]+=5; hobby_cnt["악기"]++; hobby_cnt["패션"]++; 
                     }
                     else{ 
-                        hobby_cnt["여행/투어/탐방"]++; hobby_cnt["식물/정원"]++; hobby_cnt["음악/콘서트"]++; hobby_cnt["뮤지컬/공연"]++; 
+                        hobby_cnt["여행/투어/탐방"]++; hobby_cnt["식물/정원"]++; hobby_cnt["음악/콘서트"]++; hobby_cnt["뮤지컬/공연"]+=3; 
                         hobby_cnt["박물관/미술관"]++; hobby_cnt["자전거"]++; hobby_cnt["스포츠"]++; hobby_cnt["요가/필라테스"]++; 
                         hobby_cnt["공예/만들기"]++; hobby_cnt["사진"]++; hobby_cnt["노래/작사/작곡"]++; hobby_cnt["악기"]++; hobby_cnt["패션"]++; 
                     }
@@ -74,10 +74,13 @@
                 break;
             default : 
                 let max=0;
+                let cnt=0;
+                let result=0;
                 for (var key in hobby_cnt) {
-                    if(hobby_cnt[key]>max){ max=hobby_cnt[key];}
+                    if(hobby_cnt[key]>max){ max=hobby_cnt[key]; result=cnt;}
+                    cnt++;
                 }
-                location.href=`./result.html?op=${max}`;
+                location.href=`./result.html?op=${result}`;
                 break;
         }
         if(Q_count!=Max_qc){
