@@ -8,20 +8,20 @@
 </head>
 <style>
     body{
+        margin: 0;
         height: 90vh;
         width: 99vw;
         background-color: #96e7f9;
         background-image: url("img/img1.png"),url("img/img2.png"),url("img/img3.png"),url("img/img4.png"),url("img/img5.png"),url("img/img6.png");
         background-repeat:no-repeat;
         background-size: 17%;
-        background-position: 90% 25%, 0px 80%, 15% 20%, 22% 100%, 100% 87%, 78% 100%;
+        background-position: 90% 25%, 0px 80%, 15% 20%, 22% 110%, 100% 87%, 78% 110%;
     }
     .mini_title{
         height: 10%;
         font-size: 3rem;
         text-align: center;
         margin-bottom: 2%;
-        margin-top: 3%;
     }
     .title{
         height: 60%;
@@ -50,10 +50,34 @@
     .btn>a:hover{
         background-color: rgb(255, 163, 211);
     }
+    .logo{
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        margin-left: 50px;
+    }
+    header{
+        padding:25px 0px 0px 0px ;
+        width: 101%;
+        background: 96e7f9;
+    }
+    .profile{
+        width: 50px;
+        display: inline-block;
+        float: right;
+        margin-right: 20px;
+    }
+    .profile>img{
+        width: 100%;
+    }
 </style>
 <body>
-<div class="mini_title">나에게 맞는 취미는?!</div>
-<div class="title"><img src="img/test_title.png"></div>
-<div class="btn"><a href="question.html">START</a></div>
+    <header>
+        <a href="./main/main.html" class="logo">🌎취미나라</a>
+        <div class="profile"><img src="./img/profile.png"></div>
+    </header>
+    <div class="mini_title">나에게 맞는 취미는?!</div>
+    <div class="title"><img src="img/test_title.png"></div>
+    <div class="btn"><a href="question.html">START</a></div>
 </body>
 </html>

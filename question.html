@@ -74,8 +74,21 @@
         border: 2px solid #32C1E0;
         border-radius: 20px;
     }
+    .back{
+        position: absolute;
+        margin: 10px 0px 0px 50px;
+        width: 80px;
+        float: left;
+    }
+    .back>img:hover{
+        content: url(./img/back_icon.png);
+    }
+    .back>img{
+        width: 100%;
+    }
 </style>
 <body>
+    <a href="./test_main.html"><div class="back"><img src="./img/back_icon2.png"></div></a>
     <div class="process">
         <progress value="10" max="100" id="pro"></progress>
         <div class="p_num">1/10</div>
