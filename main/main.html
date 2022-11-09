@@ -6,13 +6,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>community</title>
     <link rel="stylesheet" href="./main.css">
+    <script type="text/javascript" defer src="main.js"></script>
 </head>
 <body>
     <!-- <button type="submit" class="logo">🌎취미나라</button> -->
     <a href="./main.html" class="logo">🌎취미나라</a>
     <button type="submit" class="sign_up">회원가입</button>
     <button type="submit" class="login">로그인</button>
-    
+
+    <!-- 카테고리 -->
+    <!-- <div class="dropdown">
+        <button class="A">예술</button>
+        <div id="B" class="dropdown-content">
+          <a id="w" href="#">공예/만들기</a>
+          <a id="w" href="#">걷기/달리기</a>
+          <a id="w" href="#">독서</a>
+          <a id="w" href="#">일기/다이어리꾸미기</a><br/>
+
+          <a id="w" href="#">그림</a>
+          <a id="w" href="#">등산</a>
+          <a id="w" href="#">영화/드라마</a>
+          <a id="w" href="#">여행/투어/탐방</a><br/>
+
+          <a id="w" href="#">노래/작사/작곡</a>
+          <a id="w" href="#">자전거</a>
+          <a id="w" href="#">음악/콘서트</a>
+          <a id="w" href="#">게임</a><br/>
+
+          <a id="w" href="#">악기</a>
+          <a id="w" href="#">스포츠</a>
+          <a id="w" href="#">뮤지컬/공연</a>
+          <a id="w" href="#">요리</a><br/>
+
+          <a id="w" href="#">사진</a>
+          <a id="w" href="#">요가/필라테스</a>
+          <a id="w" href="#">박물관/미술관</a>
+          <a id="w" href="#">반려동물</a><br/>
+
+          <a id="w" href="#">패션</a>
+          <a id="w" href="#"></a>
+          <a id="w" href="#"></a>
+          <a id="w" href="#">수집</a><br/>
+
+          <a id="w" href="#"></a>
+          <a id="w" href="#"></a>
+          <a id="w" href="#"></a>
+          <a id="w" href="#">식물</a><br/>
+        </div>
+
+        <button class="A">운동</button>
+        <div id="B" class="dropdown-content">
+        </div>
+
+        <button class="A">문화</button>
+        <div id="B" class="dropdown-content">
+        </div>
+
+        <button  class="A">여가</button>
+        <div id="B" class="dropdown-content">
+        </div>
+
+        <button  class="A">테스트</button>
+        <div id="B" class="dropdown-content">
+        </div>
+
+        <button onclick="myFunction()" class="A">▽</button>
+        <div id="myDropdown" class="dropdown-content">
+        </div>
+      </div>
+
+
+      <script>
+        function myFunction() {
+            document.getElementById("B").classList.toggle("show");
+        }
+        
+        
+        window.onclick = function(event) {
+          if (!event.target.matches('.A')) {
+        
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+          
+        }
+        </script> -->
+
+        <!-- 카테고리 -->
+
+
+        <div id="wrapper">
+          <nav id="nav">
+            <ul id="menu__list">
+              <li id="menu__menu">
+                예술
+                <div id="subwrapper">
+                  <nav id="subnav">
+                    <ul id="submenu__list">
+                      <li id="submenu__menu">공예/만들기</li>
+                      <li id="submenu__menu">그림</li>
+                      <li id="submenu__menu">노래/작사/작곡</li>
+                      <li id="submenu__menu">악기</li>
+                      <li id="submenu__menu">사진</li>
+                      <li id="submenu__menu">패션</li>
+                    </ul>
+                  </nav>
+                </div>
+              </li>
+              <li id="menu__menu">
+                운동
+                <div id="subwrapper">
+                  <nav id="subnav">
+                    <ul id="submenu__list">
+                      <li id="submenu__menu">걷기/달리기</li>
+                      <li id="submenu__menu">등산</li>
+                      <li id="submenu__menu">자전거</li>
+                      <li id="submenu__menu">스포츠</li>
+                      <li id="submenu__menu">요가/필라테스</li>
+                    </ul>
+                  </nav>
+                </div>
+              </li>
+              <li id="menu__menu">
+                문화
+                <div id="subwrapper">
+                  <nav id="subnav">
+                    <ul id="submenu__list">
+                      <li id="submenu__menu">독서</li>
+                      <li id="submenu__menu">영화/드라마</li>
+                      <li id="submenu__menu">음악/콘서트</li>
+                      <li id="submenu__menu">뮤지컬/공연</li>
+                      <li id="submenu__menu">박물관/미술관</li>
+                    </ul>
+                  </nav>
+                </div>
+              </li>
+              <li id="menu__menu">
+                여가
+                <div id="subwrapper">
+                  <nav id="subnav">
+                    <ul id="submenu__list">
+                      <li id="submenu__menu">일기/다이어리꾸미기</li>
+                      <li id="submenu__menu">여행/투어/탐방</li>
+                      <li id="submenu__menu">게임</li>
+                      <li id="submenu__menu">요리</li>
+                      <li id="submenu__menu">수집</li>
+                      <li id="submenu__menu">식물/정원</li>
+                    </ul>
+                  </nav>
+                </div>
+              </li>
+              <li id="menu__menu">
+                테스트
+                <div id="subwrapper">
+                  <nav id="subnav">
+                    <ul id="submenu__list">
+                      <li id="submenu__menu">테스트</li>
+                    </ul>
+                  </nav>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+
+        <a href="#" ><img class="test_img" src="./img/test_img.png"></a>
 
 </body>
 </html>
