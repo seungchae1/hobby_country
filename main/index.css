@@ -1,5 +1,7 @@
 body{
     margin-top: 25px;
+    margin: 0;
+    padding: 0;
 }
 .logo{
     text-decoration: none;
@@ -77,12 +79,6 @@ body{
 /* 이게 있어야 화살표 눌렀을 때 창이 뜬다 */
  /* .show {display:block;} */ 
 /* ------------------------------------------------카테고리-------------------------------------------------- */
-
-body {
-    margin: 0;
-    padding: 0;
-  }
-  
   #wrapper {
     background-color: #448a8f;
     position: relative;
