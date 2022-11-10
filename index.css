@@ -37,13 +37,18 @@ body{
     display: inline;
 }
 
-/* ------------------------------------------------카테고리-------------------------------------------------- */
+a{
+  text-decoration-line: none;
+  color: #000000;
+}
 
 /* ------------------------------------------------카테고리-------------------------------------------------- */
+
+
   #wrapper {
     background-color: #ffffff;
     position: relative;
-    border: 1px solid #000000;
+    border-bottom: 1px solid #000000;
     margin-bottom: 5px;
 
   }
@@ -57,7 +62,7 @@ body{
     max-width: 824px;
     margin-left: 10px;
     margin: 0 auto;
-
+    
   }
   
   #menu__list {
@@ -83,10 +88,12 @@ body{
   
   
   #menu__menu:hover #subwrapper {
+    
     display: block;
   }
   
   #menu__menu:hover #submenu__list {
+    
     display: table;
   }
   
@@ -96,7 +103,7 @@ body{
     background-color: #ffffff;
     border:1px solid #000000;
     width: 15%;
-
+    
     
     position: absolute;
     /* top: 40px; */
@@ -113,26 +120,28 @@ body{
   #submenu__list {
     display: none;
     list-style-type: none;
-  
+    
     width: 100%;
-  
+    margin-left: -36px;
+    margin-top: 10px;
     /* text-align: center; */
   }
   
   #submenu__menu {
     /* display: table-cell; */
     vertical-align: middle;
-
+    
     height: 40px;
     font-size: 15px;
     color: #000000;
     cursor: pointer;
+    
   }
   
   /* #submenu__menu:hover {
     border-bottom: 2px solid #62dff2;
   } */
-
+/* ------------------------------------------------카테고리-------------------------------------------------- */
 
 /* 배너 */
 .test_img{
