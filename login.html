@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .dialog{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0;
+        width: 0;
+        visibility: hidden;
+        background-color: white;
+        border: 2px solid #32C1E0;
+        border-radius: 30px;
+        position: absolute;
+    }
+    .title{
+        margin-left: 45px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    table{
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+    td{
+        height: 50px;
+    }
+    input{
+        border: 1px solid gray;
+        border-radius: 10px;
+        height: 25px;
+        width: 300px;
+    }
+    .btn{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .btn>button{
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        border: 0.1px solid black;
+        background-color: #32C1E0;
+        color: white;
+        font-weight: 550;
+        font-size: 17px;
+    }
+    .join{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .join>a{
+        color: gray;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    .close{
+        width: 25px;
+        height: 25px;
+        background-image: url("img/btn_back.png");
+        background-size: 100%;
+        float: right;
+        margin-right: 20px;
+        margin-top: 15px;
+    }
+</style>
+<body>
+    <div class="dialog">
+        <div onclick="close_d()" class="close"></div>
+        <h2 class="title">LOGIN</h2>
+        <form method="post" action="./login.php">
+            <table>
+                <tr><td>아이디</td><td ><input type="text" name="uid"></td></tr>
+                <tr><td>비밀번호</td><td ><input type="password" name="upass"></td></tr>
+            </table>
+            <div class="btn"><button type="submit">login</button></div>
+            <div class="join">아직 회원이 아니신가요? <a href="#">회원가입</a></div>
+        </form>
+    </div>
+    <button onclick="dia()">로그인</button>
+</body>
+<script>
+    let d=document.getElementsByClassName("dialog")[0];
+    function dia(){
+        d.style.width="500px"
+        d.style.height="300px";
+        d.style.visibility="visible";
+    }
+    function close_d(){
+        d.style.visibility="hidden";
+        d.style.width="0px"
+        d.style.height="0px";
+    }
+</script>
+</html>
