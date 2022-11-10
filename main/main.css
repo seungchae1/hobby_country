@@ -84,8 +84,9 @@ body{
   }
   
   #wrapper {
-    background-color: #ffffff;
+    background-color: #448a8f;
     position: relative;
+    border: #000000;
   }
   
   /* 양 옆에 여백?을 준다 */
