@@ -1,0 +1,59 @@
+
+    body{
+        margin: 0;
+        height: 100vh;
+        width: 99vw;
+    }
+    .title{
+        height: 100px;
+        text-align: center;
+    }
+    .title>h1{
+        font-size: 3rem;
+    }
+    #result_hobby{
+        height: 100px;
+        text-align: center;
+        font-size: 5rem;
+        margin-bottom: 50px;
+    }
+    .hb_img{
+        text-align: center;
+    }
+    #hb_img{
+        width: 35%;
+    }
+    .logo{
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        margin-left: 50px;
+    }
+    header{
+        padding:25px 0px 0px 0px ;
+        width: 101%;
+        background: 96e7f9;
+    }
+    .profile{
+        width: 50px;
+        display: inline-block;
+        float: right;
+        margin-right: 40px;
+    }
+    .profile>img{
+        width: 100%;
+    }
+    body::-webkit-scrollbar {
+        width: 8px;  /* 스크롤바의 너비 */
+    }
+
+    body::-webkit-scrollbar-thumb {
+        height: 30%; /* 스크롤바의 길이 */
+        background: #217af4; /* 스크롤바의 색상 */
+    
+        border-radius: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+    }
