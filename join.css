@@ -1,8 +1,39 @@
+body{
+  padding: 25px;
+}
+.title{
+  margin-bottom: 50px;
+}
 .join{
     text-align: center;
 }
 .join_t{
   text-align: center;
-  width: 20%;
+  width: 50%;
   margin: auto;
+}
+
+.join_td{
+  height: 70px;
+  font-size: 16.5px;
+}
+
+.join_td>input{
+  border: 1px solid gray;
+  border-radius: 10px;
+  height: 30px;
+  width: 400px;
+  padding-left: 15px;
+}
+
+.join_btn{
+  margin-top: 40px;
+  background-color: #32C1E0;
+  width: 250px;
+  height: 50px;
+  border: 0.1px solid black;
+  border-radius: 15px;
+  font-weight: 550;
+  font-size: 17px;
+  color: white;
 }

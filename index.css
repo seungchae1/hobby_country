@@ -9,13 +9,31 @@ body{
     font-size: 30px;
     margin-left: 50px;
 }
+
+/*user*/
+.user{
+  text-align: right;
+  margin-right: 30px;
+}
+
 /* 회원가입 버튼 */
-.sign_up{   
-    margin-left: 820px;
+.join_btn{
+  text-decoration: none;
+  padding: 7px 15px 7px 15px;
+  background-color: #32C1E0;
+  color: white;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 /* 로그인 버튼 */
-.login{
-    margin-right: 50px;
+.login_btn{
+  text-align: center;
+  background-color: #91d9e9;
+  width: 90px;
+  padding : 7px 0px 7px 0px;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
 }
 
 /* ------------------------------------------------카테고리-------------------------------------------------- */
@@ -201,6 +219,7 @@ body{
   border-radius: 10px;
   height: 25px;
   width: 300px;
+  padding-left: 15px;
 }
 .btn{
   margin-top: 10px;
