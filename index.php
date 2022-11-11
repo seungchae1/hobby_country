@@ -22,7 +22,7 @@
                 echo "<img src='./img/profile_img.png' onclick='uesr()'>";
                 echo "<div class='userdrop'>
                         <ul>
-                          <li><a href='profile.html'>프로필</a></li>
+                          <li><a href='profile.php'>프로필</a></li>
                           <li><a href='logout.php'>로그아웃</a></li>
                         </ul>
                       </div>

@@ -13,4 +13,5 @@ else{
     setcookie("upass",$upass,time()+3600);
     echo "<meta http-equiv='refresh' content='2;url=index.php'>";
 }
+mysqli_close($conn);
 ?>
