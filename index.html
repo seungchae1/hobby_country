@@ -11,11 +11,13 @@
 <body>
     <!-- <button type="submit" class="logo">🌎취미나라</button> -->
     <a href="./main.html" class="logo">🌎취미나라</a>
-    <form method="post" action="join.html"><button type="submit" class="sign_up">회원가입</button></form>
-    <button type="submit" class="login" onclick="dia()">로그인</button>
+    <div class="user">
+      <a href="./join.html" class="join_btn">회원가입</a>
+      <div onclick="dia()" class="login_btn">로그인</div>
+    </div>
 
 
-     <!-- ------------------------------------------------카테고리-------------------------------------------------- -->
+
         <div id="wrapper">
           <nav id="nav">
             <ul id="menu__list">
@@ -137,7 +139,7 @@
           <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
       </table>
       <div class="btn"><button type="submit">login</button></div>
-      <div class="join">아직 회원이 아니신가요? <a href="#">회원가입</a></div>
+      <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
     </form>
   </div>
   

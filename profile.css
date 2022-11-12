@@ -1,0 +1,213 @@
+/* header */
+body{
+    margin: 0;
+    margin-top: 25px;
+    padding: 0;
+}
+.logo{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+/*user*/
+.user{
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+    height: 40px;
+  }
+  .userid{
+    display: inline-block;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+  }
+  .profile_img{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin-left: 30px;
+  }
+  .profile_img>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .userdrop{
+    position: absolute;
+    left: 96%;
+    transform: translate(-70%, 0%);
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    background-image: url("./img/profile_drop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 10;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .userdrop>ul{
+    text-align: center;
+  }
+  .userdrop>ul>li{
+    text-align: center;
+    list-style: none;
+    margin-top: 18px;
+  }
+  
+  /* 회원가입 버튼 */
+  .join_btn{
+    text-decoration: none;
+    padding: 7px 15px 7px 15px;
+    background-color: #32C1E0;
+    color: white;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  /* 로그인 버튼 */
+  .login_btn{
+    text-align: center;
+    background-color: #91d9e9;
+    width: 90px;
+    padding : 7px 0px 7px 0px;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+  }
+  
+
+
+
+/*====================== body ========================*/
+.inform{
+    width: 50%;
+    margin: auto;
+}
+.title>h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.img_box{
+  height: 200px;
+  width: 200px;
+}
+.img_box>img{
+  width: 100%;
+  height : 100%;
+  padding : 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.inform_td{
+    height: 100px;
+}
+.inform_td>input{
+  border: 1px solid gray;
+  border-radius: 7px;
+  height: 25px;
+  width: 100%;
+  padding-left: 15px;
+}
+.update_btn{
+    margin-top: 30px;
+    text-align: right;
+    margin-right: 20px;
+}
+.update_btn>button{
+    color: black;
+    padding: 5px 10px 5px 10px;
+    border: 1.5px solid #32C1E0;
+    background-color: white;
+    border-radius: 7px;
+}
+.delete_btn{
+    text-align: right;
+    margin-right: 20px;
+}
+.delete_btn>button{
+    color: white;
+    width: 100px;
+    height: 35px;
+    border:0;
+    background-color: rgb(255, 80, 80);
+    border-radius: 7px;
+}
+
+
+/* 비밀번호 확인 박스*/
+.dialog{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  background-color: white;
+  border: 2px solid #32C1E0;
+  border-radius: 30px;
+  position: absolute;
+}
+.title{
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.login_t{
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.login_td{
+  height: 50px;
+}
+.login_td>input{
+  border: 1px solid gray;
+  border-radius: 10px;
+  height: 25px;
+  width: 300px;
+  padding-left: 15px;
+}
+.btn{
+  margin-top: 20px;
+  text-align: center;
+}
+.btn>button{
+  width: 100px;
+  height: 45px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(255, 36, 36);
+  color: white;
+  font-weight: 550;
+  font-size: 17px;
+}
+.join{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+}
+.close{
+  width: 25px;
+  height: 25px;
+  background-image: url("./img/btn_back.png");
+  background-size: 100%;
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+/**/
+
+
+/* 스크롤바 커스텀 */
+body::-webkit-scrollbar {
+  width: 0;  /* 스크롤바의 너비 */
+}

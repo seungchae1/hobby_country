@@ -43,6 +43,8 @@
     .profile>img{
         width: 100%;
     }
+
+    /* 스크롤바 커스텀 */
     body::-webkit-scrollbar {
         width: 8px;  /* 스크롤바의 너비 */
     }

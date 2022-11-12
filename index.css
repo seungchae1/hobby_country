@@ -17,8 +17,8 @@
 }
 
 body{
-    margin-top: 25px;
     margin: 0;
+    margin-top: 25px;
     padding: 0;
 }
 .logo{
@@ -27,14 +27,78 @@ body{
     font-size: 30px;
     margin-left: 50px;
 }
+
+/*user*/
+.user{
+  display: inline-block;
+  float: right;
+  margin-right: 30px;
+  height: 40px;
+}
+.userid{
+  display: inline-block;
+  position: absolute;
+  right: 100px;
+  top: 40px;
+}
+.profile_img{
+  width: 55px;
+  height: 55px;
+  margin-left: 30px;
+}
+.profile_img>img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userdrop{
+  position: absolute;
+  left: 96%;
+  transform: translate(-70%, 0%);
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  background-image: url("./img/profile_drop.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 10;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.userdrop>ul{
+  text-align: center;
+}
+.userdrop>ul>li{
+  text-align: center;
+  list-style: none;
+  margin-top: 18px;
+}
+
 /* 회원가입 버튼 */
-.sign_up{   
-    margin-left: 1000px;
+.join_btn{
+  text-decoration: none;
+  padding: 7px 15px 7px 15px;
+  background-color: #32C1E0;
+  color: white;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 /* 로그인 버튼 */
-.login{
-    /* margin-right: 50px; */
-    display: inline;
+.login_btn{
+  text-align: center;
+  background-color: #91d9e9;
+  width: 90px;
+  padding : 7px 0px 7px 0px;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+}
+
+/* 스크롤바 커스텀 */
+body::-webkit-scrollbar {
+  width: 0;  /* 스크롤바의 너비 */
 }
 
 a{
@@ -213,6 +277,7 @@ a{
   border-radius: 10px;
   height: 25px;
   width: 300px;
+  padding-left: 15px;
 }
 .btn{
   margin-top: 10px;
