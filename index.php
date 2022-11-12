@@ -1,3 +1,21 @@
+<?php
+    if(isset($_COOKIE['uid'])){
+        $id = $_COOKIE['uid'];
+        include("db_conn.php");
+        $sql = "select * from hobby_join where id='$id';";
+        $sel = mysqli_query($conn, $sql);
+        $re=mysqli_fetch_row($sel);
+    
+        $id =$re[0];
+        $pass =$re[1];
+        $name =$re[2];
+        $tel =$re[3];
+        $email =$re[4];
+        $profile=$re[5];
+        if($profile == "") $profile="./img/profile_img.png";
+    mysqli_close($conn);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +36,16 @@
                 echo "<div onclick='dia()' class='login_btn'>로그인</div>";
             }
             else{
-                echo $_COOKIE['uid']."님";
-                echo "<img src='./img/profile_img.png' onclick='uesr()'>";
+              $id = $_COOKIE['uid'];
+              include("db_conn.php");
+              $sql = "select * from hobby_join where id='$id';";
+              $sel = mysqli_query($conn, $sql);
+              $re=mysqli_fetch_row($sel);
+              $profile=$re[5];
+              if($profile == "") $profile="./img/profile_img.png";
+
+              echo "<div class='userid'>".$id."님</div>";
+              echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
                 echo "<div class='userdrop'>
                         <ul>
                           <li><a href='profile.php'>프로필</a></li>

@@ -35,10 +35,22 @@ body{
   margin-right: 30px;
   height: 40px;
 }
-
-.user>img{
+.userid{
+  display: inline-block;
+  position: absolute;
+  right: 100px;
+  top: 40px;
+}
+.profile_img{
+  width: 55px;
+  height: 55px;
   margin-left: 30px;
+}
+.profile_img>img{
+  width: 100%;
   height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .userdrop{
