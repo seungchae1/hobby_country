@@ -17,8 +17,8 @@
 }
 
 body{
-    margin-top: 25px;
     margin: 0;
+    margin-top: 25px;
     padding: 0;
 }
 .logo{
@@ -30,13 +30,15 @@ body{
 
 /*user*/
 .user{
-  text-align: right;
+  display: inline-block;
+  float: right;
   margin-right: 30px;
+  height: 40px;
 }
 
 .user>img{
   margin-left: 30px;
-  width: 50px;
+  height: 100%;
 }
 
 .userdrop{
@@ -80,6 +82,11 @@ body{
   border-radius: 10px;
   color: white;
   display: inline-block;
+}
+
+/* 스크롤바 커스텀 */
+body::-webkit-scrollbar {
+  width: 0;  /* 스크롤바의 너비 */
 }
 
 a{
