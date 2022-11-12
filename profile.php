@@ -11,6 +11,9 @@
         $name =$re[2];
         $tel =$re[3];
         $email =$re[4];
+        $profile=$re[5];
+        if($profile == "") $profile="./img/profile_img.png";
+    mysqli_close($conn);
     } 
     else{
         echo "<script>alert('로그인이 필요합니다');</script>";
@@ -28,6 +31,7 @@
 <link rel="stylesheet" href="./profile.css">
 <script type="text/javascript" defer src="profile.js"></script>
 <body>
+    <!-- header -->
 <a href="./index.php" class="logo">🌎취미나라</a>
     <div class="user">
         <?php
@@ -36,8 +40,8 @@
                 echo "<div onclick='dia()' class='login_btn'>로그인</div>";
             }
             else{
-                echo $_COOKIE['uid']."님";
-                echo "<img src='./img/profile_img.png' onclick='uesr()'>";
+                echo "<div class='userid'>".$_COOKIE['uid']."님</div>";
+                echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
                 echo "<div class='userdrop'>
                         <ul>
                           <li><a href='profile.php'>프로필</a></li>
@@ -48,34 +52,35 @@
             }
         ?>
     </div>
-<form method="post" action="update.php">
+<!-- body -->
+<form method="post" action="update.php" enctype="multipart/form-data">
 <table class="inform">
     <tr class='inform_tr'>
         <td colspan='2' class='title'><h1>PROFILE</h1></td>
     </tr>
     <tr class="img_tr">
-        <td class="img_td"><img src="./img/profile_img.png"></td>
-        <td class="img_td"><input type="file" name="profile_img"></td>
+        <td class="img_td"><div class="img_box"><img src="<?php echo $profile; ?>"></div></td>
+        <td class="img_td"><input type="file" name="profile"></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>ID</td>
-        <td class='inform_td'><?php echo $id; ?></td>
+        <td class='inform_td'><input type="text" name="uid" value='<?php echo $id; ?>'></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>PASS WORD</td> 
-        <td class='inform_td'><?php echo $pass; ?><td>
+        <td class='inform_td'><input type="text" name="uid" value='<?php echo $pass; ?>'><td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>NAME</td>
-        <td class='inform_td'><?php echo $name; ?></td>
+        <td class='inform_td'><input type="text" name="uid" value='<?php echo $name; ?>'></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>TEL</td>
-        <td class='inform_td'><?php echo $tel; ?></td>
+        <td class='inform_td'><input type="text" name="uid" value='<?php echo $tel; ?>'></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td' class='inform_td'>E-MAIL</td>
-        <td class='inform_td'><?php echo $email; ?></td>
+        <td class='inform_td'><input type="text" name="uid" value='<?php echo $email; ?>'></td>
     </tr>
     <tr class='inform_tr'>
         <td colspan='2' class='inform_td'><div class="update_btn"><button type="submit">수정</button><div></td>

@@ -18,10 +18,23 @@ body{
     margin-right: 30px;
     height: 40px;
   }
-  
-  .user>img{
+  .userid{
+    display: inline-block;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+  }
+  .profile_img{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
     margin-left: 30px;
+  }
+  .profile_img>img{
+    width: 100%;
     height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
   }
   
   .userdrop{
@@ -79,12 +92,27 @@ body{
     text-align: center;
     margin-bottom: 50px;
 }
-.img_td>img{
-    height: 200px;
-    padding : 10px;
+.img_box{
+  height: 200px;
+  width: 200px;
+}
+.img_box>img{
+  width: 100%;
+  height : 100%;
+  padding : 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
 }
 .inform_td{
-    height: 70px;
+    height: 100px;
+}
+.inform_td>input{
+  border: 1px solid gray;
+  border-radius: 7px;
+  height: 25px;
+  width: 100%;
+  padding-left: 15px;
 }
 .update_btn{
     margin-top: 30px;
@@ -104,8 +132,9 @@ body{
 }
 .delete_btn>button{
     color: white;
-    padding: 5px 10px 5px 10px;
-    border: 1.5px solid rgb(255, 80, 80);
+    width: 100px;
+    height: 35px;
+    border:0;
     background-color: rgb(255, 80, 80);
     border-radius: 7px;
 }
@@ -176,3 +205,9 @@ body{
 }
 
 /**/
+
+
+/* 스크롤바 커스텀 */
+body::-webkit-scrollbar {
+  width: 0;  /* 스크롤바의 너비 */
+}
