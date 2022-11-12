@@ -2,18 +2,18 @@
 
 /* Desktop First */
  
-.title { font-size: 18px; }
+.test_img { width: 90%px; }
  
 @media (max-width: 1023px) {
-  .title { font-size: 16px; }
+  .test_img { width: 80%; }
 }
  
 @media (max-width: 767px) {
-  .title { font-size: 14px; }
+  .test_img { width: 70%; }
 }
  
 @media (max-width: 639px) {
-  .title { font-size: 12px; }
+  .test_img { width: 50; }
 }
 
 body{
@@ -50,9 +50,6 @@ a{
     position: relative;
     border-bottom: 1px solid #000000;
     margin-bottom: 5px;
-
-  }
-  #text_{
 
   }
   
@@ -147,9 +144,43 @@ a{
 .test_img{
     width: 1120px;
     height: 250px;
-    margin-left: 50px;
+    margin-left: 70px;
     margin-top: -16px;
 }
+
+/*공지 및 규칙*/
+#rule{
+  margin-left: 70px;
+  width: 1120px;
+  border-bottom:1px solid #000000;
+}
+
+#board_write{
+  margin-left: 70px;
+  
+}
+#c_name{
+  
+  width: 1120px;
+  border-bottom:1px solid #000000;
+}
+
+/* .more{
+  background-color: #ffffff;
+  color: rgb(96, 96, 96);
+  border: none;
+} */
+#list{
+  
+}
+/*전체게시판*/
+#number{
+
+}
+#writer{
+  margin-left: 30px;
+}
+/*전체게시판*/
 
 /* 로그인 박스 */
 .dialog{
