@@ -1,16 +1,21 @@
 <?php
-    $id = $_COOKIE['uid'];
-    include("db_conn.php");
-    $sql = "select * from hobby_join where id='$id';";
-    $sel = mysqli_query($conn, $sql);
-    $re=mysqli_fetch_row($sel);
-
-    $id =$re[0];
-    $pass =$re[1];
-    $name =$re[2];
-    $tel =$re[3];
-    $email =$re[4];
-
+    if(isset($_COOKIE['uid'])){
+        $id = $_COOKIE['uid'];
+        include("db_conn.php");
+        $sql = "select * from hobby_join where id='$id';";
+        $sel = mysqli_query($conn, $sql);
+        $re=mysqli_fetch_row($sel);
+    
+        $id =$re[0];
+        $pass =$re[1];
+        $name =$re[2];
+        $tel =$re[3];
+        $email =$re[4];
+    } 
+    else{
+        echo "<script>alert('로그인이 필요합니다');</script>";
+        echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,33 +47,42 @@
             }
         ?>
     </div>
+<form method="post" action="update.php">
 <table class="inform">
     <tr class='inform_tr'>
-        <td colspan='2' class='inform_td'><h1>PROFILE</h1></td>
+        <td colspan='2' class='title'><h1>PROFILE</h1></td>
+    </tr>
+    <tr class="img_tr">
+        <td class="img_td"><img src="./img/profile_img.png"></td>
+        <td class="img_td"><input type="file" name="profile_img"></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>ID</td>
-        <td class='inform_td'><?php echo $re[0]; ?></td>
+        <td class='inform_td'><?php echo $id; ?></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>PASS WORD</td> 
-        <td class='inform_td'><?php echo $re[1]; ?><td>
+        <td class='inform_td'><?php echo $pass; ?><td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>NAME</td>
-        <td class='inform_td'><?php echo $re[2]; ?></td>
+        <td class='inform_td'><?php echo $name; ?></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>TEL</td>
-        <td class='inform_td'><?php echo $re[3]; ?></td>
+        <td class='inform_td'><?php echo $tel; ?></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td' class='inform_td'>E-MAIL</td>
-        <td class='inform_td'><?php echo $re[4]; ?></td>
+        <td class='inform_td'><?php echo $email; ?></td>
     </tr>
     <tr class='inform_tr'>
-        <td colspan='2' class='inform_td'><div class="update_btn"><a  href="update.php" >수정</a><div></td>
+        <td colspan='2' class='inform_td'><div class="update_btn"><button type="submit">수정</button><div></td>
+    </tr>
+    <tr class='inform_tr'>
+        <td colspan='2' class='inform_td'><div class="delete_btn"><button type="submit" onclick="delete_join()">회원 탈퇴</button><div></td>
     </tr>
 </table>
+</form>
 </body>
 </html>

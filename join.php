@@ -19,7 +19,8 @@ else if($upass != $ch_pass ) echo "<script>alert('비밀번호 확인이 일치�
 
 $sql = "insert into hobby_join(id, pass, name, tel, address) values('$uid','$upass','$uname','$utel','$uaddress');";
 mysqli_query($conn, $sql);
-echo "<script>alert('회원가입되었습니다!'); history.go(-2); </scritp>";
+echo "<script>alert('회원가입되었습니다!');</scritp>";
+echo "<meta http-equiv='refresh' content='2;url=index.php'>";
 
 mysqli_close($conn);
 ?>

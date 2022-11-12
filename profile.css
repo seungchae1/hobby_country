@@ -75,8 +75,13 @@ body{
     width: 50%;
     margin: auto;
 }
-h1{
+.title>h1{
     text-align: center;
+    margin-bottom: 50px;
+}
+.img_td>img{
+    height: 200px;
+    padding : 10px;
 }
 .inform_td{
     height: 70px;
@@ -86,10 +91,21 @@ h1{
     text-align: right;
     margin-right: 20px;
 }
-.update_btn>a{
-    text-decoration: none;
+.update_btn>button{
     color: black;
     padding: 5px 10px 5px 10px;
     border: 1.5px solid #32C1E0;
+    background-color: white;
+    border-radius: 7px;
+}
+.delete_btn{
+    text-align: right;
+    margin-right: 20px;
+}
+.delete_btn>button{
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border: 1.5px solid rgb(255, 80, 80);
+    background-color: rgb(255, 80, 80);
     border-radius: 7px;
 }
