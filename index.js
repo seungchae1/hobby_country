@@ -27,7 +27,7 @@ function uesr(){
     u.style.height="0px";
   }
 }
-/*
+
 (function () { 
     const txt = document.querySelector('.windowW');
     const getWidth = function(){
@@ -41,4 +41,3 @@ function uesr(){
     txtWidth();
     window.addEventListener('resize', txtWidth);
   })()
-  */

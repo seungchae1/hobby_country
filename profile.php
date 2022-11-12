@@ -26,6 +26,7 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="./profile.css">
+<script type="text/javascript" defer src="profile.js"></script>
 <body>
 <a href="./index.php" class="logo">🌎취미나라</a>
     <div class="user">
@@ -80,9 +81,21 @@
         <td colspan='2' class='inform_td'><div class="update_btn"><button type="submit">수정</button><div></td>
     </tr>
     <tr class='inform_tr'>
-        <td colspan='2' class='inform_td'><div class="delete_btn"><button type="submit" onclick="delete_join()">회원 탈퇴</button><div></td>
+        <td colspan='2' class='inform_td'><div class="delete_btn"><button type="button" onclick="delete_join()">회원 탈퇴</button><div></td>
     </tr>
 </table>
 </form>
+<!-- 탈퇴시 비밀번호 확인 -->
+<div class="dialog">
+    <div onclick="close_d()" class="close"></div>
+    <h2 class="title">비밀번호 확인</h2>
+      <div class="join">정말 탈퇴하시겠습니까?</div>
+    <form method="post" action="./login.php">
+      <table class="login_t">
+        <td class="login_td"><input type="password" name="upass"></td></tr>
+      </table>
+      <div class="btn"><button type="submit">탈퇴</button></div>
+    </form>
+  </div>
 </body>
 </html>
