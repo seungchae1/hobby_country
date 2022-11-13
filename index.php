@@ -167,12 +167,7 @@
             <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
           </span>
 
-          <!-- <script>
-              $( "#write" ).click(function( event ) {
-                  location.href='write.html';
-              });
-          </script> -->
-
+          
           
           
 
