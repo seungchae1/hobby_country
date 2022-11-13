@@ -80,7 +80,7 @@
                     if(hobby_cnt[key]>max){ max=hobby_cnt[key]; result=cnt;}
                     cnt++;
                 }
-                location.href=`./result.html?op=${result}`;
+                location.href=`./result.php?op=${result}`;
                 break;
         }
         if(Q_count!=Max_qc){

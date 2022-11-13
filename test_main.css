@@ -1,12 +1,14 @@
 body{
     margin: 0;
+    margin-top: 25px;
+    padding: 0;
     height: 90vh;
-    width: 99vw;
+    width: 100vw;
     background-color: #96e7f9;
     background-image: url("img/img1.png"),url("img/img2.png"),url("img/img3.png"),url("img/img4.png"),url("img/img5.png"),url("img/img6.png");
     background-repeat:no-repeat;
     background-size: 17%;
-    background-position: 90% 25%, 0px 80%, 15% 20%, 22% 110%, 100% 87%, 78% 110%;
+    background-position: 85% 25%, 2% 80%, 15% 20%, 22% 100%, 100% 87%, 80% 100%;
 }
 .mini_title{
     height: 10%;
@@ -16,7 +18,7 @@ body{
 }
 .title{
     height: 60%;
-    width: 100%;
+    width: 93%;
     text-align: center;
 }
 .title>img{
@@ -47,17 +49,148 @@ body{
     font-size: 30px;
     margin-left: 50px;
 }
-header{
-    padding:25px 0px 0px 0px ;
-    width: 101%;
-    background: 96e7f9;
-}
-.profile{
-    width: 50px;
+
+/*user*/
+.user{
     display: inline-block;
     float: right;
-    margin-right: 20px;
-}
-.profile>img{
+    margin-right: 30px;
+    height: 40px;
+  }
+  .userid{
+    display: inline-block;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+  }
+  .profile_img{
+    width: 55px;
+    height: 55px;
+    margin-left: 30px;
+  }
+  .profile_img>img{
     width: 100%;
-}
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .userdrop{
+    position: absolute;
+    left: 96%;
+    transform: translate(-70%, 0%);
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    background-image: url("./img/profile_drop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 10;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .userdrop>ul{
+    text-align: center;
+  }
+  .userdrop>ul>li{
+    text-align: center;
+    list-style: none;
+    margin-top: 18px;
+  }
+  a{
+    text-decoration-line: none;
+    color: #000000;
+  }
+  
+  /* 회원가입 버튼 */
+  .join_btn{
+    text-decoration: none;
+    padding: 7px 15px 7px 15px;
+    background-color: #32C1E0;
+    color: white;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  /* 로그인 버튼 */
+  .login_btn{
+    text-align: center;
+    background-color: #91d9e9;
+    width: 90px;
+    padding : 7px 0px 7px 0px;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+  }
+  
+  /* 스크롤바 커스텀 */
+  body::-webkit-scrollbar {
+    width: 0;  /* 스크롤바의 너비 */
+  }
+  
+  
+/* 로그인 박스 */
+.dialog{
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    background-color: white;
+    border: 2px solid #32C1E0;
+    border-radius: 30px;
+    position: absolute;
+  }
+  .title{
+    margin-left: 45px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .login_t{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+  .login_td{
+    height: 50px;
+  }
+  .login_td>input{
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 25px;
+    width: 300px;
+    padding-left: 15px;
+  }
+  .btn{
+    margin-top: 10px;
+    text-align: center;
+  }
+  .btn>button{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0.1px solid black;
+    background-color: #32C1E0;
+    color: white;
+    font-weight: 550;
+    font-size: 17px;
+  }
+  .join{
+    margin-top: 20px;
+    text-align: center;
+  }
+  .join>a{
+    color: gray;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .close{
+    width: 25px;
+    height: 25px;
+    background-image: url("./img/btn_back.png");
+    background-size: 100%;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  
