@@ -3,6 +3,12 @@
     $name = $_FILES['profile']['name']; //a.hwp
     $tmp_name = $_FILES['profile']['tmp_name']; // 이상한 파일이름(임시 디렉토리)
 
+    $uid = $_POST['uid'];
+    $upass = $_POST['upass'];
+    $uname = $_POST['uname'];
+    $utel = $_POST['utel'];
+    $uemail = $_POST['uemail'];
+
     $upload_dir ='./upload/';
     if(!is_dir($upload_dir)){ // upload dir이 없으면
         mkdir($upload_dir);  // 만들어준다 //mkdir() 함수
@@ -16,8 +22,8 @@
     
     //DB에저장
     $id = $_COOKIE['uid'];
-    $sql = "UPDATE hobby_join SET profile='$upload_file' where id='$id';";
+    $sql = "UPDATE hobby_join SET id='$uid', pass='$upass', name='$uname', tel='$utel', address='$uemail', profile='$upload_file' where id='$id';";
     mysqli_query($conn, $sql);
     mysqli_close($conn);
     echo "<meta http-equiv='refresh' content='3;url=profile.php'>";
-    ?>
+?>

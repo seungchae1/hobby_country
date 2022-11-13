@@ -113,8 +113,8 @@ a{
     background-color: #ffffff;
     position: relative;
     border-bottom: 1px solid #000000;
+    margin-top: 8px;
     margin-bottom: 5px;
-
   }
   
   /* 양 옆에 여백?을 준다 */
