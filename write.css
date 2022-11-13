@@ -1,0 +1,16 @@
+#write{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#title{
+    width: 500px;
+    height: 30px;
+}
+
+#content{
+    margin-top: 15px;
+    width: 1000px;
+    height: 400px;
+    resize: none;
+}
