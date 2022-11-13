@@ -239,12 +239,8 @@ a{
 }
 
 #list{
-  /* border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-  border: 1px solid #000000; */
-  /*   */
-  /* border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000; */
+  border: none;
+  box-shadow: none;
   margin-right: 100px;
 
 }
