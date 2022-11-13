@@ -242,11 +242,15 @@ a{
   /* border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
   border: 1px solid #000000; */
-  background-color: #91d9e9;
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
+  /*   */
+  /* border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000; */
   margin-right: 100px;
+
 }
+
+
+
 #write{
   margin-right: 100px;
 }
