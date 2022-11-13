@@ -8,7 +8,10 @@ var Hb_img=["./img/img1.png","./img/img2.png","./img/img3.png","./img/img4.png",
 "./img/img6.png/","./img/img7.png","./img/img8.png","./img/img9.png","./img/img10.png",
 "./img/img11.png","./img/img12.png","./img/img13.png","./img/img14.png","./img/img15.png",
 "./img/img16.png","./img/img17.png","./img/img18.png","./img/img19.png",
-"./img/img20.png","./img/img21.png,","./img/img22.png"];
+"./img/img20.png","./img/img21.png","./img/img22.png"];
+
+let d = document.getElementsByClassName("text_box")[0];
+let text = document.createElement('div');
 
 //페이지 시작 시 자동실행되는 함수
 window.onload=function(){
@@ -18,6 +21,12 @@ window.onload=function(){
     
     document.getElementById("result_hobby").innerHTML = Hobby[result_h];
     document.getElementById("hb_img").src=Hb_img[result_h];
+
+
+    //설명
+    text.setAttribute('class','hobby_text');
+    text.innerHTML="설명";
+    d.appendChild(text);
   }
 
 //user
