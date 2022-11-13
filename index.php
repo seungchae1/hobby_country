@@ -122,56 +122,44 @@
         <div id="board_write">
           <h3 id="c_name">전체 게시판</h3>
           
-          <div id="list">
-            <th id="number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;번호</th>
-            <th id="writer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;글쓴이</th>
-            <th id="write_name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제목&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-            <th id="date">등록일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-            <th id="lookup">조회</th>
+          <!-- 리스트 -->
+          <table border="1" id="list">
+	          <th>번호</th>
+	          <th>글쓴이</th>
+            <th>제목</th>
+            <th>등록일</th>
+            <th>조회</th>
+
+            <?php
+            include('./conn.php');
+
+            $date=date('Y/m/d');
+
+            $query ="select * from bbs order by id desc";
+            $result=mysqli_query($conn, $query);
+
+            $count=mysqli_num_rows($result);
             
-          </div>
+            for($i=0; $i<=$count; $i++){
+              $row= mysqli_fetch_array($result);
+            ?>
+
+            <tr><!-- 첫번째 줄 시작 -->
+	            <td><?php echo $row[0]; ?></td>
+	            <td><?php echo $row['name']; ?></td>
+              <td><?php echo $row['title']; ?></td>
+              <td><?php echo $date; ?></td>
+              <td><?php  ?></td>
+	          </tr><!-- 첫번째 줄 끝 -->
+            <?php }
+            mysqli_close($conn); ?>
+          </table>
 
           <div id="write_line"></div>
             
 
           <!-- 리스트 -->
-          <?php
-            include('./conn.php');
-            // $title = $_POST['title'];
-            $date=date('Y/m/d');
-            // $name = $_POST['name'];
-            // $content = $_POST['content'];
-
-            $query ="select * from bbs order by id desc";
-            $result=mysqli_query($conn, $query);
-
-
-            $count=mysqli_num_rows($result);
-            
-
-            for($i=0; $i<=$count; $i++){
-              $row= mysqli_fetch_array($result);
-              echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$row[0]."&nbsp;&nbsp;&nbsp;";
-              echo $row['name'];
-              echo $date;
-              echo $row['title'];
-              echo $row['content'];
-
-              echo "<br>";
-              echo "___________________________________________________________________________________________________________________________________________________________________";
-              echo "<br>";
-            }
-            mysqli_close($conn);
-
-          ?>
+          
           
 
 
