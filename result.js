@@ -29,6 +29,19 @@ window.onload=function(){
     d.appendChild(text);
   }
 
+//로그인 박스
+let di=document.getElementsByClassName("dialog")[0];
+function dia(){
+    di.style.width="500px"
+    di.style.height="300px";
+    di.style.visibility="visible";
+}
+function close_d(){
+    di.style.visibility="hidden";
+    di.style.width="0px"
+    di.style.height="0px";
+}
+
 //user
 let u=document.getElementsByClassName("userdrop")[0];
 let u_cnt=0;
