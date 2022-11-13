@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="./result.css">
-<script src="./result.js"></script>
 <body>
     <a href="./index.php" class="logo">🌎취미나라</a>
     <div class="user">
@@ -46,7 +45,12 @@
     <div class="hb_img">
         <img id="hb_img">
     </div>
-    
+    <div class="text_box">
+
+    </div>
+    <div class="restart">
+        <a href="./test_main.php" class="re_btn"><div class="re_text">다시하기</div><img src="./img/re.png" class="restart_img"></a>
+    </div>
     <!-- 로그인 박스 --> 
   <div class="dialog">
     <div onclick="close_d()" class="close"></div>
@@ -61,4 +65,5 @@
     </form>
   </div>
 </body>
+<script src="./result.js"></script>
 </html>

@@ -40,11 +40,10 @@
     <div class="mini_title">나에게 맞는 취미는?!</div>
     <div class="title"><img src="img/test_title.png"></div>
     <div class="btn"><a href="question.html">START</a></div>
-    
     <!-- 로그인 박스 --> 
   <div class="dialog">
     <div onclick="close_d()" class="close"></div>
-    <h2 class="title">LOGIN</h2>
+    <h2 class="login_title">LOGIN</h2>
     <form method="post" action="./login.php">
       <table class="login_t">
           <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>

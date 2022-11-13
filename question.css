@@ -78,3 +78,8 @@
     .back>img{
         width: 100%;
     }
+
+    .hobby_text{
+        margin-top: 20px;
+        text-align: center;
+    }
