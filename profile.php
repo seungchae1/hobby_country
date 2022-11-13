@@ -68,19 +68,19 @@
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>PASS WORD</td> 
-        <td class='inform_td'><input type="text" name="uid" value='<?php echo $pass; ?>'><td>
+        <td class='inform_td'><input type="text" name="upass" value='<?php echo $pass; ?>'><td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>NAME</td>
-        <td class='inform_td'><input type="text" name="uid" value='<?php echo $name; ?>'></td>
+        <td class='inform_td'><input type="text" name="uname" value='<?php echo $name; ?>'></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>TEL</td>
-        <td class='inform_td'><input type="text" name="uid" value='<?php echo $tel; ?>'></td>
+        <td class='inform_td'><input type="text" name="utel" value='<?php echo $tel; ?>'></td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td' class='inform_td'>E-MAIL</td>
-        <td class='inform_td'><input type="text" name="uid" value='<?php echo $email; ?>'></td>
+        <td class='inform_td'><input type="text" name="uemail" value='<?php echo $email; ?>'></td>
     </tr>
     <tr class='inform_tr'>
         <td colspan='2' class='inform_td'><div class="update_btn"><button type="submit">수정</button><div></td>

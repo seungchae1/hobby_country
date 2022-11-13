@@ -1,21 +1,3 @@
-<?php
-    if(isset($_COOKIE['uid'])){
-        $id = $_COOKIE['uid'];
-        include("db_conn.php");
-        $sql = "select * from hobby_join where id='$id';";
-        $sel = mysqli_query($conn, $sql);
-        $re=mysqli_fetch_row($sel);
-    
-        $id =$re[0];
-        $pass =$re[1];
-        $name =$re[2];
-        $tel =$re[3];
-        $email =$re[4];
-        $profile=$re[5];
-        if($profile == "") $profile="./img/profile_img.png";
-    mysqli_close($conn);
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,7 +100,7 @@
                 </div>
               </li>
               <li id="menu__menu">
-                <div id="text_"><a href="#">테스트</a></div>
+                <div id="text_"><a href="./test_main.php">테스트</a></div>
                 <div id="subwrapper">
                   <nav id="subnav">
                     
