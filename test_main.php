@@ -40,5 +40,19 @@
     <div class="mini_title">나에게 맞는 취미는?!</div>
     <div class="title"><img src="img/test_title.png"></div>
     <div class="btn"><a href="question.html">START</a></div>
+    
+    <!-- 로그인 박스 --> 
+  <div class="dialog">
+    <div onclick="close_d()" class="close"></div>
+    <h2 class="title">LOGIN</h2>
+    <form method="post" action="./login.php">
+      <table class="login_t">
+          <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
+          <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
+      </table>
+      <div class="btn"><button type="submit">login</button></div>
+      <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
+    </form>
+  </div>
 </body>
 </html>

@@ -68,7 +68,7 @@
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>PASS WORD</td> 
-        <td class='inform_td'><input type="text" name="upass" value='<?php echo $pass; ?>'><td>
+        <td class='inform_td'><input type="password" name="upass" value='<?php echo $pass; ?>'><td>
     </tr>
     <tr class='inform_tr'>
         <td class='inform_td'>NAME</td>
