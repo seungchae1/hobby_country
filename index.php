@@ -129,8 +129,84 @@
           </nav>
         </div>
 
-
+        <!-- 배너 -->
         <a href="#" ><img class="test_img" src="./img/test_img.png"></a>
+
+        <div class="notice_rule"> <!-- 공지사항/규칙 -->
+          <h4 id="rule">공지사항/ 규칙</h4>
+          <a href="#">규칙</a>
+        </div>
+
+        <div id="board_write">
+          <h3 id="c_name">전체 게시판</h3>
+          
+          <div id="list">
+            <th id="number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;번호</th>
+            <th id="writer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;글쓴이</th>
+            <th id="write_name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제목&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th id="date">등록일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th id="lookup">조회</th>
+            
+          </div>
+
+          <div id="write_line"></div>
+            
+
+          <!-- 리스트 -->
+          <?php
+            include('./conn.php');
+            // $title = $_POST['title'];
+            $date=date('Y/m/d');
+            // $name = $_POST['name'];
+            // $content = $_POST['content'];
+
+            $query ="select * from bbs order by id desc";
+            $result=mysqli_query($conn, $query);
+
+
+            $count=mysqli_num_rows($result);
+            
+
+            for($i=0; $i<=$count; $i++){
+              $row= mysqli_fetch_array($result);
+              echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$row[0]."&nbsp;&nbsp;&nbsp;";
+              echo $row['name'];
+              echo $date;
+              echo $row['title'];
+              echo $row['content'];
+
+              echo "<br>";
+              echo "___________________________________________________________________________________________________________________________________________________________________";
+              echo "<br>";
+            }
+            mysqli_close($conn);
+
+          ?>
+          
+
+
+          <span style='float:right'>
+            <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
+          </span>
+
+          <!-- <script>
+              $( "#write" ).click(function( event ) {
+                  location.href='write.html';
+              });
+          </script> -->
+
+          
+          
+
+        </div>
 
 
     <!-- 로그인 박스 --> 
