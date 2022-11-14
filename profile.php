@@ -28,7 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<link rel="stylesheet" href="./profile.css">
+<link rel="stylesheet" href="./profile.css?after">
 <script type="text/javascript" defer src="profile.js"></script>
 <body>
     <!-- header -->
@@ -71,6 +71,10 @@
         <td class='inform_td'><input type="password" name="upass" value='<?php echo $pass; ?>'><td>
     </tr>
     <tr class='inform_tr'>
+        <td class='inform_td'>CONFIRM PASS WORD</td> 
+        <td class='inform_td'><input type="password" name="upass_ck"><td>
+    </tr>
+    <tr class='inform_tr'>
         <td class='inform_td'>NAME</td>
         <td class='inform_td'><input type="text" name="uname" value='<?php echo $name; ?>'></td>
     </tr>
@@ -95,7 +99,7 @@
     <div onclick="close_d()" class="close"></div>
     <h2 class="title">비밀번호 확인</h2>
       <div class="join">정말 탈퇴하시겠습니까?</div>
-    <form method="post" action="./login.php">
+    <form method="post" action="./delete_user.php">
       <table class="login_t">
         <td class="login_td"><input type="password" name="upass"></td></tr>
       </table>
