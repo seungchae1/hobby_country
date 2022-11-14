@@ -135,18 +135,18 @@
 
             $date=date('Y/m/d');
 
-            $query ="select * from bbs order by id desc";
+            $query ="select * from hobbycountry_write order by id desc";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
-            
+
             for($i=0; $i<=$count; $i++){
               $row= mysqli_fetch_array($result);
             ?>
 
             <tr><!-- 첫번째 줄 시작 -->
-	            <td><?php echo $row[0]; ?></td>
-	            <td><?php echo $row['name']; ?></td>
+	            <td><?php echo $row[0];?></td>
+	            <td><?php echo $_COOKIE['uid']; ?></td>
               <td><?php echo $row['title']; ?></td>
               <td><?php echo $date; ?></td>
               <td><?php  ?></td>
@@ -155,13 +155,7 @@
             mysqli_close($conn); ?>
           </table>
 
-          <div id="write_line"></div>
-            
-
           <!-- 리스트 -->
-          
-          
-
 
           <span style='float:right'>
             <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
