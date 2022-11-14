@@ -146,7 +146,7 @@
 
             <tr><!-- 첫번째 줄 시작 -->
 	            <td><?php echo $row[0];?></td>
-	            <td><?php echo $_COOKIE['uid']; ?></td>
+	            <td><?php echo $row['id'] ?></td>
               <td><?php echo $row['title']; ?></td>
               <td><?php echo $date; ?></td>
               <td><?php  ?></td>
