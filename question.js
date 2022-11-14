@@ -21,7 +21,7 @@
     {
         switch(Q_count){
             case 1 : 
-                question.innerHTML="당신의 나이는?";
+                question.innerHTML="당신의 나이는?(선택지4)";
                 op3.setAttribute('class','option');
                 op3.setAttribute('onclick','Select_op(3)');
                 ops.appendChild(op3);
