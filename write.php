@@ -1,6 +1,8 @@
 <?php
 include('./conn.php');
 
+$id=$_COOKIE['uid'];
+
 $date = date('Y-m-d'); //현재시간
 $title = $_POST['title'];
 $content = $_POST['content'];
