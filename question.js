@@ -30,7 +30,7 @@
                 op4.setAttribute('onclick','Select_op(4)');
                 ops.appendChild(op4);
 
-                op1.innerHTML="10대 이하";
+                op1.innerHTML="10대";
                 op2.innerHTML="20대";
                 op3.innerHTML="30대";
                 op4.innerHTML="40대 이상";
@@ -182,8 +182,8 @@
                 break;
             case 11 : 
                 question.innerHTML="손재주가 좋다는 말을 자주 듣거나 그렇게 생각하나요?";
-                op1.innerHTML="넉넉함";
-                op2.innerHTML="적음";
+                op1.innerHTML="yes";
+                op2.innerHTML="no";
                 if(op==1){
                     hobby_cnt["요리"]++; hobby_cnt["스포츠"]++; hobby_cnt["그림"]++;
                     hobby_cnt["공예/만들기"]++; hobby_cnt["노래/작사/작곡"]++; hobby_cnt["악기"]++; hobby_cnt["패션"]++; hobby_cnt["요가/필라테스"]++;

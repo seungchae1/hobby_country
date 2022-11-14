@@ -142,7 +142,7 @@ body{
 
 /* 비밀번호 확인 박스*/
 .dialog{
-  top: 50%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 0;

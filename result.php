@@ -7,13 +7,14 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="./result.css">
+<script type="text/javascript" defer src="./result.js"></script>
 <body>
     <a href="./index.php" class="logo">🌎취미나라</a>
     <div class="user">
         <?php
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {
                 echo "<a href='./join.html' class='join_btn'>회원가입</a>";
-                echo "<div onclick='dia()' class='login_btn'>로그인</div>";
+                echo "<div class='login_btn' onclick='dia()'>로그인</div>";
             }
             else{
               $id = $_COOKIE['uid'];
@@ -36,6 +37,18 @@
             }
         ?>
     </div>
+    <!-- 로그인 박스 --> 
+  <div class="dialog">
+    <div onclick="close_d()" class="close"></div>
+    <h2 class="login_title">LOGIN</h2>
+      <table class="login_t">
+          <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
+          <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
+      </table>
+      <div class="btn"><button type="submit">login</button></div>
+      <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
+  </div>
+
     <div class="title">
         <h1>당신에게 어울리는 취미는</h1>
     </div>
@@ -51,19 +64,6 @@
     <div class="restart">
         <a href="./test_main.php" class="re_btn"><div class="re_text">다시하기</div><img src="./img/re.png" class="restart_img"></a>
     </div>
-    <!-- 로그인 박스 --> 
-  <div class="dialog">
-    <div onclick="close_d()" class="close"></div>
-    <h2 class="title">LOGIN</h2>
-    <form method="post" action="./login.php">
-      <table class="login_t">
-          <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
-          <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
-      </table>
-      <div class="btn"><button type="submit">login</button></div>
-      <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
-    </form>
-  </div>
+    
 </body>
-<script src="./result.js"></script>
 </html>
