@@ -112,7 +112,7 @@
         </div>
 
         <!-- 배너 -->
-        <a href="#" ><img class="test_img" src="./img/test_img.png"></a>
+        <a href="./test_main.php" ><div class="img_div"><div class="test_img"></div></div></a>
 
         <div class="notice_rule"> <!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙</h4>
