@@ -133,8 +133,6 @@
             <?php
             include('./conn.php');
 
-            $date=date('Y/m/d');
-
             $query ="select * from hobbycountry_write order by id desc";
             $result=mysqli_query($conn, $query);
 
@@ -146,9 +144,9 @@
 
             <tr><!-- 첫번째 줄 시작 -->
 	            <td><?php echo $row[0];?></td>
-	            <td><?php echo $row['id'] ?></td>
-              <td><?php echo $row['title']; ?></td>
-              <td><?php echo $date; ?></td>
+	            <td><?php echo $row[9]; ?></td>
+              <td><?php echo $row[2]; ?></td>
+              <td><?php echo $row[10]; ?></td>
               <td><?php  ?></td>
 	          </tr><!-- 첫번째 줄 끝 -->
             <?php }
