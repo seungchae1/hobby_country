@@ -1,8 +1,8 @@
 <?php
 include('./conn.php');
 
-$id=$_COOKIE['uid'];
-
+//$id=$_COOKIE['uid'];
+$id= 'kim';
 $date = date('Y-m-d'); //현재시간
 $title = $_POST['title'];
 $content = $_POST['content'];
@@ -37,10 +37,10 @@ echo "서버디렉토리 추가".$upload_file."<br/>";
 move_uploaded_file($tmp_name, $upload_file);
 //DB에 저장?
 
-$query="insert into hobbycountry_write (title, content, img_path) values('$title','$content','$upload_file')";
+$query="insert into hobbycountry_write (title, content, date, uid, img_path) values('$title','$content',$date,'$id','$upload_file')";
 mysqli_query($conn,$query);
 
 //echo $date;
-
+echo "<meta http-equiv='refresh' content='2;url=index.php'>";
 mysqli_close($conn);
 ?>
