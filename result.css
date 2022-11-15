@@ -47,7 +47,7 @@
 
     /* 스크롤바 커스텀 */
     body::-webkit-scrollbar {
-        width: 8px;  /* 스크롤바의 너비 */
+        width: 0px;  /* 스크롤바의 너비 */
     }
 
     body::-webkit-scrollbar-thumb {
@@ -60,6 +60,38 @@
     body::-webkit-scrollbar-track {
         background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
     }
+
+/*설명*/
+    .text_box{
+      margin: 30px;
+      text-align: center;
+    }
+  
+/*다시하기 버튼*/
+  .restart{
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    height: 70px;
+    background-color: rgb(255, 163, 211);
+    border-radius: 50px;
+    padding-top: 30px;
+  }
+  
+    .re_btn{
+      color: white;
+      font-size: 30px;
+    }
+  .restart_img{
+    display: inline-block;
+    margin-left: 10px;
+    width: 20px;
+  }
+  .re_text{
+    display: inline-block;
+  }
+
+
 
     
 /*user*/
@@ -200,30 +232,3 @@
     margin-top: 15px;
   }
   
-  .text_box{
-    margin: 30px;
-    text-align: center;
-  }
-
-  .restart{
-    margin: auto;
-    text-align: center;
-    width: 300px;
-    height: 70px;
-    background-color: rgb(255, 163, 211);
-    border-radius: 50px;
-    padding-top: 30px;
-  }
-
-  .re_btn{
-    color: white;
-    font-size: 30px;
-  }
-.restart_img{
-  display: inline-block;
-  margin-left: 10px;
-  width: 20px;
-}
-.re_text{
-  display: inline-block;
-}
