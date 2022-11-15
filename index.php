@@ -142,7 +142,8 @@
               $row= mysqli_fetch_array($result);
             ?>
 
-            <tr><!-- 첫번째 줄 시작 -->
+            <tr onClick="location.href='user_write.php?id=<?php $row[0] ?>'"><!-- 첫번째 줄 시작 -->
+
 	            <td><?php echo $row[0];?></td>
 	            <td><?php echo $row[9]; ?></td>
               <td><?php echo $row[2]; ?></td>
