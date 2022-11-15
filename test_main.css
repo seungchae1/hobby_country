@@ -113,6 +113,7 @@ body{
   }
   /* 로그인 버튼 */
   .login_btn{
+    cursor: pointer;
     text-align: center;
     background-color: #91d9e9;
     width: 90px;

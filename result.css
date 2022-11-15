@@ -69,13 +69,13 @@
   
 /*다시하기 버튼*/
   .restart{
-    margin: auto;
     text-align: center;
     width: 300px;
-    height: 70px;
+    height: 80px;
     background-color: rgb(255, 163, 211);
+    border: 0;
     border-radius: 50px;
-    padding-top: 30px;
+    margin-bottom: 100px;
   }
   
     .re_btn{
@@ -91,7 +91,9 @@
     display: inline-block;
   }
 
-
+.rebtn_div{
+  text-align: center;
+}
 
     
 /*user*/
@@ -157,6 +159,7 @@
   }
   /* 로그인 버튼 */
   .login_btn{
+    cursor: pointer;
     text-align: center;
     background-color: #91d9e9;
     width: 90px;

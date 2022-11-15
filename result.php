@@ -61,9 +61,10 @@
     <div class="text_box">
 
     </div>
-    <div class="restart">
+    <div class="rebtn_div">
+    <button class="restart">
         <a href="./test_main.php" class="re_btn"><div class="re_text">다시하기</div><img src="./img/re.png" class="restart_img"></a>
+    </button>
     </div>
-    
 </body>
 </html>
