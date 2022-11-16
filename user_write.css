@@ -1,0 +1,35 @@
+#user_write{
+    margin-left: 150px;
+    border: 1px solid rgb(121, 121, 121);
+    padding: 20px;
+    width: 80%;
+}
+#name{
+    font-size: small;
+    font-weight: bold;
+}
+#date{
+    font-size: small;
+    color: rgb(81, 81, 81);
+    border-bottom: 1px solid rgb(121, 121, 121);
+}
+#content{
+    margin-top: 30px;
+    
+}
+
+#comment_num{
+    font-size: small;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+}   
+.comment_write{
+    margin-top: 30px;
+    
+}
+#comment{
+    resize: none;
+    width: 80%;
+    height: 80px;
+}

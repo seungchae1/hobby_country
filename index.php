@@ -116,7 +116,7 @@
 
         <div class="notice_rule"> <!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙</h4>
-          <a href="#">규칙</a>
+          <a href="#">필독</a>
         </div>
 
         <div id="board_write">
@@ -142,19 +142,36 @@
               $row= mysqli_fetch_array($result);
             ?>
 
-            <tr onClick="location.href='user_write.php?id=<?php $row[0] ?>'"><!-- 첫번째 줄 시작 -->
+            <tr onClick="location.href='user_write.php?id=<?php echo $row[0] ?>'"><!-- 첫번째 줄 시작 -->
 
 	            <td><?php echo $row[0];?></td>
-	            <td><?php echo $row[9]; ?></td>
+	            <td><?php echo $row[5]; ?></td>
               <td><?php echo $row[2]; ?></td>
-              <td><?php echo $row[10]; ?></td>
+              <td><?php echo $row[6]; ?></td>
               <td><?php  ?></td>
 	          </tr><!-- 첫번째 줄 끝 -->
             <?php }
             mysqli_close($conn); ?>
           </table>
+          
 
           <!-- 리스트 -->
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
 
           <span style='float:right'>
             <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
