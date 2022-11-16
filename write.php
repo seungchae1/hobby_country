@@ -76,6 +76,9 @@
             <option value="식물/정원<">식물/정원</option>
           </select>
         </div>
+        <?php 
+          if($_COOKIE['uid']=='guck' || $_COOKIE['uid']=='park') echo "공지<input type='checkbox' name='rule' value=1>";
+        ?>
         <div class="i">
 
           <textarea name="content" id="content"  placeholder="내용을 입력해 주세요"></textarea>

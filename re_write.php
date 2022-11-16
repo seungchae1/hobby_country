@@ -4,6 +4,8 @@ $id=$_COOKIE['uid'];
 $date = date("Y-m-d"); //현재시간
 $title = $_POST['title'];
 $content = $_POST['content'];
+if(isset($_POST['rule'])) $rule = $_POST['rule'];
+else $rule = 0;
 if(!isset($_POST['select_h'])) echo"<script>alert('카테고리를 선택하세요.');history.go(-1);</script>";
 $category =$_POST['select_h'];
 //제목,
@@ -30,7 +32,7 @@ $upload_file=$upload_dir.basename($name);
 move_uploaded_file($tmp_name, $upload_file);
 //DB에 저장?
 
-$query="insert into write_h (id, title, content, cdate, path, category) values('$id','$title','$content','$date','$upload_file','$category')";
+$query="insert into write_h (id, title, content, cdate, path, category, rule, cnt) values('$id','$title','$content','$date','$upload_file','$category',$rule ,0)";
 mysqli_query($conn,$query);
 
 //echo $date;

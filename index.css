@@ -240,13 +240,14 @@ a{
   padding-left: 500px; 
 }
 
-#list{
+.list{
   width: 100%;
   border: none;
   box-shadow: none;
 }
 
 .list_td{
+  text-align: center;
   cursor: pointer;
 }
 
