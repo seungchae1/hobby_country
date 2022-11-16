@@ -38,7 +38,7 @@
             }
         ?>
     </div>
-        <div id="wrapper">
+    <div id="wrapper">
           <nav id="nav">
             <ul id="menu__list">
               <li id="menu__menu">
@@ -146,7 +146,7 @@
         </div>
 
         <div id="board_write">
-          <h3 id="c_name">전체 게시판</h3>
+          <h3 id="c_name">"자전거" 게시판</h3>
           
           <!-- 리스트 -->
           <table border="1" class="list">
@@ -158,7 +158,7 @@
 
             
             <?php
-            $query ="select * from write_h order by num desc";
+            $query ="select * from write_h where category='자전거' order by num desc";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -202,4 +202,4 @@
   
 
 </body>
-</html>
+</html>s
