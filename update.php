@@ -25,7 +25,7 @@
         
         //DB에저장
         $id = $_COOKIE['uid'];
-        $sql = "UPDATE hobby_join SET id='$uid', pass='$upass', name='$uname', tel='$utel', address='$uemail', profile='$upload_file' where id='$id';";
+        $sql = "UPDATE hobby_join SET id='$uid', pass='$upass', name='$uname', tel='$utel', email='$uemail', profile='$upload_file' where id='$id';";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
         echo "<meta http-equiv='refresh' content='3;url=profile.php'>";

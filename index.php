@@ -130,6 +130,9 @@
             <th>등록일</th>
             <th>조회</th>
 
+            <span style='float:right'>
+            <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
+          </span>
             <?php
             include('./conn.php');
 
@@ -156,9 +159,6 @@
 
           <!-- 리스트 -->
 
-          <span style='float:right'>
-            <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
-          </span>
 
           
           
