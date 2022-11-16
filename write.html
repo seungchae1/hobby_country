@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="./write.css" rel="stylesheet">
+    
+    <style>
+        body {margin:20px};
+    </style>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div id="write">
+        <h4>글쓰기</h4>
+      <hr>
+      <form method="post" action="write.php" enctype="multipart/form-data">
+      
+        <div class="i"> <!--input 박스에 크기 맞추는 코드.?col-sm-3 -->
+        <!-- <label for="exampleFormControlInput1" class="form-label"></label> -->
+          <input type="text" id="title" name="title" placeholder="제목을 입력해 주세요">
+        </div>
+        <div class="i">
+          <textarea name="content" id="content"  placeholder="내용을 입력해 주세요"></textarea>
+        </div>
+          <input type="file" name="userfile"><br/>
+          <!-- <button type="submit">upload</button> -->
+        <button type="submit" class="btn btn-primary">등록</button>
+      </form>
+    </div>
+    
+  </body>
+</html>

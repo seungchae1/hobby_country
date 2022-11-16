@@ -115,6 +115,9 @@
         <a href="./test_main.php" ><div class="img_div"><div class="test_img"></div></div></a>
         <div class="notice_rule"> <!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙</h4>
+<<<<<<< HEAD
+          <a href="#">필독</a>
+=======
           <table border="1" class="list">
 	          <th>번호</th>
 	          <th>글쓴이</th>
@@ -143,6 +146,7 @@
             <?php }?>
           </table>
           <a href="#">규칙</a>
+>>>>>>> a183dc2fa6349dbfd0bb949adf6d431d0b4680a1
         </div>
 
         <div id="board_write">
@@ -167,19 +171,49 @@
               $row= mysqli_fetch_array($result);
             ?>
 
-            <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr"><!-- 첫번째 줄 시작 -->
+            <tr onClick="location.href='user_write.php?id=<?php $row[0] ?>'" class="list_tr"><!-- 첫번째 줄 시작 -->
 
 	            <td class="list_td"><?php echo $row[0];?></td>
 	            <td class="list_td"><?php echo $row[1]; ?></td>
               <td class="list_td"><?php echo $row[2]; ?></td>
               <td class="list_td"><?php echo $row[5]; ?></td>
               <td class="list_td"><?php echo $row[7]; ?></td>
+>>>>>>> a183dc2fa6349dbfd0bb949adf6d431d0b4680a1
 	          </tr><!-- 첫번째 줄 끝 -->
             <?php }
             mysqli_close($conn); ?>
           </table>
+          
 
           <!-- 리스트 -->
+<<<<<<< HEAD
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+          <span style='float:right'>
+            <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
+          </span>
+
+          
+          
+          
+
+=======
+>>>>>>> a183dc2fa6349dbfd0bb949adf6d431d0b4680a1
         </div>
         <span style='float:right'>
             <button type="button" id="write"><a href="write.php">글쓰기</a></button>
