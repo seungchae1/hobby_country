@@ -27,7 +27,7 @@
 
               echo "<div class='userid'>".$id."님</div>";
               echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
-                echo "<div class='userdrop'>
+            echo "<div class='userdrop'>
                         <ul>
                           <li><a href='profile.php'>프로필</a></li>
                           <li><a href='logout.php'>로그아웃</a></li>
@@ -61,9 +61,18 @@
     <div class="text_box">
 
     </div>
-    <div class="restart">
-        <a href="./test_main.php" class="re_btn"><div class="re_text">다시하기</div><img src="./img/re.png" class="restart_img"></a>
+    <div class="rebtn_div">
+    <form action="./index.php">
+    <button class="restart" type="submit">
+        <div class="re_btn"><div class="re_text">게시판에 공유하기</div></div>
+    </button>
+    </form>
+    <br>
+    <form action="./test_main.php">
+    <button class="restart" type="submit">
+        <div class="re_btn"><div class="re_text">다시하기</div><img src="./img/re.png" class="restart_img"></div>
+    </button>
+    </form>
     </div>
-    
 </body>
 </html>

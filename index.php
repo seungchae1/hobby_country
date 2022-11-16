@@ -46,7 +46,7 @@
                 <div id="subwrapper">
                   <nav id="subnav">
                     <ul id="submenu__list">
-                      <li id="submenu__menu">공예/만들기</li>
+                      <li id="submenu__menu"><a href="./ctgr.php?c='공예/만들기'">공예/만들기</a></li>
                       <li id="submenu__menu">그림</li>
                       <li id="submenu__menu">노래/작사/작곡</li>
                       <li id="submenu__menu">악기</li>
@@ -113,35 +113,65 @@
 
         <!-- 배너 -->
         <a href="./test_main.php" ><div class="img_div"><div class="test_img"></div></div></a>
-
         <div class="notice_rule"> <!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙</h4>
+<<<<<<< HEAD
           <a href="#">필독</a>
+=======
+          <table border="1" class="list">
+	          <th>번호</th>
+	          <th>글쓴이</th>
+            <th>제목</th>
+            <th>등록일</th>
+            <th>조회</th>
+          <?php
+            include('./db_conn.php');
+
+            $query ="select * from write_h where rule=1";
+            $result=mysqli_query($conn, $query);
+
+            $count=mysqli_num_rows($result);
+
+            for($i=0; $i<$count; $i++){
+              $row= mysqli_fetch_array($result);
+            ?>
+
+            <tr onClick="location.href='user_write.php?id=<?php $row[0] ?>'" class="list_tr">
+
+	            <td class="list_td"><?php echo $row[0];?></td>
+	            <td class="list_td"><?php echo $row[1]; ?></td>
+              <td class="list_td"><?php echo $row[2]; ?></td>
+              <td class="list_td"><?php echo $row[5]; ?></td>
+              <td class="list_td"><?php  ?></td>
+            <?php }?>
+          </table>
+          <a href="#">규칙</a>
+>>>>>>> a183dc2fa6349dbfd0bb949adf6d431d0b4680a1
         </div>
 
         <div id="board_write">
           <h3 id="c_name">전체 게시판</h3>
           
           <!-- 리스트 -->
-          <table border="1" id="list">
+          <table border="1" class="list">
 	          <th>번호</th>
 	          <th>글쓴이</th>
             <th>제목</th>
             <th>등록일</th>
             <th>조회</th>
 
+            
             <?php
-            include('./conn.php');
-
-            $query ="select * from hobbycountry_write order by id desc";
+            $query ="select * from write_h order by num desc";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
 
-            for($i=0; $i<=$count; $i++){
+            for($i=0; $i<$count; $i++){
               $row= mysqli_fetch_array($result);
             ?>
 
+<<<<<<< HEAD
             <tr onClick="location.href='user_write.php?id=<?php echo $row[0] ?>'"><!-- 첫번째 줄 시작 -->
 
 	            <td><?php echo $row[0];?></td>
@@ -149,6 +179,15 @@
               <td><?php echo $row[2]; ?></td>
               <td><?php echo $row[6]; ?></td>
               <td><?php  ?></td>
+=======
+            <tr onClick="location.href='user_write.php?id=<?php $row[0] ?>'" class="list_tr"><!-- 첫번째 줄 시작 -->
+
+	            <td class="list_td"><?php echo $row[0];?></td>
+	            <td class="list_td"><?php echo $row[1]; ?></td>
+              <td class="list_td"><?php echo $row[2]; ?></td>
+              <td class="list_td"><?php echo $row[5]; ?></td>
+              <td class="list_td"><?php echo $row[7]; ?></td>
+>>>>>>> a183dc2fa6349dbfd0bb949adf6d431d0b4680a1
 	          </tr><!-- 첫번째 줄 끝 -->
             <?php }
             mysqli_close($conn); ?>
@@ -156,6 +195,7 @@
           
 
           <!-- 리스트 -->
+<<<<<<< HEAD
 
 
 
@@ -181,7 +221,12 @@
           
           
 
+=======
+>>>>>>> a183dc2fa6349dbfd0bb949adf6d431d0b4680a1
         </div>
+        <span style='float:right'>
+            <button type="button" id="write"><a href="write.php">글쓰기</a></button>
+          </span>
 
 
     <!-- 로그인 박스 --> 

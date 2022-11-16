@@ -85,6 +85,7 @@ body{
 }
 /* 로그인 버튼 */
 .login_btn{
+  cursor: pointer;
   text-align: center;
   background-color: #91d9e9;
   width: 90px;
@@ -217,17 +218,16 @@ a{
 /*공지 및 규칙*/
 .notice_rule{
   margin-left: 70px;
+  margin-right: 70px;
 }
 
 #rule{
-  
-  width: 1120px;
+  width: 100%;
   border-bottom:1px solid #000000;
 }
 
 #board_write{
-  margin-left: 70px;
-  
+  padding: 0px 70px 0px 70px;
 }
 
 /*전체게시판*/
@@ -240,17 +240,21 @@ a{
   padding-left: 500px; 
 }
 
-#list{
+.list{
+  width: 100%;
   border: none;
   box-shadow: none;
-  margin-right: 100px;
-
 }
 
+.list_td{
+  text-align: center;
+  cursor: pointer;
+}
 
 
 #write{
   margin-right: 100px;
+  margin-top: 50px;
 }
 /*전체게시판*/
 

@@ -37,3 +37,16 @@ body{
   font-size: 17px;
   color: white;
 }
+
+.back{
+  position: absolute;
+  margin: 10px 0px 0px 50px;
+  width: 80px;
+  float: left;
+}
+.back>img:hover{
+  content: url(./img/back_icon.png);
+}
+.back>img{
+  width: 100%;
+}
