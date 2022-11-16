@@ -130,27 +130,25 @@
             <th>등록일</th>
             <th>조회</th>
 
-            <span style='float:right'>
-            <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
-          </span>
+            
             <?php
-            include('./conn.php');
+            include('./db_conn.php');
 
-            $query ="select * from hobbycountry_write order by id desc";
+            $query ="select * from write_h order by id desc";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
 
-            for($i=0; $i<=$count; $i++){
+            for($i=0; $i<$count; $i++){
               $row= mysqli_fetch_array($result);
             ?>
 
             <tr onClick="location.href='user_write.php?id=<?php $row[0] ?>'"><!-- 첫번째 줄 시작 -->
 
 	            <td><?php echo $row[0];?></td>
-	            <td><?php echo $row[9]; ?></td>
+	            <td><?php echo $row[1]; ?></td>
               <td><?php echo $row[2]; ?></td>
-              <td><?php echo $row[10]; ?></td>
+              <td><?php echo $row[5]; ?></td>
               <td><?php  ?></td>
 	          </tr><!-- 첫번째 줄 끝 -->
             <?php }
@@ -158,13 +156,10 @@
           </table>
 
           <!-- 리스트 -->
-
-
-          
-          
-          
-
         </div>
+        <span style='float:right'>
+            <button type="button" id="write"><a href="write.php">글쓰기</a></button>
+          </span>
 
 
     <!-- 로그인 박스 --> 

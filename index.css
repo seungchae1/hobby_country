@@ -227,8 +227,7 @@ a{
 }
 
 #board_write{
-  margin-left: 70px;
-  
+  padding: 0px 70px 0px 70px;
 }
 
 /*전체게시판*/
@@ -242,16 +241,16 @@ a{
 }
 
 #list{
+  width: 100%;
   border: none;
   box-shadow: none;
-  margin-right: 100px;
-
 }
 
 
 
 #write{
   margin-right: 100px;
+  margin-top: 50px;
 }
 /*전체게시판*/
 
