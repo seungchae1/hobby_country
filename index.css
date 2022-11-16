@@ -218,11 +218,11 @@ a{
 /*공지 및 규칙*/
 .notice_rule{
   margin-left: 70px;
+  margin-right: 70px;
 }
 
 #rule{
-  
-  width: 1120px;
+  width: 100%;
   border-bottom:1px solid #000000;
 }
 
@@ -246,6 +246,9 @@ a{
   box-shadow: none;
 }
 
+.list_td{
+  cursor: pointer;
+}
 
 
 #write{
