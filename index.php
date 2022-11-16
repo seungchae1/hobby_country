@@ -203,12 +203,7 @@
             <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
           </span>
 
-          
-          
-          
-
-=======
->>>>>>> a183dc2fa6349dbfd0bb949adf6d431d0b4680a1
+        
         </div>
         <span style='float:right'>
             <button type="button" id="write"><a href="write.php">글쓰기</a></button>
