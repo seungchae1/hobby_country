@@ -182,28 +182,6 @@
           
 
           <!-- 리스트 -->
-
-
-
-
-
-
-          
-
-
-
-
-
-
-
-
-
-
-          <span style='float:right'>
-            <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
-          </span>
-
-        
         </div>
         <span style='float:right'>
             <button type="button" id="write"><a href="write.php">글쓰기</a></button>
