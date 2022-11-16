@@ -139,7 +139,7 @@
 	            <td class="list_td"><?php echo $row[1]; ?></td>
               <td class="list_td"><?php echo $row[2]; ?></td>
               <td class="list_td"><?php echo $row[5]; ?></td>
-              <td class="list_td"><?php  ?></td>
+              <td class="list_td"><?php echo $row[7]; ?></td>
             <?php }?>
           </table>
           <a href="#">규칙</a>
@@ -167,7 +167,7 @@
               $row= mysqli_fetch_array($result);
             ?>
 
-            <tr onClick="location.href='user_write.php?id=<?php $row[0] ?>'" class="list_tr"><!-- 첫번째 줄 시작 -->
+            <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr"><!-- 첫번째 줄 시작 -->
 
 	            <td class="list_td"><?php echo $row[0];?></td>
 	            <td class="list_td"><?php echo $row[1]; ?></td>
