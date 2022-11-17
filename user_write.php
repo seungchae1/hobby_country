@@ -3,7 +3,6 @@
 include('./conn.php');
 //idx값 가져오기
 $id=$_GET['id'];
-$comment = $_POST['comment'];
 $query = "select * from hobbycountry_write where id = $id";
 $result = mysqli_query($conn, $query);
 $row=mysqli_fetch_row($result);
@@ -31,8 +30,9 @@ $row=mysqli_fetch_row($result);
             <div id="comment_num">댓글 </div>
 
             <?php 
-             
-             
+            //댓글 보이는 부분
+            //$comment=$_POST['comment'];
+            //$mysqli_query="INSERT INTO hobby_write_comment( body, user_id, comment) VALUES('$comment','kim','$row[0]')";
             ?>
             
             <div class="comment_write">
