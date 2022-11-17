@@ -1,7 +1,7 @@
 <?php
     if(isset($_COOKIE['uid'])){
         $id = $_COOKIE['uid'];
-        include("db_conn.php");
+        include("db.php");
         $sql = "select * from hobby_join where id='$id';";
         $sel = mysqli_query($conn, $sql);
         $re=mysqli_fetch_row($sel);

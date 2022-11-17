@@ -1,5 +1,5 @@
 <?php
-include("./db_conn.php");
+include("db.php");
 $upass = $_POST['upass'];
 $id = $_COOKIE['uid'];
 $sel = "select pass from hobby_join where id='$id';";

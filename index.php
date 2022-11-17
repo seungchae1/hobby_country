@@ -19,7 +19,7 @@
             }
             else{
               $id = $_COOKIE['uid'];
-              include("db_conn.php");
+              include("db.php");
               $sql = "select * from hobby_join where id='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
@@ -123,8 +123,6 @@
             <th>등록일</th>
             <th>조회</th>
           <?php
-            include('./db_conn.php');
-
             $query ="select * from write_h where rule=1";
             $result=mysqli_query($conn, $query);
 

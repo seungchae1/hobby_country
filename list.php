@@ -1,5 +1,5 @@
 <?php
-include ['./conn.php'];
+include("db.php");
 $date=date('Y-m-d');
 
 $query ="select * from bbs";

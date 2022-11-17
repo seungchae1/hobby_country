@@ -1,5 +1,5 @@
 <?php
-include("db_conn.php");
+include("db.php");
 $uid=$_POST['uid'];
 $upass=$_POST['upass'];
 $ch_pass=$_POST['ch_pass'];

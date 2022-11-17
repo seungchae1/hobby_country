@@ -1,6 +1,6 @@
 <?php
 
-include('./db_conn.php');
+include('./db.php');
 //idx값 가져오기
 $num=$_GET['id'];
 $query = "select * from write_h where num = $num;";

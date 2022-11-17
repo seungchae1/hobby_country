@@ -1,5 +1,5 @@
 <?php
-    include("db_conn.php");
+    include("db.php");
     $name = $_FILES['profile']['name']; //a.hwp
     $tmp_name = $_FILES['profile']['tmp_name']; // 이상한 파일이름(임시 디렉토리)
 
