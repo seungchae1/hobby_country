@@ -57,12 +57,6 @@ $row=mysqli_fetch_row($result);
             <?php if($row[4]!="./write_img/") echo "<img src='$row[4]'>"; ?>
             
             <div id="comment_num">댓글 </div>
-            <div class="comment_write">
-                <div>댓글</div>
-                <textarea name="comment" id="comment"  placeholder="댓글 작성"></textarea>
-                <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
-                <td><button type="submit" class="btn_sub">등록</button></td>
-            </div>
             <?php
                 $sql = "select * from comm where num=$num;";
                 $re = mysqli_query($conn, $sql);
@@ -75,6 +69,12 @@ $row=mysqli_fetch_row($result);
                     echo "</div>";
                 }
             ?>
+            <div class="comment_write">
+                <div>댓글</div>
+                <textarea name="comment" id="comment"  placeholder="댓글 작성"></textarea>
+                <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
+                <td><button type="submit" class="btn_sub">등록</button></td>
+            </div>
         </div>
 
         
