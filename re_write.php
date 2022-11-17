@@ -1,5 +1,5 @@
 <?php
-include('./db_conn.php');
+include("db.php");
 $id=$_COOKIE['uid'];
 $date = date("Y-m-d"); //현재시간
 $title = $_POST['title'];
