@@ -13,13 +13,13 @@
     <a href="./index.php" class="logo">🌎취미나라</a>
     <div class="user">
         <?php
+            include("db.php");
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {
                 echo "<a href='./join.html' class='join_btn'>회원가입</a>";
                 echo "<div onclick='dia()' class='login_btn'>로그인</div>";
             }
             else{
               $id = $_COOKIE['uid'];
-              include("db.php");
               $sql = "select * from hobby_join where id='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
@@ -122,8 +122,7 @@
             <th>등록일</th>
             <th>조회</th>
           <?php
-            include('./db.php');
-
+            include("db.php");
             $query ="select * from write_h where rule=1";
             $result=mysqli_query($conn, $query);
 
@@ -133,7 +132,7 @@
               $row= mysqli_fetch_array($result);
             ?>
 
-            <tr onClick="location.href='user_write.php?id=<?php $row[0] ?>'" class="list_tr">
+            <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr">
 
 	            <td class="list_td"><?php echo $row[0];?></td>
 	            <td class="list_td"><?php echo $row[1]; ?></td>
@@ -142,7 +141,6 @@
               <td class="list_td"><?php echo $row[7]; ?></td>
             <?php }?>
           </table>
-          <a href="#">규칙</a>
         </div>
 
         <div id="board_write">

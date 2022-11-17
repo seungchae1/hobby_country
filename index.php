@@ -115,7 +115,6 @@
         <a href="./test_main.php" ><div class="img_div"><div class="test_img"></div></div></a>
         <div class="notice_rule"> <!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙</h4>
-          <a href="#">필독</a>
           <table border="1" class="list">
 	          <th>번호</th>
 	          <th>글쓴이</th>
@@ -142,7 +141,6 @@
               <td class="list_td"><?php echo $row[7]; ?></td>
             <?php }?>
           </table>
-          <a href="#">규칙</a>
         </div>
 
         <div id="board_write">

@@ -121,9 +121,8 @@
             <th>제목</th>
             <th>등록일</th>
             <th>조회</th>
-          <?php
-            include('./db_conn.php');
-
+            <?php
+            include("db.php");
             $query ="select * from write_h where rule=1";
             $result=mysqli_query($conn, $query);
 
@@ -133,7 +132,7 @@
               $row= mysqli_fetch_array($result);
             ?>
 
-            <tr onClick="location.href='user_write.php?id=<?php $row[0] ?>'" class="list_tr">
+            <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr">
 
 	            <td class="list_td"><?php echo $row[0];?></td>
 	            <td class="list_td"><?php echo $row[1]; ?></td>
@@ -142,7 +141,6 @@
               <td class="list_td"><?php echo $row[7]; ?></td>
             <?php }?>
           </table>
-          <a href="#">규칙</a>
         </div>
 
         <div id="board_write">
