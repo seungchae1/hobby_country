@@ -51,6 +51,7 @@
         </div>
         카테고리 <div class="select_div">
           <select name="select_h">
+            <option value="0">-카테고리 선택-</option>
             <option value="공예/만들기">공예/만들기</option>
             <option value="그림">그림</option>
             <option value="노래/작사/작곡">노래/작사/작곡</option>

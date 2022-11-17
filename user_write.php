@@ -29,7 +29,6 @@ $row=mysqli_fetch_row($result);
             }
             else{
               $id = $_COOKIE['uid'];
-              include("db_conn.php");
               $sql = "select * from hobby_join where id='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
@@ -58,11 +57,6 @@ $row=mysqli_fetch_row($result);
             <?php if($row[4]!="./write_img/") echo "<img src='$row[4]'>"; ?>
             
             <div id="comment_num">댓글 </div>
-
-            <?php 
-
-            ?>
-            
             <div class="comment_write">
                 <div>댓글</div>
                 <textarea name="comment" id="comment"  placeholder="댓글 작성"></textarea>
@@ -70,7 +64,6 @@ $row=mysqli_fetch_row($result);
                 <td><button type="submit" class="btn_sub">등록</button></td>
             </div>
             <?php
-                include("./db_conn.php");
                 $sql = "select * from comm where num=$num;";
                 $re = mysqli_query($conn, $sql);
                 $n = mysqli_num_rows($re);
@@ -89,8 +82,5 @@ $row=mysqli_fetch_row($result);
         
         
     </form>
-
-    
-    
 </body>
 </html>

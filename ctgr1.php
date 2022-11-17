@@ -122,7 +122,7 @@
             <th>등록일</th>
             <th>조회</th>
           <?php
-            include('./db_conn.php');
+            include('./db.php');
 
             $query ="select * from write_h where rule=1";
             $result=mysqli_query($conn, $query);
