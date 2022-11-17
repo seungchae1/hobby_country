@@ -55,7 +55,7 @@ $row=mysqli_fetch_row($result);
             <div id="date"><?php echo $row[6]; ?></div>
 
             <div id="content"><?php echo $row[3]; ?></div>
-            <img src="<?php echo $row[4]; ?>">
+            <?php if($row[4]!="./write_img/") echo "<img src='$row[4]'>"; ?>
             
             <div id="comment_num">댓글 </div>
 
