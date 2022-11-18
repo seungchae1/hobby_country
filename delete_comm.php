@@ -10,5 +10,5 @@ echo $num;
 
 $sql = "delete from comm where num=$num and id='$id' and content='$content';";
 mysqli_query($conn, $sql);
-echo "<meta http-equiv='refresh' content='0;url=./user_write.php?id=$num'>";
+echo "<meta http-equiv='refresh' content='2;url=./user_write.php?id=$num'>";
 ?>
