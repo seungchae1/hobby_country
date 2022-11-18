@@ -1,12 +1,13 @@
 <?php
-
 include('./db.php');
 //idx값 가져오기
 $num=$_GET['id'];
 $query = "select * from write_h where num = $num;";
 $result = mysqli_query($conn, $query);
 $row=mysqli_fetch_row($result);
-
+$cnt = (int)$row[7]+1;
+$query = "update write_h set cnt=$cnt where num = $num;";
+mysqli_query($conn, $query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
