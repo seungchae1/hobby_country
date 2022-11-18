@@ -65,7 +65,7 @@ $row=mysqli_fetch_row($result);
                     $r=mysqli_fetch_row($re);
                     echo "<div class='comm_div'>".$r[2]."<div class='comm_content'>".$r[1]."</div>";
                     if(isset($_COOKIE['uid']))
-                        if($_COOKIE['uid']==$r[2]) echo "<button class='btn_dt'>삭제</button>";
+                        if($_COOKIE['uid']==$r[2]) echo "<button class='btn_dt'><a href='./delete_comm.php?num=$r[0]&con=$r[1]'>삭제</a></button>";
                     echo "</div>";
                 }
             ?>
