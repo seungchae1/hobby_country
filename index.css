@@ -26,6 +26,10 @@ body{
     margin-left: 50px;
 }
 
+.logo_img{
+  width: 13%;
+}
+
 /*user*/
 .user{
   display: inline-block;
