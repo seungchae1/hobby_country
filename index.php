@@ -46,30 +46,18 @@
                 <div id="subwrapper">
                   <nav id="subnav">
                     <ul id="submenu__list">
-<<<<<<< HEAD
-
-=======
->>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
                       <li id="submenu__menu">공예/만들기</li>
                       <li id="submenu__menu">그림</li>
                       <li id="submenu__menu">노래/작사/작곡</li>
                       <li id="submenu__menu">악기</li>
                       <li id="submenu__menu">사진</li>
                       <li id="submenu__menu">패션</li>
-<<<<<<< HEAD
-
-=======
->>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
                       <li id="submenu__menu"><a href="./ctgr1.php">공예/만들기</a></li>
                       <li id="submenu__menu"><a href="./ctgr2.php">그림</a></li>
                       <li id="submenu__menu"><a href="./ctgr3.php">노래/작사/작곡</a></li>
                       <li id="submenu__menu"><a href="./ctgr4.php">악기</a></li>
                       <li id="submenu__menu"><a href="./ctgr5.php">사진</a></li>
                       <li id="submenu__menu"><a href="./ctgr6.php">패션</a></li>
-<<<<<<< HEAD
-
-=======
->>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
                     </ul>
                   </nav>
                 </div>
@@ -119,7 +107,10 @@
               </li>
               <li id="menu__menu">
                 <div id="text_"><a href="./test_main.php">테스트</a></div>
-                
+                <div id="subwrapper">
+                  <nav id="subnav">
+                    
+                  </nav>
                 </div>
               </li>
             </ul>
@@ -131,30 +122,15 @@
 
         <div class="notice_rule"> <!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙</h4>
-<<<<<<< HEAD
-
-          
-
-          <table class="list_1">
-            
-            <th id="list1_name"></th>
-            <th id="list1_name">제목</th>
-            <th id="list1_name">글쓴이</th>
-            <th id="list1_name">등록일</th>
-            <th id="list1_name">조회</th>
-            
-	          
-=======
           <table border="1" class="list">
 	          <th>번호</th>
 	          <th>글쓴이</th>
             <th>제목</th>
             <th>등록일</th>
             <th>조회</th>
->>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
           <?php
             include("db.php");
-            $query ="select * from hobbycountry_write where id=1";
+            $query ="select * from write_h where rule=1";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -165,11 +141,11 @@
 
             <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr">
 
-	            <td class="list_td1"><?php echo "공지";?></td>
-              <td class="list_title1"><?php echo $row[2]; ?></td>
-              <td class="list_td1"><?php echo $row[1]; ?></td>
-              <td class="list_td1"><?php echo $row[5]; ?></td>
-              <td class="list_td1"><?php echo $row[7]; ?></td>
+	            <td class="list_td"><?php echo $row[0];?></td>
+	            <td class="list_td"><?php echo $row[1]; ?></td>
+              <td class="list_td"><?php echo $row[2]; ?></td>
+              <td class="list_td"><?php echo $row[5]; ?></td>
+              <td class="list_td"><?php echo $row[7]; ?></td>
             <?php }?>
           </table>
         </div>
@@ -179,14 +155,13 @@
           <h3 id="c_name">전체 게시판</h3>
           
           <!-- 리스트 -->
-          <table class="list_2">
-            <div id="list_name">
-              <th id="list2_name">번호</th>
-              <th id="list2_name">제목</th>
-              <th id="list2_name">글쓴이</th>
-              <th id="list2_name">등록일</th>
-              <th id="list2_name">조회</th>
-            </div>
+          <table  id="list">
+	          <th>번호</th>
+	          <th>글쓴이</th>
+            <th>제목</th>
+            <th>등록일</th>
+            <th>조회</th>
+
 
             <?php 
             include('./db.php');
@@ -200,17 +175,6 @@
               $row= mysqli_fetch_array($result);
             ?>
 
-<<<<<<< HEAD
-
-            <tr onClick="location.href='user_write.php?id=<?php echo $row[0] ?>'"><!-- 첫번째 줄 시작 -->
-
-	            <td class="list_td2"><?php echo $row[0];?></td>
-              <td class="list_title2"><?php echo $row[1]; ?></td>
-              <td class="list_td2"><?php echo $row[5]; ?></td>
-              <td class="list_td2"><?php echo $row[6]; ?></td>
-              <td class="list_td2"><?php  ?></td>
-
-            
             
             <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr"><!-- 첫번째 줄 시작 -->
 
@@ -220,31 +184,20 @@
               <td class="list_td"><?php echo $row[5]; ?></td>
               <td class="list_td"><?php echo $row[7]; ?></td>
 	          </tr><!-- 첫번째 줄 끝 -->
-
             <?php }
             mysqli_close($conn); ?>
           </table>
 
           <!-- 리스트 -->
-<<<<<<< HEAD
-
-=======
->>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
 
           <span style='float:right'>
             <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
           </span>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
         </div>
         <div id="footer">
-          <h5>문의사항</h5>
-          s2125@e-mirim.hs.kr</br>
-          s2117@e-mirim.hs.kr
-          <h4 id="footer_name" src="./img/">취미나라</h4>
+          <button type="button" id="footer_q" >문의사항</button>
+          <h4 id="footer_name" src="./img/logo.png">취미나라</h4>
         </div>
 
 
