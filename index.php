@@ -110,7 +110,10 @@
               </li>
               <li id="menu__menu">
                 <div id="text_"><a href="./test_main.php">테스트</a></div>
-                
+                <div id="subwrapper">
+                  <nav id="subnav">
+                    
+                  </nav>
                 </div>
               </li>
             </ul>
@@ -123,7 +126,6 @@
         <div class="notice_rule"> <!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙</h4>
 
-
           
 
           <table class="list_1">
@@ -133,14 +135,11 @@
             <th id="list1_name">글쓴이</th>
             <th id="list1_name">등록일</th>
             <th id="list1_name">조회</th>
-            
-	          
-
-          
+     
 
           <?php
             include("db.php");
-            $query ="select * from hobbycountry_write where id=1";
+            $query ="select * from write_h where rule=1";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -151,11 +150,11 @@
 
             <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr">
 
-	            <td class="list_td1"><?php echo "공지";?></td>
-              <td class="list_title1"><?php echo $row[2]; ?></td>
-              <td class="list_td1"><?php echo $row[1]; ?></td>
-              <td class="list_td1"><?php echo $row[5]; ?></td>
-              <td class="list_td1"><?php echo $row[7]; ?></td>
+	            <td class="list_td"><?php echo $row[0];?></td>
+	            <td class="list_td"><?php echo $row[1]; ?></td>
+              <td class="list_td"><?php echo $row[2]; ?></td>
+              <td class="list_td"><?php echo $row[5]; ?></td>
+              <td class="list_td"><?php echo $row[7]; ?></td>
             <?php }?>
           </table>
         </div>
@@ -166,15 +165,13 @@
           
           <!-- 리스트 -->
           <table class="list_2">
-            
-          <div id="list_name">
+            <div id="list_name">
               <th id="list2_name">번호</th>
               <th id="list2_name">제목</th>
               <th id="list2_name">글쓴이</th>
               <th id="list2_name">등록일</th>
               <th id="list2_name">조회</th>
             </div>
-           
 
             <?php 
             include('./db.php');
@@ -197,7 +194,6 @@
               <td class="list_td2"><?php echo $row[5]; ?></td>
               <td class="list_td2"><?php echo $row[7]; ?></td>
 	          </tr><!-- 첫번째 줄 끝 -->
-
             <?php }
             mysqli_close($conn); ?>
           </table>
@@ -214,7 +210,7 @@
           <h5>문의사항</h5>
           s2125@e-mirim.hs.kr</br>
           s2117@e-mirim.hs.kr
-          <h4 id="footer_name" src="img/logo.png/">취미나라</h4>
+          <h4 id="footer_name" src="./img/">취미나라</h4>
         </div>
 
 
