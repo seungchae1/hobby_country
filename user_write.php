@@ -2,13 +2,13 @@
 
 include('./db.php');
 //idx값 가져오기
-<<<<<<< HEAD
+
 $id=$_GET['id'];
 $query = "select * from hobbycountry_write where id = $id";
-=======
+
 $num=$_GET['id'];
-$query = "select * from write_h where num = $num;";
->>>>>>> c7d691f1904e478e8b78ffa9717ea2dde66d46e3
+$query = "select * from hobbycountry_write where id = $id;";
+
 $result = mysqli_query($conn, $query);
 $row=mysqli_fetch_row($result);
 
@@ -62,16 +62,14 @@ $row=mysqli_fetch_row($result);
             <?php if($row[4]!="./write_img/") echo "<img src='$row[4]'>"; ?>
             
             <div id="comment_num">댓글 </div>
-<<<<<<< HEAD
+
 
             <?php 
             //댓글 보이는 부분
             //$comment=$_POST['comment'];
             //$mysqli_query="INSERT INTO hobby_write_comment( body, user_id, comment) VALUES('$comment','kim','$row[0]')";
             ?>
-            
-=======
->>>>>>> c7d691f1904e478e8b78ffa9717ea2dde66d46e3
+
             <div class="comment_write">
                 <div>댓글</div>
                 <textarea name="comment" id="comment"  placeholder="댓글 작성"></textarea>
@@ -92,9 +90,6 @@ $row=mysqli_fetch_row($result);
             ?>
         </div>
 
-        
-
-        
         
     </form>
 </body>
