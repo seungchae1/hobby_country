@@ -1,7 +1,7 @@
 <?php
-
 include('./db.php');
 //idx값 가져오기
+<<<<<<< HEAD
 
 $id=$_GET['id'];
 $query = "select * from hobbycountry_write where id = $id";
@@ -9,9 +9,15 @@ $query = "select * from hobbycountry_write where id = $id";
 $num=$_GET['id'];
 $query = "select * from hobbycountry_write where id = $id;";
 
+=======
+$num=$_GET['id'];
+$query = "select * from write_h where num = $num;";
+>>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
 $result = mysqli_query($conn, $query);
 $row=mysqli_fetch_row($result);
-
+$cnt = (int)$row[7]+1;
+$query = "update write_h set cnt=$cnt where num = $num;";
+mysqli_query($conn, $query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,6 +68,7 @@ $row=mysqli_fetch_row($result);
             <?php if($row[4]!="./write_img/") echo "<img src='$row[4]'>"; ?>
             
             <div id="comment_num">댓글 </div>
+<<<<<<< HEAD
 
 
             <?php 
@@ -76,6 +83,8 @@ $row=mysqli_fetch_row($result);
                 <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
                 <td><button type="submit" class="btn_sub">등록</button></td>
             </div>
+=======
+>>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
             <?php
                 $sql = "select * from comm where num=$num;";
                 $re = mysqli_query($conn, $sql);
@@ -84,12 +93,36 @@ $row=mysqli_fetch_row($result);
                     $r=mysqli_fetch_row($re);
                     echo "<div class='comm_div'>".$r[2]."<div class='comm_content'>".$r[1]."</div>";
                     if(isset($_COOKIE['uid']))
-                        if($_COOKIE['uid']==$r[2]) echo "<button class='btn_dt'>삭제</button>";
+                        if($_COOKIE['uid']==$r[2]) echo "<button class='btn_dt'><a href='./delete_comm.php?num=$r[0]&con=$r[1]'>삭제</a></button>";
                     echo "</div>";
                 }
             ?>
+            <div class="comment_write">
+                <div>댓글</div>
+                <textarea name="comment" id="comment"  placeholder="댓글 작성"></textarea>
+                <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
+                <td><button type="submit" class="btn_sub">등록</button></td>
+            </div>
         </div>
 
+<<<<<<< HEAD
+=======
+          <!-- 로그인 박스 --> 
+  <div class="dialog">
+    <div onclick="close_d()" class="close"></div>
+    <h2 class="title">LOGIN</h2>
+    <form method="post" action="./login.php">
+      <table class="login_t">
+          <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
+          <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
+      </table>
+      <div class="btn"><button type="submit">login</button></div>
+      <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
+    </form>
+  </div>
+
+        
+>>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
         
     </form>
 </body>

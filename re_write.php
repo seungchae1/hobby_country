@@ -6,8 +6,9 @@ $title = $_POST['title'];
 $content = $_POST['content'];
 if(isset($_POST['rule'])) $rule = $_POST['rule'];
 else $rule = 0;
-if(!isset($_POST['select_h'])) echo"<script>alert('카테고리를 선택하세요.');history.go(-1);</script>";
 $category =$_POST['select_h'];
+if($category==0) echo"<script>alert('카테고리를 선택하세요.');history.go(-1);</script>";
+else{
 //제목,
 
 // if($conn){
@@ -38,4 +39,5 @@ mysqli_query($conn,$query);
 //echo $date;
 echo "<meta http-equiv='refresh' content='2;url=index.php'>";
 mysqli_close($conn);
+}
 ?>
