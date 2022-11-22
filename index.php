@@ -127,7 +127,7 @@
 
           <?php
             include("db.php");
-            $query ="select * from write_h where id=1";
+            $query ="select * from write_h where rule=1";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);

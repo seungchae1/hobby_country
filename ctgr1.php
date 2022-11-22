@@ -123,7 +123,7 @@
             <th id="list1_name">조회</th>
           <?php
             include("db.php");
-            $query ="select * from hobbycountry_write where id=1";
+            $query ="select * from write_h where rule=1";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
