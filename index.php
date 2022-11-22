@@ -135,7 +135,7 @@
 
           <?php
             include("db.php");
-            $query ="select * from hobbycountry_write where id=1";
+            $query ="select * from write_h where id=1";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -172,7 +172,7 @@
             <?php 
             include('./db.php');
 
-            $query ="select * from hobbycountry_write order by id desc";
+            $query ="select * from write_h order by id desc";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -199,7 +199,7 @@
           <!-- 리스트 -->
 
           <span style='float:right'>
-            <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
+            <button type="button" id="write" class="btn btn-default" ><a href="write.php">글쓰기</a></button>
           </span>
 
 
