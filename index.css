@@ -231,7 +231,7 @@ a{
 #rule{
   width: 100%;
   padding-bottom: 10px;
-  border-bottom:3px solid #50f1ef;
+  border-bottom:3px solid #345956;
   
 }
 
@@ -246,19 +246,21 @@ a{
   
 }
 #write_name{
-  padding-left: 500px; 
+  /* padding-left: 500px;  */
 }
 
 #c_name{
   padding-bottom: 10px;
-  border-bottom: 3px solid #50f1ef;
+  border-bottom: 3px solid #345956;
 }
 
 .list_1{
   width: 100%;
   border-spacing: 0px;
+  
 }
 .list_2{
+  width: 100%;
   border-spacing: 0px;
 }
 #list1_name{
@@ -273,7 +275,7 @@ a{
 
 
 .list_tr{
-  border-top: 3px solid #50f1ef;
+  border-top: 3px solid #074140;
   
   
 }
@@ -302,6 +304,7 @@ a{
   padding-bottom: 15px;
   text-align: center;
   background-color: #edf2f2;
+  padding-left: 0px;
 }
 .list_td2{
   cursor: pointer;
@@ -309,7 +312,7 @@ a{
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: center;
-  
+  padding-left: 15px;
 }
 
 
@@ -317,6 +320,7 @@ a{
 #write{
   margin-right: 100px;
   margin-top: 50px;
+ 
 }
 /*전체게시판*/
 
@@ -387,7 +391,9 @@ a{
 }
 
 #footer{
+  
   margin-left: 45%;
+  margin-top: 50px;
 }
 #footer_q{
   background-color: #ffffff;
@@ -395,6 +401,9 @@ a{
   margin-left: 50%;
 }
 #footer_name{
-  
+  margin-top: -30px;
+  width: 20%; 
+  height: 20%;
+  margin-bottom: 30px;
 }
 

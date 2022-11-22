@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- <button type="submit" class="logo">🌎취미나라</button> -->
-    <a href="./index.php" class="logo">🌎취미나라</a>
+    <a href="./index.php" class="logo"><img src="./img/logo.png" class="logo_img"></a>
     <div class="user">
         <?php
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {

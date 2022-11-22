@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- <button type="submit" class="logo">🌎취미나라</button> -->
-    <a href="./index.php" class="logo">🌎취미나라</a>
+    <a href="./index.php" class="logo"><img src="./img/logo.png" class="logo_img"></a>
     <div class="user">
         <?php
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {
@@ -115,12 +115,13 @@
         <a href="./test_main.php" ><div class="img_div"><div class="test_img"></div></div></a>
         <div class="notice_rule"> <!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙</h4>
-          <table border="1" class="list">
-	          <th>번호</th>
-	          <th>글쓴이</th>
-            <th>제목</th>
-            <th>등록일</th>
-            <th>조회</th>
+          <table class="list_1">
+            
+            <th id="list1_name">공지</th>
+            <th id="list1_name">제목</th>
+            <th id="list1_name">글쓴이</th>
+            <th id="list1_name">등록일</th>
+            <th id="list1_name">조회</th>
             <?php
             include("db.php");
             $query ="select * from write_h where rule=1";
