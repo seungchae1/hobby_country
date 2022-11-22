@@ -157,7 +157,6 @@
               <th id="list2_name">조회</th>
             </div>
 
-            
             <?php
             $query ="select * from write_h where category='요가/필라테스' order by num desc";
             $result=mysqli_query($conn, $query);
