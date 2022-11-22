@@ -37,8 +37,7 @@
             }
         ?>
     </div>
-    <div class="mini_title">나에게 맞는 취미는?!</div>
-    <div class="title"><img src="img/test_title.png"></div>
+    <div class="title"><img src="img/back.png"></div>
     <div class="btn"><a href="question.html">START</a></div>
     <!-- 로그인 박스 --> 
   <div class="dialog">
