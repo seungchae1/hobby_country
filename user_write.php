@@ -1,7 +1,7 @@
 <?php
 include('./db.php');
 //idx값 가져오기
-<<<<<<< HEAD
+
 
 $id=$_GET['id'];
 $query = "select * from hobbycountry_write where id = $id";
@@ -9,14 +9,14 @@ $query = "select * from hobbycountry_write where id = $id";
 $num=$_GET['id'];
 $query = "select * from hobbycountry_write where id = $id;";
 
-=======
+
 $num=$_GET['id'];
-$query = "select * from write_h where num = $num;";
->>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
+$query = "select * from hobbycountry_write where id = $id;";
+
 $result = mysqli_query($conn, $query);
 $row=mysqli_fetch_row($result);
 $cnt = (int)$row[7]+1;
-$query = "update write_h set cnt=$cnt where num = $num;";
+$query = "update hobbycountry_write set id=$id where id = $id;";
 mysqli_query($conn, $query);
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ mysqli_query($conn, $query);
 </head>
 <body>
 
-<a href="./index.php" class="logo">🌎취미나라</a>
+<a href="./index.php" class="logo"><img src="./img/logo.png" class="logo_img"></a>
     <div class="user">
         <?php
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {
@@ -60,15 +60,15 @@ mysqli_query($conn, $query);
     </div>
     <form method="post" action="write_comm.php" enctype="multipart/form-data">
         <div id="user_write"> 
-            <h1><?php echo $row[2]; ?></h1> 
-            <div id="name"><?php echo $row[1]; ?></div>
+            <h1><?php echo $row[1]; ?></h1> 
+            <div id="name"><?php echo $row[2]; ?></div>
             <div id="date"><?php echo $row[6]; ?></div>
 
             <div id="content"><?php echo $row[3]; ?></div>
             <?php if($row[4]!="./write_img/") echo "<img src='$row[4]'>"; ?>
             
             <div id="comment_num">댓글 </div>
-<<<<<<< HEAD
+
 
 
             <?php 
@@ -83,8 +83,7 @@ mysqli_query($conn, $query);
                 <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
                 <td><button type="submit" class="btn_sub">등록</button></td>
             </div>
-=======
->>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
+
             <?php
                 $sql = "select * from comm where num=$num;";
                 $re = mysqli_query($conn, $sql);
@@ -105,8 +104,7 @@ mysqli_query($conn, $query);
             </div>
         </div>
 
-<<<<<<< HEAD
-=======
+
           <!-- 로그인 박스 --> 
   <div class="dialog">
     <div onclick="close_d()" class="close"></div>
@@ -122,8 +120,7 @@ mysqli_query($conn, $query);
   </div>
 
         
->>>>>>> 71501acaba09fa32178e89717d000c779909f7d0
-        
+
     </form>
 </body>
 </html>

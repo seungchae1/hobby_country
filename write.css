@@ -1,16 +1,22 @@
-body{
-    margin: 0;
-    margin-top: 25px;
-    padding: 0;
+
+.logo{
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.logo_img{
+width: 13%;
 }
 
 #write{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #title{
-    width: 500px;
+    width: 50%;
     height: 30px;
 }
 
@@ -20,15 +26,6 @@ body{
     height: 400px;
     resize: none;
 }
-
-
-.logo{
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    margin-left: 50px;
-}
-
 
 /*user*/
 .user{

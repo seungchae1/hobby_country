@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>community</title>
-    <link rel="stylesheet" href="./index.css?after">
+    <link rel="stylesheet" href="./index.css">
     <script type="text/javascript" defer src="index.js"></script>
 </head>
 <body>
     <!-- <button type="submit" class="logo">🌎취미나라</button> -->
-    <a href="./index.php" class="logo">🌎취미나라</a>
+    <a href="./index.php" class="logo"><img src="./img/logo.png" class="logo_img"></a>
     <div class="user">
         <?php
             include("db.php");
@@ -115,15 +115,15 @@
         <a href="./test_main.php" ><div class="img_div"><div class="test_img"></div></div></a>
         <div class="notice_rule"> <!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙</h4>
-          <table border="1" class="list">
-	          <th>번호</th>
-	          <th>글쓴이</th>
-            <th>제목</th>
-            <th>등록일</th>
-            <th>조회</th>
+          <table class="list_1">
+	          <th id="list1_name">번호</th>
+            <th id="list1_name">제목</th>
+	          <th id="list1_name">글쓴이</th>
+            <th id="list1_name">등록일</th>
+            <th id="list1_name">조회</th>
           <?php
             include("db.php");
-            $query ="select * from write_h where rule=1";
+            $query ="select * from hobbycountry_write where id=1";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -134,11 +134,11 @@
 
             <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr">
 
-	            <td class="list_td"><?php echo $row[0];?></td>
-	            <td class="list_td"><?php echo $row[1]; ?></td>
-              <td class="list_td"><?php echo $row[2]; ?></td>
-              <td class="list_td"><?php echo $row[5]; ?></td>
-              <td class="list_td"><?php echo $row[7]; ?></td>
+            <td class="list_td1"><?php echo "공지";?></td>
+	            <td class="list_title1"><?php echo $row[1]; ?></td>
+              <td class="list_td1"><?php echo $row[2]; ?></td>
+              <td class="list_td1"><?php echo $row[5]; ?></td>
+              <td class="list_td1"><?php echo $row[7]; ?></td>
             <?php }?>
           </table>
         </div>
@@ -147,13 +147,14 @@
           <h3 id="c_name">"공예/만들기" 게시판</h3>
           
           <!-- 리스트 -->
-          <table border="1" class="list">
-	          <th>번호</th>
-	          <th>글쓴이</th>
-            <th>제목</th>
-            <th>등록일</th>
-            <th>조회</th>
-
+          <table class="list_2">
+            <div id="list_name">
+              <th id="list2_name">번호</th>
+              <th id="list2_name">제목</th>
+              <th id="list2_name">글쓴이</th>
+              <th id="list2_name">등록일</th>
+              <th id="list2_name">조회</th>
+            </div>
             
             <?php
             $query ="select * from write_h where category='공예/만들기' order by num desc";
@@ -167,11 +168,11 @@
 
             <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr"><!-- 첫번째 줄 시작 -->
 
-	            <td class="list_td"><?php echo $row[0];?></td>
-	            <td class="list_td"><?php echo $row[1]; ?></td>
-              <td class="list_td"><?php echo $row[2]; ?></td>
-              <td class="list_td"><?php echo $row[5]; ?></td>
-              <td class="list_td"><?php echo $row[7]; ?></td>
+              <td class="list_td2"><?php echo $row[0];?></td>
+	            <td class="list_title2"><?php echo $row[1]; ?></td>
+              <td class="list_td2"><?php echo $row[5]; ?></td>
+              <td class="list_td2"><?php echo $row[6]; ?></td>
+              <td class="list_td2"><?php echo $row[7]; ?></td>
 	          </tr><!-- 첫번째 줄 끝 -->
             <?php }
             mysqli_close($conn); ?>

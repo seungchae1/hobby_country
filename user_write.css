@@ -4,11 +4,22 @@ body{
     margin-top: 25px;
 }
 #user_write{
-    margin-left: 150px;
+    margin-left: 10%;
     border: 1px solid rgb(121, 121, 121);
     padding: 50px;
     width: 80%;
 }
+.logo{
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.logo_img{
+width: 13%;
+}
+
 #name{
     font-size: small;
     font-weight: bold;
