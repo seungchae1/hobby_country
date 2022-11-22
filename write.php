@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="./write.css" rel="stylesheet">
+<link rel="stylesheet" href="./write.css">
   </head>
   <body>
     <a href="./index.php" class="logo"><img src="./img/logo.png" class="logo_img"></a>

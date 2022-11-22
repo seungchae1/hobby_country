@@ -46,14 +46,6 @@
                 <div id="subwrapper">
                   <nav id="subnav">
                     <ul id="submenu__list">
-
-                      <li id="submenu__menu">공예/만들기</li>
-                      <li id="submenu__menu">그림</li>
-                      <li id="submenu__menu">노래/작사/작곡</li>
-                      <li id="submenu__menu">악기</li>
-                      <li id="submenu__menu">사진</li>
-                      <li id="submenu__menu">패션</li>
-
                       <li id="submenu__menu"><a href="./ctgr1.php">공예/만들기</a></li>
                       <li id="submenu__menu"><a href="./ctgr2.php">그림</a></li>
                       <li id="submenu__menu"><a href="./ctgr3.php">노래/작사/작곡</a></li>
@@ -135,7 +127,7 @@
 
           <?php
             include("db.php");
-            $query ="select * from hobbycountry_write where id=1";
+            $query ="select * from write_h where id=1";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -172,7 +164,7 @@
             <?php 
             include('./db.php');
 
-            $query ="select * from hobbycountry_write order by id desc";
+            $query ="select * from write_h order by id desc";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -199,7 +191,7 @@
           <!-- 리스트 -->
 
           <span style='float:right'>
-            <button type="button" id="write" class="btn btn-default" ><a href="write.html">글쓰기</a></button>
+            <button type="button" id="write" class="btn btn-default" ><a href="write.php">글쓰기</a></button>
           </span>
 
 
