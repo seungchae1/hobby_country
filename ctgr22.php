@@ -200,7 +200,6 @@
       <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
     </form>
   </div>
-  
 
 </body>
 </html>
