@@ -9,16 +9,16 @@
 <link rel="stylesheet" href="./result.css">
 <script type="text/javascript" defer src="./result.js"></script>
 <body>
-    <a href="./index.php" class="logo">🌎취미나라</a>
+    <a href="./index.php" class="logo"><img src="./img/logo.png" class="logo_img"></a>
     <div class="user">
         <?php
+            include("db.php");
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {
                 echo "<a href='./join.html' class='join_btn'>회원가입</a>";
                 echo "<div class='login_btn' onclick='dia()'>로그인</div>";
             }
             else{
               $id = $_COOKIE['uid'];
-              include("db.php");
               $sql = "select * from hobby_join where id='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
