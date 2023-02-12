@@ -23,12 +23,18 @@
     #hb_img{
         width: 35%;
     }
-    .logo{
-        text-decoration: none;
-        color: black;
-        font-size: 30px;
-        margin-left: 50px;
-    }
+    
+.logo{
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.logo_img{
+width: 13%;
+}
+
     header{
         padding:25px 0px 0px 0px;
         width: 101%;

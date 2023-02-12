@@ -4,19 +4,12 @@ include('./db.php');
 
 
 $id=$_GET['id'];
-$query = "select * from hobbycountry_write where id = $id";
-
-$num=$_GET['id'];
-$query = "select * from hobbycountry_write where id = $id;";
-
-
-$num=$_GET['id'];
-$query = "select * from hobbycountry_write where id = $id;";
+$query = "select * from write_h where id = $id";
 
 $result = mysqli_query($conn, $query);
 $row=mysqli_fetch_row($result);
 $cnt = (int)$row[7]+1;
-$query = "update hobbycountry_write set id=$id where id = $id;";
+$query = "update write_h set cnt=$cnt where id = $id;";
 mysqli_query($conn, $query);
 ?>
 <!DOCTYPE html>
