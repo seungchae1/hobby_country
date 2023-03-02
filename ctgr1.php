@@ -135,8 +135,8 @@
             <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr">
 
             <td class="list_td1"><?php echo "공지";?></td>
-	            <td class="list_title1"><?php echo $row[1]; ?></td>
-              <td class="list_td1"><?php echo $row[2]; ?></td>
+	            <td class="list_title1"><?php echo $row[2]; ?></td>
+              <td class="list_td1"><?php echo $row[1]; ?></td>
               <td class="list_td1"><?php echo $row[5]; ?></td>
               <td class="list_td1"><?php echo $row[7]; ?></td>
             <?php }?>
@@ -167,11 +167,10 @@
             ?>
 
             <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr"><!-- 첫번째 줄 시작 -->
-
               <td class="list_td2"><?php echo $row[0];?></td>
-	            <td class="list_title2"><?php echo $row[1]; ?></td>
+	            <td class="list_title2"><?php echo $row[2]; ?></td>
+              <td class="list_td2"><?php echo $row[1]; ?></td>
               <td class="list_td2"><?php echo $row[5]; ?></td>
-              <td class="list_td2"><?php echo $row[6]; ?></td>
               <td class="list_td2"><?php echo $row[7]; ?></td>
 	          </tr><!-- 첫번째 줄 끝 -->
             <?php }

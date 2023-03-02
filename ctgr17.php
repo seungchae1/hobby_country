@@ -136,8 +136,8 @@
             <tr onClick="location.href='user_write.php?id=<?php echo $row[0]; ?>'" class="list_tr">
 
               <td class="list_td1"><?php echo "공지";?></td>
-	            <td class="list_title1"><?php echo $row[1]; ?></td>
-              <td class="list_td1"><?php echo $row[2]; ?></td>
+	            <td class="list_title1"><?php echo $row[2]; ?></td>
+              <td class="list_td1"><?php echo $row[1]; ?></td>
               <td class="list_td1"><?php echo $row[5]; ?></td>
               <td class="list_td1"><?php echo $row[7]; ?></td>
             <?php }?>

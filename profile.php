@@ -32,7 +32,7 @@
 <script type="text/javascript" defer src="profile.js"></script>
 <body>
     <!-- header -->
-<a href="./index.php" class="logo">🌎취미나라</a>
+    <a href="./index.php" class="logo"><img src="./img/logo.png" class="logo_img"></a>
     <div class="user">
         <?php
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {

@@ -7,7 +7,7 @@ $content = $_POST['content'];
 if(isset($_POST['rule'])) $rule = $_POST['rule'];
 else $rule = 0;
 $category =$_POST['select_h'];
-if($category==0) echo"<script>alert('카테고리를 선택하세요.');history.go(-1);</script>";
+if($category=="0") echo"<script>alert('카테고리를 선택하세요.');history.go(-1);</script>";
 else{
 //제목,
 
