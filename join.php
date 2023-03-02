@@ -9,7 +9,7 @@ $uaddress=$_POST['uaddress'];
 
 $sql = "select id from hobby_join;";
 $sel = mysqli_query($conn, $sql);
-$n = mysqli_num_rows($sel); 
+$n = mysqli_num_rows($sel);
 if($uid == null) echo "<script>alert('아이디를 입력하세요.'); history.go(-1);</script>"; 
 else for($i=0; $i<$n; $i++){ $re=mysqli_fetch_row($sel); if((string)$re[0]==$uid){echo "<script>alert('이미 사용중인 아이디입니다.'); history.go(-1);</script>"; break;}}
 if($upass == null) echo "<script>alert('비밀번호를 입력하세요.'); history.go(-1);</script>"; 

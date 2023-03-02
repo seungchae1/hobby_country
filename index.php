@@ -20,6 +20,7 @@
             }
             else{
               $id = $_COOKIE['uid'];
+              include("db.php");
               $sql = "select * from hobby_join where id='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
@@ -127,7 +128,7 @@
 
           <?php
             include("db.php");
-            $query ="select * from write_h where rule=1";
+            $query ="select * from hobbycountry_write where id=1";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -164,7 +165,7 @@
             <?php 
             include('./db.php');
 
-            $query ="select * from write_h order by num desc";
+            $query ="select * from write_h order by id desc";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);

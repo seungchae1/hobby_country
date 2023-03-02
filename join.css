@@ -1,24 +1,24 @@
-body{
+body {
   padding: 25px;
 }
-.title{
+.title {
   margin-bottom: 50px;
 }
-.join{
-    text-align: center;
+.join {
+  text-align: center;
 }
-.join_t{
+.join_t {
   text-align: center;
   width: 50%;
   margin: auto;
 }
 
-.join_td{
+.join_td {
   height: 70px;
   font-size: 16.5px;
 }
 
-.join_td>input{
+.join_td > input {
   border: 1px solid gray;
   border-radius: 10px;
   height: 30px;
@@ -26,27 +26,26 @@ body{
   padding-left: 15px;
 }
 
-.join_btn{
+.join_btn {
   margin-top: 40px;
-  background-color: #32C1E0;
+  background-color: #d9d9d9;
   width: 250px;
   height: 50px;
-  border: 0.1px solid black;
   border-radius: 15px;
   font-weight: 550;
   font-size: 17px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
-.back{
+.back {
   position: absolute;
   margin: 10px 0px 0px 50px;
   width: 80px;
   float: left;
 }
-.back>img:hover{
+.back > img:hover {
   content: url(./img/back_icon.png);
 }
-.back>img{
+.back > img {
   width: 100%;
 }
