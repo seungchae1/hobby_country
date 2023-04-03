@@ -128,7 +128,7 @@
 
           <?php
             include("db.php");
-            $query ="select * from hobbycountry_write where id=1";
+            $query ="select * from write_h where id=1";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -204,23 +204,5 @@
           <h5 style="margin-top:-15px">s2117@e-mirim.hs.kr</h5></br></br>
           <img src="./img/logo.png" id="footer_name"></img>
         </div>
-
-
-
-    <!-- 로그인 박스 --> 
-  <div class="dialog">
-    <div onclick="close_d()" class="close"></div>
-    <h2 class="title">LOGIN</h2>
-    <form method="post" action="./login.php">
-      <table class="login_t">
-          <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
-          <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
-      </table>
-      <div class="btn"><button type="submit">login</button></div>
-      <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
-    </form>
-  </div>
-  
-
 </body>
 </html>

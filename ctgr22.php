@@ -16,7 +16,7 @@
             include("db.php");
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {
                 echo "<a href='./join.html' class='join_btn'>회원가입</a>";
-                echo "<div onclick='dia()' class='login_btn'>로그인</div>";
+                echo "<a href='./loginpage.html' class='login_btn'>로그인</a>";
             }
             else{
               $id = $_COOKIE['uid'];
@@ -183,21 +183,5 @@
         <span style='float:right'>
             <button type="button" id="write"><a href="write.php">글쓰기</a></button>
           </span>
-
-
-    <!-- 로그인 박스 --> 
-  <div class="dialog">
-    <div onclick="close_d()" class="close"></div>
-    <h2 class="title">LOGIN</h2>
-    <form method="post" action="./login.php">
-      <table class="login_t">
-          <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
-          <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
-      </table>
-      <div class="btn"><button type="submit">login</button></div>
-      <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
-    </form>
-  </div>
-
 </body>
 </html>
