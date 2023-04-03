@@ -1,9 +1,9 @@
 <?php
 
 $url='localhost';
-$id = 'hobby';
-$passwd='mirim1234@';
-$db = 'hobby_db';
+$id = 'root';
+$passwd='mirim';
+$db = 'testdb';
 
 $conn = mysqli_connect($url, $id, $passwd, $db);
 
