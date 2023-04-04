@@ -18,15 +18,15 @@ header{
     padding-top: 10px;
     box-shadow: 0px 2px 5px rgb(235, 235, 235);
 }
-header>img{
-    width: 95px;
-    margin-left: 300px;
+header>a>img{
+  width: 95px;
+  margin-left: 300px;
 }
-header>a{
-    float: right;
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
+.link_btn{
+  float: right;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
 }
 #login_btn{
     padding: 2px 15px;

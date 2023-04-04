@@ -18,11 +18,11 @@ header{
   padding-top: 10px;
   box-shadow: 0px 2px 5px rgb(235, 235, 235);
 }
-header>img{
+header>a>img{
   width: 95px;
   margin-left: 300px;
 }
-header>a{
+.link_btn{
   float: right;
   text-decoration: none;
   color: black;
