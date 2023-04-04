@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <link rel="stylesheet" href="join.css" />
-  <body>
-    <a href="javascript: history.go(-1);"
-      ><div class="back"><img src="./img/back_icon2.png" /></div
-    ></a>
-    <div class="join">
-      <h1 class="title">취미나라 회원가입</h1>
-      <form method="post" action="join.php">
-        <table class="join_t">
-          <tr>
-            <td class="join_td">* 이름</td>
-            <td class="join_td"><input type="text" name="uname" /></td>
-          </tr>
-          <tr>
-            <td class="join_td">* 아이디</td>
-            <td class="join_td"><input type="text" name="uid" /></td>
-          </tr>
-          <tr>
-            <td class="join_td">* 비밀번호</td>
-            <td class="join_td"><input type="password" name="upass" /></td>
-          </tr>
-          <tr>
-            <td class="join_td">비밀번호 확인</td>
-            <td class="join_td"><input type="password" name="ch_pass" /></td>
-          </tr>
-          <tr>
-            <td class="join_td">전화번호</td>
-            <td class="join_td"><input type="text" name="utel" /></td>
-          </tr>
-          <tr>
-            <td class="join_td">e-mail</td>
-            <td class="join_td"><input type="text" name="uaddress" /></td>
-          </tr>
-        </table>
-        <button class="join_btn" type="submit">확인</button>
-      </form>
-    </div>
-  </body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        @import url(./join.css);
+        @import url(./join.js);
+      </style>
+    
+</head>
+<body>
+    <header>
+        <img src="./img/logo.png">
+        <a href="./loginpage.html" id="login_btn">로그인</a>
+        <a href="./join.html">회원가입</a>
+    </header>
+    <div class="title">회원 정보 입력</div>
+    <div class="s_title">취미나라의 회원이 되어 다양한 취미를 공유해보세요!</div>
+    <div class="guide">*표시는 필수입력 항목입니다.</div><br>
+    <form action="./join.php" method="post">
+      <table>
+        <tr>
+          <th>이름*</th>
+          <td><input type="text" name="uname" id="uname"></td>
+        </tr>
+        <tr>
+          <th>아이디*</th>
+          <td><input type="text" name="uid" id="uid"></td>
+        </tr>
+        <tr>
+          <th>비밀번호*</th>
+          <td><input type="password" name="upass" id="upass"></td>
+        </tr>
+        <tr>
+          <th>비밀번호 확인*</th>
+          <td><input type="password" name="ch_pass" id="ch_pass"></td>
+        </tr>
+        <tr>
+          <th>전화번호</th>
+          <td><input type="tel" name="utel" class="utel" maxlength="3">&nbsp;&nbsp; - &nbsp;&nbsp;
+            <input type="tel" name="utel2" class="utel" maxlength="4">&nbsp;&nbsp; - &nbsp;&nbsp;
+            <input type="tel" name="utel3" class="utel" maxlength="4"></td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td><input type="text" name="uaddress" class="uaddress">&nbsp;&nbsp; @ &nbsp;&nbsp;<input type="text" name="uaddress2" id="uaddress2"></td>
+        </tr>
+      </table>
+      <button class="join_btn">확인</button>
+    </form>
+    <footer>
+        <div>
+            <img src="./img/logo.png">
+        </div>
+        <div>
+            <div class="f_m_title">문의</div>
+            <div class="f_content">s2125@e-mirim.hs.kr</div>
+            <div class="f_content">s2117@e-mirim.hs.kr</div>
+        </div>
+    </footer>
+</body>
 </html>
