@@ -19,7 +19,7 @@
             }
             else{
               $id = $_COOKIE['uid'];
-              $sql = "select * from hobby_join where id='$id';";
+              $sql = "select * from hobby_user where userid='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
               $profile=$re[5];
@@ -37,17 +37,6 @@
             }
         ?>
     </div>
-    <!-- 로그인 박스 --> 
-  <div class="dialog">
-    <div onclick="close_d()" class="close"></div>
-    <h2 class="login_title">LOGIN</h2>
-      <table class="login_t">
-          <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
-          <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
-      </table>
-      <div class="btn"><button type="submit">login</button></div>
-      <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
-  </div>
 
     <div class="title">
         <h1>당신에게 어울리는 취미는</h1>
@@ -62,7 +51,7 @@
 
     </div>
     <div class="rebtn_div">
-    <form action="./index.php">
+    <form action="./chagepage.php">
     <button class="restart" type="submit">
         <div class="re_btn"><div class="re_text">게시판에 공유하기</div></div>
     </button>

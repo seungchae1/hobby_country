@@ -12,14 +12,14 @@
     <a href="./index.php" class="logo"><img src="./img/logo.png" class="logo_img"></a>
     <div class="user">
         <?php
-              include("db.php");
+            include("db.php");
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {
                 echo "<a href='./join.html' class='join_btn'>회원가입</a>";
                 echo "<div onclick='dia()' class='login_btn'>로그인</div>";
             }
             else{
               $id = $_COOKIE['uid'];
-              $sql = "select * from hobby_join where id='$id';";
+              $sql = "select * from hobby_user where userid='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
               $profile=$re[5];
