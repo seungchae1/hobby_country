@@ -33,7 +33,7 @@ $upload_file=$upload_dir.basename($name);
 move_uploaded_file($tmp_name, $upload_file);
 //DB에 저장?
 
-$query="insert into write_h (id, title, content, cdate, path, category, rule, cnt) values('$id','$title','$content','$date','$upload_file','$category',$rule ,0)";
+$query="insert into hobby_post (userid, title, contents, date, img, category, isrule, view) values('$id','$title','$content','$date','$upload_file','$category',$rule ,0)";
 mysqli_query($conn,$query);
 
 //echo $date;

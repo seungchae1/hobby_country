@@ -20,9 +20,9 @@
                 echo "<div onclick='dia()' class='login_btn'>로그인</div>";
             }
             else{
-              $id = $_COOKIE['uid'];
               include("db.php");
-              $sql = "select * from hobby_join where id='$id';";
+              $id = $_COOKIE['uid'];
+              $sql = "select * from hobby_user where userid='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
               $profile=$re[5];

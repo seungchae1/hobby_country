@@ -4,12 +4,12 @@ include('./db.php');
 
 
 $num=$_GET['id'];
-$query = "select * from write_h where num = $num";
+$query = "select * from hobby_post where num = $num";
 
 $result = mysqli_query($conn, $query);
 $row=mysqli_fetch_row($result);
-$cnt = (int)$row[7]+1;
-$query = "update write_h set cnt=$cnt where num = $num;";
+$cnt = (int)$row[4]+1;
+$query = "update hobby_post set view=$cnt where num = $num;";
 mysqli_query($conn, $query);
 ?>
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ mysqli_query($conn, $query);
             }
             else{
               $id = $_COOKIE['uid'];
-              $sql = "select * from hobby_join where id='$id';";
+              $sql = "select * from hobby_user where userid='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
               $profile=$re[5];
@@ -53,16 +53,16 @@ mysqli_query($conn, $query);
     </div>
     <form method="post" action="write_comm.php" enctype="multipart/form-data">
         <div id="user_write"> 
-            <h1><?php echo $row[2]; ?></h1> 
-            <div id="name"><?php echo $row[1]; ?></div>
-            <div id="date"><?php echo $row[6]; ?></div>
+            <h1><?php echo $row[1]; ?></h1> 
+            <div id="name"><?php echo $row[0]; ?></div>
+            <div id="date"><?php echo $row[3]; ?></div>
 
-            <div id="content"><?php echo $row[3]; ?></div>
-            <?php if($row[4]!="./write_img/") echo "<img src='$row[4]' class='user_img'>"; ?>
+            <div id="content"><?php echo $row[6]; ?></div>
+            <?php if($row[7]!="./write_img/") echo "<img src='$row[7]' class='user_img'>"; ?>
             
             <div id="comment_num">댓글 </div>
             <?php
-                $sql = "select * from comm where num=$num;";
+                $sql = "select * from hobby_comm where post_num=$num;";
                 $re = mysqli_query($conn, $sql);
                 $n = mysqli_num_rows($re);
                 for($i=0; $i<$n; $i++){
@@ -80,24 +80,6 @@ mysqli_query($conn, $query);
                 <td><button type="submit" class="btn_sub">등록</button></td>
             </div>
         </div>
-
-
-          <!-- 로그인 박스 --> 
-  <div class="dialog">
-    <div onclick="close_d()" class="close"></div>
-    <h2 class="title">LOGIN</h2>
-    <form method="post" action="./login.php">
-      <table class="login_t">
-          <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
-          <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
-      </table>
-      <div class="btn"><button type="submit">login</button></div>
-      <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
-    </form>
-  </div>
-
-        
-
     </form>
 </body>
 </html>

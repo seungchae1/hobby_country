@@ -3,7 +3,7 @@ include("db.php");
 $uid=$_POST['uid'];
 $upass= $_POST['upass'];
 
-$sql = "select id, pass from hobby_join where id='$uid' && pass='$upass';";
+$sql = "select userid, pass from hobby_user where userid='$uid' && pass='$upass';";
 $sel = mysqli_query($conn, $sql);
 $n = mysqli_num_rows($sel);
 
