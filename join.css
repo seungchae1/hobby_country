@@ -30,7 +30,7 @@ header>a>img{
 }
 #login_btn{
   padding: 2px 15px;
-  background-color: #D9D9D9;
+  background-color: #8DD38B;
   margin-right: 300px;
   margin-left: 20px;
   border: none;
@@ -59,6 +59,7 @@ header>a>img{
   font-size: 16px;
   margin: auto;
   margin-top: 80px;
+  background-color: #8DD38B;
 }
 .guide{
   font-size: 13px;
@@ -73,17 +74,22 @@ form{
 }
 table{
   margin: auto;
+  margin-top: 8px;
   border-spacing : 0;
-  border-top: 3px solid #ABABAB;
+  border-top: 3px solid #8DD38B;
 }
 tr{
   text-align: left;
   height: 50px;
 }
+.star_mark{
+  color: #5C86D7;
+  font-size: 16px;
+}
 th{
   width: 120px;
   padding-left: 25px;
-  background-color: #F5F5F5;
+  background-color: rgba(141, 211, 139, 0.2);;
   font-size: 13px;
   font-weight: 400;
   border-bottom: 1px solid #ABABAB;

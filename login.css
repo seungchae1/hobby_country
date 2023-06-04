@@ -30,7 +30,7 @@ header>a>img{
 }
 #login_btn{
     padding: 2px 15px;
-    background-color: #D9D9D9;
+    background-color: #8DD38B;
     margin-right: 300px;
     margin-left: 20px;
     border: none;
@@ -83,6 +83,9 @@ header>a>img{
     display: inline-block;
     vertical-align: middle;
 }
+.btn_div>button{
+  background-color: rgba(141, 211, 139, 0.7);
+}
 .join_q{
     text-align: center;
     font-size: 14px;
@@ -92,6 +95,7 @@ header>a>img{
 }
 .joint_btn{
     width: 270px;
+    background-color: #8DD38B;
     height: 40px;
     border-radius: 13px;
     border: none;
