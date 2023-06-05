@@ -160,25 +160,55 @@ a:hover{
 
 /*공지 및 규칙*/
 .notice_rule{
-  margin-left: 37vmin;
-  margin-right: 37vmin;
+  padding-left: 37vmin;
+  padding-right: 30vmin;
   margin-top: 100px;
+  width: 100%;
 }
-
+.list_tr{
+  width: 315px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 10px rgb(0, 0, 0, 0.1);
+  background-color: white;
+  float: left;
+}
 #rule{
   font-size: 20px;
   font-weight: bold;
   padding-bottom:30px;
 }
-
+#rule1{
+  margin-top: 20px;
+  color: #ABABAB;
+  font-weight: bold;
+  font-size: 17px;
+}
+#rule2{
+  margin-top: 10px;
+  color: #656565;
+  font-weight: 600;
+}
+#rule3{
+  margin-top: 10px;
+}
+#rule4{
+  color: #ABABAB;
+  font-size: 14px;
+}
 #rule>img{
   margin-left: 10px;
 }
-
 #board_write{
+  float: left;
+  width: 100%;
+  padding-left: 37vmin;
+  padding-right: 37vmin;
   margin-top: 100px;
-  margin-left: 37vmin;
-  margin-right: 37vmin;
+}
+.list_2{
+  width: 100%;
 }
 
 /*전체게시판*/
@@ -198,13 +228,6 @@ a:hover{
 }
 #c_name>img{
   margin-left: 10px;
-}
-.list_1{
-  width: 100%;
-  
-}
-.list_2{
-  width: 100%;
 }
 #list1_name{
   padding-bottom: 15px;
@@ -237,11 +260,7 @@ a:hover{
 
 .list_td1{
   cursor: pointer;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-align: center;
-  background-color: #edf2f2;
-  padding-left: 0px;
+  padding-left: 20px;
 }
 .list_td2{
   cursor: pointer;
