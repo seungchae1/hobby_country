@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    <header>
+  <header>
       
   <a href="./chagepage.php?page=0" class="logo"><img src="./img/logo.png" class="m-3 logo_img"></a>
   <nav class="navbar justify-content-center navbar-expand-sm">

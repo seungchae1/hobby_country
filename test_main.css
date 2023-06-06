@@ -1,190 +1,161 @@
+html{
+  margin: 0;
+  padding: 0;
+}
 body{
     margin: 0;
-    margin-top: 25px;
     padding: 0;
-    height: 90vh;
-    width: 100vw;
-}
-.title{
-    width: 100%;
-    text-align: center;
-}
-.title>img{
-    width: 60%;
+    background-image: url("./img/back.png");
+    background-size: auto 85vh;
+    background-repeat: no-repeat;
+    background-position: center 50px;
 }
 .btn{
-    height: 15%;
-    text-align: center;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 40px;
+  width: 100%;
+  text-align: center;
 }
 .btn>a{
-    padding: 0.7% 3% 0.7% 3%;
-    border: 13px solid white;
-    border-radius: 30px;
-    font-size: 3rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    background-color: #3cdbff;
+  padding: 5px 10vw 5px 10vw;
+  border-radius: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #8DD38B;
 }
 .btn>a:hover{
-    background-color: rgb(255, 157, 208);
+    background-color: #6cba69;
+    color: white;
 }
-.logo{
-  text-decoration: none;
-  color: black;
-  font-size: 30px;
-  margin-left: 50px;
-}
-
-.logo_img{
-width: 13%;
-}
-.logo_img{
-  width: 13%;
+*{
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /*user*/
-.user{
-    display: inline-block;
-    float: right;
-    margin-right: 30px;
-    height: 40px;
-  }
-  .userid{
-    display: inline-block;
-    position: absolute;
-    right: 100px;
-    top: 40px;
-  }
-  .profile_img{
-    width: 55px;
-    height: 55px;
-    margin-left: 30px;
-  }
-  .profile_img>img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  .userdrop{
-    position: absolute;
-    left: 96%;
-    transform: translate(-70%, 0%);
-    height: 0;
-    width: 0;
-    visibility: hidden;
-    background-image: url("./img/profile_drop.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    z-index: 10;
-    margin-top: 10px;
-    padding-top: 10px;
-  }
-  .userdrop>ul{
-    text-align: center;
-  }
-  .userdrop>ul>li{
-    text-align: center;
-    list-style: none;
-    margin-top: 18px;
-  }
-  a{
-    text-decoration-line: none;
-    color: #000000;
-  }
-  
-  /* 회원가입 버튼 */
-  .join_btn{
-    text-decoration: none;
-    padding: 7px 15px 7px 15px;
-    background-color: #32C1E0;
-    color: white;
-    border-radius: 10px;
-    margin-right: 10px;
-  }
-  /* 로그인 버튼 */
-  .login_btn{
-    cursor: pointer;
-    text-align: center;
-    background-color: #91d9e9;
-    width: 90px;
-    padding : 7px 0px 7px 0px;
-    border-radius: 10px;
-    color: white;
-    display: inline-block;
-  }
-  
-  /* 스크롤바 커스텀 */
-  body::-webkit-scrollbar {
-    width: 0;  /* 스크롤바의 너비 */
-  }
-  
-  
-/* 로그인 박스 */
-.dialog{
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 0;
-    width: 0;
-    visibility: hidden;
-    background-color: white;
-    border: 2px solid #32C1E0;
-    border-radius: 30px;
-    position: absolute;
-  }
-  .login_title{
-    margin-left: 45px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .login_t{
-    text-align: center;
-    width: 80%;
-    margin: auto;
-  }
-  .login_td{
-    height: 50px;
-  }
-  .login_td>input{
-    border: 1px solid gray;
-    border-radius: 10px;
-    height: 25px;
-    width: 300px;
-    padding-left: 15px;
-  }
-  .btn{
-    margin-top: 10px;
-    text-align: center;
-  }
-  .btn>button{
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-    border: 0.1px solid black;
-    background-color: #32C1E0;
-    color: white;
-    font-weight: 550;
-    font-size: 17px;
-  }
-  .join{
-    margin-top: 20px;
-    text-align: center;
-  }
-  .join>a{
-    color: gray;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  .close{
-    width: 25px;
-    height: 25px;
-    background-image: url("./img/btn_back.png");
-    background-size: 100%;
-    float: right;
-    margin-right: 20px;
-    margin-top: 15px;
-  }
-  
+.userid{
+  display: inline-block;
+  position: absolute;
+  right: 100px;
+  top: 40px;
+}
+.profile_img{
+  width: 55px;
+  height: 55px;
+  margin-left: 30px;
+}
+.profile_img>img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userdrop{
+  position: absolute;
+  left: 96%;
+  transform: translate(-70%, 0%);
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  background-image: url("./img/profile_drop.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 10;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.userdrop>ul{
+  text-align: center;
+}
+.userdrop>ul>li{
+  text-align: center;
+  list-style: none;
+  margin-top: 18px;
+}
+
+/*header*/
+header{
+  padding-left: 290px;
+  width: 100%;
+  height:50px;
+  box-shadow: 0px 2px 5px rgb(235, 235, 235);
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* ------------------------------------------------카테고리-------------------------------------------------- */
+nav{
+  float: left;
+  margin-left: 110px;
+}
+nav>ul>li>a{
+  font-size: 13px;
+  margin: 0 30px 0 30px;
+}
+.dropdown-menu{
+  border: none;
+  background:none;
+  width: 100vw;
+  text-align: center;
+  margin-top: -2px;
+}
+#drop1{
+  margin-left: -570px;
+}
+#drop2{
+  margin-left: -670px;
+}
+#drop3{
+  margin-left: -770px;
+}
+#drop4{
+  margin-left: -870px;
+}
+.dropdown-item{
+  background-color: rgba(141, 211, 139, 0.2);
+  padding:10px;
+}
+.dropdown-item>a{
+  margin:0 15px 0 15px;
+  color: #656565;
+  font-size: 13px;
+}
+.dropdown-item:hover{
+  background-color: rgba(141, 211, 139, 0.2);
+}
+.logo_img{
+  float: left;
+  width: 95px;
+}
+#login_btn{
+  padding: 2px 15px;
+  background-color: #8DD38B;
+  margin-right: 300px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 15px;
+}
+.link_btn{
+  float: right;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+a{
+  text-decoration-line: none;
+  color: #000000;
+}
+a:hover{
+  text-decoration-line: none;
+  color: #000000;
+}
+
+/* 스크롤바 커스텀 */
+body::-webkit-scrollbar {
+  width: 0;  /* 스크롤바의 너비 */
+}
