@@ -102,6 +102,17 @@ body::-webkit-scrollbar {
   font-size: 16px;
 }
 
+/* 글 작성하기 */
+.write_top {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 필수 항목 */
+.pilsu {
+  text-align: right;
+}
+
 .ttt {
   background-color: #e8f6e8;
   text-align: left;

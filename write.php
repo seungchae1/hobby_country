@@ -41,8 +41,8 @@
         ?>
     </div>
     <div id="write">
-        <h4>글 작성하기</h4>
-        <h5><span class="star_mark">*</span>표시는 필수입력 항목입니다.</h5>
+        <h4 class="write_top">글 작성하기</h4>
+        <h5 class="pilsu"><span class="star_mark">*</span>표시는 필수입력 항목입니다.</h5>
       
       <div>
         <form method="post" action="re_write.php" enctype="multipart/form-data">
@@ -53,7 +53,7 @@
             </tr>
             
             <tr>
-              <th><div class="ttt">카테고리<span class="star_mark">*</span></div></th>
+              <th class="ttt"><div>카테고리<span class="star_mark">*</span></div></th>
               <td> 
                 <div class="select_div">
                   <select name="select_h">
