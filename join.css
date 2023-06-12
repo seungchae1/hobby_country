@@ -12,21 +12,18 @@ body{
 
 
 /*header*/
+
 header{
+  padding-left: 290px;
   width: 100%;
-  height: 35px;
-  padding-top: 10px;
+  height:50px;
   box-shadow: 0px 2px 5px rgb(235, 235, 235);
+  background-color: #ffffff;
+  position: relative;
 }
-header>a>img{
+.logo_img{
+  float: left;
   width: 95px;
-  margin-left: 300px;
-}
-.link_btn{
-  float: right;
-  text-decoration: none;
-  color: black;
-  font-size: 13px;
 }
 #login_btn{
   padding: 2px 15px;
@@ -35,6 +32,26 @@ header>a>img{
   margin-left: 20px;
   border: none;
   border-radius: 15px;
+}
+.link_btn{
+  float: right;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+/* 스크롤바 커스텀 */
+body::-webkit-scrollbar {
+  width: 0;  /* 스크롤바의 너비 */
+}
+
+a{
+  text-decoration-line: none;
+  color: #000000;
+}
+a:hover{
+  text-decoration-line: none;
+  color: #000000;
 }
 /*header end*/
 
@@ -62,12 +79,17 @@ header>a>img{
   background-color: #8DD38B;
 }
 .guide{
-  font-size: 13px;
   float: right;
-  margin-right: 300px;
-  color: #272727;
+  margin-right: 340px;
   font-weight: 300;
   display: inline-block;
+}
+.star_mark{
+  color: #5C86D7;
+  font-size: 18px;
+}
+.guid_cont{
+  font-size: 13px;
 }
 form{
   text-align: center;
@@ -81,10 +103,6 @@ table{
 tr{
   text-align: left;
   height: 50px;
-}
-.star_mark{
-  color: #5C86D7;
-  font-size: 16px;
 }
 th{
   width: 120px;
@@ -114,29 +132,8 @@ input{
 .uaddress{width: 190px;}
 #uaddress2{width: 150px;}
 /*footer*/
-footer{
-  width: 100%;
-  height: 260px;
-  background-color: #F5F5F5;
-  margin-top: 150px;
-}
-footer>div>img{
-  width: 95px;
-  margin-left: 300px;
-}
-footer>div{
-  margin: 20px 50px 0 0;
-  float: left;
-}
-.f_m_title{
-  font-weight: 500;
-  font-size: 14px;
-  margin-top: 2px;
-  margin-bottom: 20px;
-}
-.f_content{
-  font-size: 13px;
-  margin-bottom: 10px;
-}
 
+#footer_img{
+  width: 100%;
+}
 /*footer end*/
