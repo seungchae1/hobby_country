@@ -5,10 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/earth_logo.jpg" />
+		<link rel="icon" type="image/png" href="img/earth_logo.jpg" sizes="192x192"/>
+		<meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <title>community</title>
+    <title>#취미나라</title>
     <link rel="stylesheet" href="./index.css?after">
     <script type="text/javascript" defer src="index.js"></script>
     <style>
@@ -98,19 +102,22 @@
             else{
               include("db.php");
               $id = $_COOKIE['uid'];
-              $sql = "select * from hobby_user where userid='$id';";
+              $sql = "select name,profile from hobby_user where userid='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
-              $profile=$re[5];
+              $name = $re[0];
+              $profile=$re[1];
               if($profile == null) $profile="./img/profile_img.png";
 
-              echo "<div class='userid'>".$id."님</div>";
-              echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
+              echo "<div class='p-3 link_btn username'>";
+              echo "<div class='userid1'><div class='userid'>".$name."</div>님 환영합니다.</div>";
+              //echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
                 echo "<div class='userdrop'>
                         <ul>
                           <li><a href='profile.php'>프로필</a></li>
                           <li><a href='logout.php'>로그아웃</a></li>
                         </ul>
+                      </div>
                       </div>
                     ";
             }
@@ -121,7 +128,7 @@
         <?php
         if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) 
         {
-        '<a href="./test_main.php" ><div class="test_img"></div></a>';
+        echo '<a href="./test_main.php" ><div class="test_img"></div></a>';
         echo '<div class="notice_rule"> ';
         echo '<!-- 공지사항/규칙 -->
           <h4 id="rule">공지사항/ 규칙<img src="./img/Line.png"></h4> ';
@@ -134,7 +141,7 @@
             for($i=0; $i<3; $i++){
               $row= mysqli_fetch_array($result);
               ?>
-              <div onClick='.'location.href='user_write.php?id=$row[5];'" class="list_tr">
+              <div onClick='location.href="user_write.php?id=<?php echo $row[5];?>"' class="list_tr">
 
                 <div class="list_td1" id="rule1"><?php echo "공지";?></div>
                 <div class="list_td1" id="rule2"><?php echo $row[6]; ?></div>
