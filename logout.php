@@ -3,4 +3,4 @@
 setcookie('uid','',time()-1);
 setcookie('upass','',time()-1);
 ?>
-<meta http-equiv='refresh' content='2; url=index.php'>
+<meta http-equiv='refresh' content='1.5; url=index.php'>

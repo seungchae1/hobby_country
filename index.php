@@ -109,8 +109,7 @@
               $profile=$re[1];
               if($profile == null) $profile="./img/profile_img.png";
 
-              echo "<div class='p-3 link_btn username'>";
-              echo "<div class='userid1'><a href='./profile.php' class='userid'>".$name."</a>님 환영합니다.</div>";
+              echo "<div class='p-3 link_btn username'><div class='userid1'><a href='./profile.php' class='userid'>".$name."</a>님 환영합니다.</div><a href='./logout.php' class='logout'>로그아웃</a></div>";
               //echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
             }
         ?>

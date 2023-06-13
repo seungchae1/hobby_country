@@ -93,7 +93,7 @@
     </li>
   </ul>
 </nav>
-        <?php
+<?php
             include("db.php");
             if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {
               echo "<div class='p-3 link_btn'><a href='./join.html' id='join_btn'>회원가입</a>";
@@ -102,21 +102,15 @@
             else{
               include("db.php");
               $id = $_COOKIE['uid'];
-              $sql = "select * from hobby_user where userid='$id';";
+              $sql = "select name,profile from hobby_user where userid='$id';";
               $sel = mysqli_query($conn, $sql);
               $re=mysqli_fetch_row($sel);
-              $profile=$re[5];
+              $name = $re[0];
+              $profile=$re[1];
               if($profile == null) $profile="./img/profile_img.png";
 
-              echo "<div class='userid'>".$id."님</div>";
-              echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
-                echo "<div class='userdrop'>
-                        <ul>
-                          <li><a href='profile.php'>프로필</a></li>
-                          <li><a href='logout.php'>로그아웃</a></li>
-                        </ul>
-                      </div>
-                    ";
+              echo "<div class='p-3 link_btn username'><div class='userid1'><a href='./profile.php' class='userid'>".$name."</a>님 환영합니다.</div><a href='./logout.php' class='logout'>로그아웃</a></div>";
+              //echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
             }
         ?>
     </header>
