@@ -87,6 +87,10 @@ header{
 .guid_cont{
   font-size: 13px;
 }
+.passlock{
+  width: 18px;
+  margin-left: 10px;
+}
 form{
   text-align: center;
 }

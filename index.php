@@ -109,23 +109,22 @@
               $profile=$re[1];
               if($profile == null) $profile="./img/profile_img.png";
 
-              echo "<div class='p-3 link_btn username'><div class='userid1'><a href='./profile.php' class='userid'>".$name."</a>님 환영합니다.</div><a href='./logout.php' class='logout'>로그아웃</a></div>";
+              echo "<div class='p-3 link_btn username'><div class='userid1'><a href='./profile.php?update=no' class='userid'>".$name."</a>님 환영합니다.</div><a href='./logout.php' class='logout'>로그아웃</a></div>";
               //echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
             }
         ?>
     </header>
 
-        <!-- 배너 -->
         <?php
         if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) 
         {
-        echo '<a href="./test_main.php" ><div class="test_img"></div></a>';
+        echo '<a href="./test_main.php"><img class="test_img" src="./img/b_img.png"></div></a>';
+
         echo '<div class="notice_rule"> ';
-        echo '<!-- 공지사항/규칙 -->
-          <h4 id="rule">공지사항/ 규칙<img src="./img/Line.png"></h4> ';
+        echo '<h4 id="rule">공지사항/ 규칙<img src="./img/Line.png"> <a href="/rule_page.php" class="rule_more">전체 보기</a></h4>';
      
             include("db.php");
-            $query ="select * from hobby_post where isrule = 1";
+            $query ="select * from hobby_post where isrule = 1 order by date";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
@@ -159,21 +158,21 @@
             include('./db.php');
 
             if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) $query ="select * from hobby_post where isrule=null or isrule=0 order by num desc";
-            else $query ="select * from hobby_post where category='".$_COOKIE['page']."' order by date desc";
+            else $query ="select * from hobby_post where category='".$_COOKIE['page']."' order by date";
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
 
             
 
-            for($i=0; $i<$count; $i++){
+            for($i=$count-1; $i>=0; $i--){
               $row= mysqli_fetch_array($result);
             ?>
 
             
             <tr onClick="location.href='user_write.php?id=<?php echo $row[5]; ?>'"><!-- 첫번째 줄 시작 -->
 
-	            <td class="list_td2"><?php echo $row[5];?></td>
+	            <td class="list_td2"><?php echo $i+1;?></td>
 	            <td class="list_td2"><?php echo $row[0]; ?></td>
               <td class="list_td2"><?php echo $row[1]; ?></td>
               <td class="list_td2"><?php echo $row[3]; ?></td>
