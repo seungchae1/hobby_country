@@ -1,38 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="./write.css" rel="stylesheet">
-    
+    <link href="./write1.css" rel="stylesheet" />
+
     <style>
-        body {margin:20px};
+      body {
+        margin: 20px;
+      }
     </style>
 
     <title>Hello, world!</title>
   </head>
   <body>
-
     <div id="write">
-        <h4>글쓰기</h4>
-      <hr>
+      <h4>글 작성하기</h4>
+        <h5>*표시는 필수입력 항목입니다.</h5>
+      <hr />
       <form method="post" action="write.php" enctype="multipart/form-data">
-      
-        <div class="i"> <!--input 박스에 크기 맞추는 코드.?col-sm-3 -->
-        <!-- <label for="exampleFormControlInput1" class="form-label"></label> -->
-          <input type="text" id="title" name="title" placeholder="제목을 입력해 주세요">
-        </div>
-        <div class="i">
-          <textarea name="content" id="content"  placeholder="내용을 입력해 주세요"></textarea>
-        </div>
-          <input type="file" name="userfile"><br/>
-          <!-- <button type="submit">upload</button> -->
-        <button type="submit" class="btn btn-primary">등록</button>
+        <table class="i" border="1">
+          <tr>
+            <th class="ttt">제목*</th>
+            <td><input type="text" id="title" name="title"/></td>
+          </tr>
+          
+          <tr>
+            <th><div class="ttt">카테고리*</div></th>
+            <td> 
+              <div class="select_div">
+                <select name="select_h">
+                  <option value="예술">예술</option>
+                  <option value="운동">운동</option>
+                  <option value="문화">문화</option>
+                  <option value="여가">여가</option>
+                </select>
+                <?php 
+                if($_COOKIE['uid']=='guck' || $_COOKIE['uid']=='park') echo "공지<input type='checkbox' name='rule' value=1>";
+                ?>
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            <th class="ttt">글 내용*</th>
+            <td><input name="content" id="content" /></td>
+          </tr>
+          <tr>
+            <th class="ttt">파일/이미지</th>
+            <td><input type="file" name="userfile" /></td>
+          </tr>
+        </table>
+        <button type="submit" class="btn-primary">취소</button>
+        <button type="submit" class="btn-primary">확인</button>
+      </form>
       </form>
     </div>
-    
   </body>
 </html>
