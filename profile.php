@@ -100,7 +100,7 @@
                     p.innerText = a;
                   }
                   else{
-                    p.innerText=".$re[1].";
+                    p.innerText='".$re[1]."';
                   }
                 }"; 
                 ?> 
@@ -128,31 +128,49 @@
         <table class="info_table">
           <tr>
             <th>이름 <span class="star_mark">*</span></th>
-            <td><input type="text" name="uname" id="uname"></td>
+            <td><input type="text" name="uname" id="uname" value=<?php echo $re[2]; ?>></td>
           </tr>
           <tr>
             <th>아이디 <span class="star_mark">*</span></th>
-            <td><input type="text" name="uid" id="uid"></td>
+            <td>
+              <?php echo $re[0]; ?>
+            </td>
           </tr>
           <tr>
             <th>비밀번호 <span class="star_mark">*</span></th>
-            <td><input type="password" name="upass" id="upass"></td>
+            <td><input type="password" name="upass" id="upass" value=<?php echo $re[1]; ?>></td>
           </tr>
           <tr>
             <th>비밀번호 확인 <span class="star_mark">*</span></th>
             <td><input type="password" name="ch_pass" id="ch_pass"></td>
           </tr>
           <tr>
+            <?php
+              $tel1= substr($re[3], 0 , 3);
+              $tel2= substr($re[3], 4, 4);
+              $tel3= substr($re[3], 9, 4);
+            ?>
             <th>전화번호</th>
-            <td><input type="tel" name="utel" class="utel" maxlength="3">&nbsp;&nbsp; - &nbsp;&nbsp;
-              <input type="tel" name="utel2" class="utel" maxlength="4">&nbsp;&nbsp; - &nbsp;&nbsp;
-              <input type="tel" name="utel3" class="utel" maxlength="4">
+            <td><input type="tel" name="utel" class="utel" maxlength="3"  value=<?php echo $tel1; ?>>&nbsp;&nbsp; - &nbsp;&nbsp;
+              <input type="tel" name="utel2" class="utel" maxlength="4"  value=<?php echo $tel2; ?>>&nbsp;&nbsp; - &nbsp;&nbsp;
+              <input type="tel" name="utel3" class="utel" maxlength="4"  value=<?php echo $tel3; ?>>
             </td>
           </tr>
           <tr>
+            <?php
+              $mail_len= strlen($re[4]);
+              $mail_len_1=0;
+              for($i=0; $i<$mail_len; $i++){
+                if($re[4][$i] == '@'){$mail_len_1=$i; break;}
+              }
+
+              $mail1 = substr($re[4], 0, $mail_len_1);
+              $mail2 = substr($re[4], $mail_len_1+1);
+
+            ?>
             <th>이메일</th>
-            <td><input type="text" name="uaddress" class="uaddress">&nbsp;&nbsp; @ &nbsp;&nbsp;<input type="text"
-                name="uaddress2" id="uaddress2"></td>
+            <td><input type="text" name="uaddress" class="uaddress" value=<?php echo $mail1; ?>>&nbsp;&nbsp; @ &nbsp;&nbsp;
+            <input type="text" name="uaddress2" id="uaddress2" value=<?php echo $mail2; ?>></td>
           </tr>
         </table>
         <button type="submit" class="sub_btn">완료</button>
