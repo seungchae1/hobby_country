@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-		<link rel="apple-touch-icon" sizes="180x180" href="img/earth_logo.jpg" />
-		<link rel="icon" type="image/png" href="img/earth_logo.jpg" sizes="192x192"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="img/earth_logo.png" />
+		<link rel="icon" type="image/png" href="img/earth_logo.png" sizes="197x197"/>
 		<meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
@@ -110,16 +110,8 @@
               if($profile == null) $profile="./img/profile_img.png";
 
               echo "<div class='p-3 link_btn username'>";
-              echo "<div class='userid1'><div class='userid'>".$name."</div>님 환영합니다.</div>";
+              echo "<div class='userid1'><a href='./profile.php' class='userid'>".$name."</a>님 환영합니다.</div>";
               //echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
-                echo "<div class='userdrop'>
-                        <ul>
-                          <li><a href='profile.php'>프로필</a></li>
-                          <li><a href='logout.php'>로그아웃</a></li>
-                        </ul>
-                      </div>
-                      </div>
-                    ";
             }
         ?>
     </header>
