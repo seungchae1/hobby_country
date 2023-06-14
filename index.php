@@ -160,16 +160,16 @@
             if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) $query ="select * from hobby_post where isrule=null or isrule=0 order by num desc";
             else $query ="select * from hobby_post where category='".$_COOKIE['page']."' order by date";
             $result=mysqli_query($conn, $query);
-
             $count=mysqli_num_rows($result);
-
-            
+/*
+            if (isset($_GET['len']))
+            $len = $_GET['len'];
+            if (!isset($len))
+            $len = ($count >= 10) ? $count - 10 : 0;*/
 
             for($i=$count-1; $i>=0; $i--){
               $row= mysqli_fetch_array($result);
             ?>
-
-            
             <tr onClick="location.href='user_write.php?id=<?php echo $row[5]; ?>'"><!-- 첫번째 줄 시작 -->
 
 	            <td class="list_td2"><?php echo $i+1;?></td>
@@ -178,10 +178,11 @@
               <td class="list_td2"><?php echo $row[3]; ?></td>
               <td class="list_td2" id="list_td2_r"><?php echo $row[2]; ?></td>
 	          </tr><!-- 첫번째 줄 끝 -->
-            <?php }
-            mysqli_close($conn); ?>
+            <?php }?>
           </table>
-        </div>
+         <!-- <div class="post_page" ><?php for($i=0; $i<$count/10; $i++) { ?>
+          <div onclick="location.href='changePost.php?cnt=<?php echo $count; ?>&num= <?php echo ($i+1);?>'" class="page1"> <?php echo ($i + 1) ; ?></div> <?php }?></div>-->
+          </div>
           <span style='float:right'>
             <button type="button" id="write" class="btn btn-default" ><a href="write.php"><img src="./img/write_icon.png"></a></button>
           </span>

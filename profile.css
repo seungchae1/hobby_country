@@ -52,7 +52,17 @@ header{
 
 /*====================== body ========================*/
 .wrap_table{
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+}
+.list_my_post{
+  float: left;
+  height: 455px;
+  overflow: hidden;
+}
+.list_my_comm{
+  width: 100%;
+  height: 445px;
+  overflow: hidden;
 }
 .sub_title{
   font-size: 20px;
@@ -72,7 +82,6 @@ header{
   font-size: 13px;
   float: right;
   margin-right: 20vw;
-  margin-top: 30px;
 }
 .guide{
   float: right;
@@ -96,6 +105,7 @@ form{
 }
 .info_table{
   margin: auto;
+  margin-bottom: 50px;
   margin-top: 8px;
   border-spacing : 0;
   border-top: 3px solid #8DD38B;
@@ -123,6 +133,7 @@ td{
   padding-left: 25px;
   font-size: 13px;
 }
+
 input{
   border:1px solid #ABABAB;
   border-radius: 12px;

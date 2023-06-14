@@ -271,10 +271,20 @@ a:hover{
 #write{
   margin-top: 50px;
  margin-right: 70px;
- margin-top: 200px;
+ margin-top: 120px;
 }
 #write>a>img{
   width: 70px;
+}
+.post_page{
+  margin-top: 80px;
+  font-size: 14px;
+  text-align: center;
+}
+.page1{
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
 }
 /*전체게시판*/
 #footer_img{

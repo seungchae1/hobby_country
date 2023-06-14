@@ -179,10 +179,10 @@
   </div>
 
   <!-- 내 게시글 -->
-  <div class="wrap_table">
+  <div class="wrap_table list_my_post">
     <h4 class="sub_title">내가 쓴 게시물<img src="./img/Line.png" /></h4>
     <!-- 리스트 -->
-    <table class="list_2">
+    <table class="my_post_table">
       <tr id="list_name">
         <td class="list2_name">NO</td>
         <td class="list2_name">제목</td>
@@ -190,16 +190,12 @@
         <td class="list2_name">내용</td>
         <td class="list2_name" id="list2_r">조회수</td>
       </tr>
-
       <?php
 
       $query = "select * from hobby_post where userid='$id' order by date desc";
       $result = mysqli_query($conn, $query);
-
+      
       $count = mysqli_num_rows($result);
-
-
-
       for ($i = $count - 1; $i >= 0; $i--) {
         $row = mysqli_fetch_array($result);
         ?>
@@ -207,7 +203,7 @@
         <tr onClick="location.href='user_write.php?id=<?php echo $row[5]; ?>'">
           <!-- 첫번째 줄 시작 -->
 
-          <td class="list_td2">
+          <td class="list_td2" id="a">
             <?php echo $i + 1; ?>
           </td>
           <td class="list_td2">
@@ -225,15 +221,22 @@
         </tr><!-- 첫번째 줄 끝 -->
       <?php } ?>
     </table>
-    <button class="sub_btn">더보기</button>
   </div>
-
+    <button class="sub_btn" onclick="myPostMore(1, <?php echo $count; ?>)">더보기</button>
+<script>
+  function myPostMore(i, cnt){
+    var list  =   document.getElementsByClassName("wrap_table")[i];
+    var list_heigh = list.offsetHeight;
+    if(list_heigh>=48*(cnt+2)) return;
+    list.style.height = list_heigh + 48*5 +"px";
+  }
+  </script>
   <!-- 내 댓글 -->
-  <div class="wrap_table">
+  <div class="wrap_table list_my_comm">
     <h4 class="sub_title">내가 쓴 댓글<img src="./img/Line.png" /></h4>
     <!-- 리스트 -->
-    <table class="list_2">
-      <tr id="list_name">
+    <table class="comm_tbl">
+      <tr id="list_name ">
         <td class="list2_name">NO</td>
         <td class="list2_name">글 제목</td>
         <td class="list2_name">작성일</td>
@@ -241,7 +244,7 @@
       </tr>
 
       <?php
-      $query = "select * from hobby_post where userid='$id' order by date desc";
+      $query = "select * from hobby_comm where userid='$id' order by date desc";
       $result = mysqli_query($conn, $query);
 
       $count = mysqli_num_rows($result);
@@ -271,8 +274,8 @@
       <?php }
       mysqli_close($conn); ?>
     </table>
-    <button class="sub_btn">더보기</button>
   </div>
+    <button class="sub_btn" onclick="myPostMore(2, <?php echo $count; ?>)">더보기</button>
 
 
   <div id="footer">
