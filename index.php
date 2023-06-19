@@ -128,7 +128,8 @@
             $result=mysqli_query($conn, $query);
 
             $count=mysqli_num_rows($result);
-            for($i=0; $i<3; $i++){
+            if($count>=3) $count=3;
+            for($i=0; $i<$count; $i++){
               $row= mysqli_fetch_array($result);
               ?>
               <div onClick='location.href="user_write.php?id=<?php echo $row[5];?>"' class="list_tr">

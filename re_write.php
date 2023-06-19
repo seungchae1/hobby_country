@@ -3,7 +3,7 @@ include("db.php");
 $id=$_COOKIE['uid'];
 $date = date("Y-m-d"); //현재시간
 $title = $_POST['title'];
-$content = $_POST['content'];
+$content = $_POST['contents'];
 if(isset($_POST['rule'])) $rule = $_POST['rule'];
 else $rule = 0;
 $category =$_POST['select_h'];

@@ -106,11 +106,19 @@ body::-webkit-scrollbar {
 .write_top {
   font-weight: bold;
   text-align: center;
+  font-size: 24px;
 }
 
 /* 필수 항목 */
 .pilsu {
   text-align: right;
+  font-size: 16px;
+}
+
+input[type="file"] {
+}
+
+.file_btn {
 }
 
 .ttt {
@@ -155,7 +163,7 @@ input {
 }
 
 #title {
-  width: 50%;
+  width: 55%;
   height: 30px;
 }
 
@@ -189,23 +197,27 @@ input {
 
 .btn-primary-close {
   margin-top: 80px;
-  width: 230px;
-  height: 30px;
+  width: 341px;
+  height: 51px;
   border: none;
-  margin-left: 25%;
   background-color: #d9d9d9;
   border-radius: 10px;
+  font-size: 20px;
 }
 
 .btn-primary-check {
   margin-top: 80px;
-  width: 230px;
-  width: 230px;
-  height: 30px;
+  width: 341px;
+  height: 51px;
   border: none;
   margin-left: 5%;
   background-color: #8dd38b;
   border-radius: 12px;
+  font-size: 20px;
+}
+
+.write_btn {
+  text-align: center;
 }
 
 /* footer */

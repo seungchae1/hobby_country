@@ -53,14 +53,18 @@ mysqli_query($conn, $query);
     </div>
     <form method="post" action="write_comm.php" enctype="multipart/form-data">
         <div id="user_write"> 
-            <h1><?php echo $row[1]; ?></h1> 
-            <div id="name"><?php echo $row[0]; ?></div>
-            <div id="date"><?php echo $row[3]; ?></div>
+            <h1 class="title" ><?php echo $row[1]; ?></h1> 
+            <div class="name_data">
+                <?php echo $row[0]; ?> &#8725;
+                <?php echo $row[3]; ?>
+                <div style="margin-top:8px;"><?php echo $row[2]; ?></div>
+            </div>
+            
 
             <div id="content"><?php echo $row[6]; ?></div>
             <?php if($row[7]!="./write_img/") echo "<img src='$row[7]' class='user_img'>"; ?>
             
-            <div id="comment_num">댓글 </div>
+            <div id="comment_num">댓글 	&#8213;&#8213;&#8213;</div>
             <?php
                 $sql = "select * from hobby_comm where post_num=$num;";
                 $re = mysqli_query($conn, $sql);
@@ -74,10 +78,12 @@ mysqli_query($conn, $query);
                 }
             ?>
             <div class="comment_write">
-                <div>댓글</div>
-                <textarea name="comment" id="comment"  placeholder="댓글 작성"></textarea>
-                <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
-                <td><button type="submit" class="btn_sub">등록</button></td>
+                <!-- <div>댓글</div> -->
+                <textarea name="comment" id="comment" placeholder="댓글 추가하기"></textarea>
+                <div>
+                    <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
+                    <button type="submit" class="btn_sub">댓글</button>
+                </div>
             </div>
         </div>
     </form>

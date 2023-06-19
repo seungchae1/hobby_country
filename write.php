@@ -58,27 +58,34 @@
                 <div class="select_div">
                   <select name="select_h">
                     <option value="예술">예술</option>
+                    <?php 
+                    
+                    ?>
                     <option value="운동">운동</option>
                     <option value="문화">문화</option>
                     <option value="여가">여가</option>
                   </select>
                   <?php 
                   if($_COOKIE['uid']=='guck' || $_COOKIE['uid']=='park') echo "공지<input type='checkbox' name='rule' value=1>";
+                  
                   ?>
                 </div>
               </td>
             </tr>
             <tr>
-              <th class="ttt">글 내용<span class="star_mark">*</span></th>
-              <td><input name="content" id="content" /></td>
+              <th class="ttt" id="write_content" style="vertical-align: top;">글 내용<span class="star_mark">*</span></th>
+              <td><textarea rows="4" id="content" name="contents"></textarea></td>
             </tr>
             <tr>
               <th class="ttt">파일/이미지</th>
-              <td><input type="file" name="userfile" class="file_btn"/></td>
+              
+              <td class="file_btn"><input type="file" name="userfile" /></td>
             </tr>
           </table>
-          <button type="submit" class="btn-primary-close">취소</button>
-          <button type="submit" class="btn-primary-check">확인</button>
+          <div class="write_btn">
+            <button type="submit" class="btn-primary-close">취소</button>
+            <button type="submit" class="btn-primary-check">확인</button>
+          </div>
         </form>
       </div>
 
