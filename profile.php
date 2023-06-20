@@ -265,10 +265,10 @@
             <?php echo $row[0]; ?>
           </td>
           <td class="list_td2">
-            <?php echo $row[1]; ?>
+            <?php echo $row[2]; ?>
           </td>
           <td class="list_td2" id="list_td2_r">
-            <?php echo $row[2]; ?>
+            <?php echo $row[3]; ?>
           </td>
         </tr><!-- 첫번째 줄 끝 -->
       <?php }
