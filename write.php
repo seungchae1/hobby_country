@@ -124,6 +124,7 @@
                   function changeButtonColor(button) {
                     if (previousButton !== null) {
                       previousButton.style.backgroundColor = ""; // 이전에 선택된 버튼의 색상을 원래 상태로 변경
+                      previousButton.style.border = "1px solid #ababab";
                     }
 
                     var buttons = document.getElementsByName("category");
@@ -131,7 +132,8 @@
                       buttons[i].style.backgroundColor = "";
                     }
 
-                    button.style.backgroundColor = "yellow";
+                    button.style.backgroundColor = "#AFE0AE";
+                    button.style.border="none";
                     document.getElementById("select_h").value = button.value;
 
                     previousButton = button; // 현재 버튼을 이전 버튼으로 저장

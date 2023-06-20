@@ -173,6 +173,41 @@ input {
   margin-top: 26px;
 } */
 
+/* 카테고리 */
+#category-select {
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #ababab;
+  padding: 8px 12px 8px 12px;
+}
+
+.select_div {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.select_div select {
+  margin-right: 10px;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+}
+
+.category-buttons button {
+  margin-right: 2px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #ababab;
+  padding: 8px 12px 8px 12px;
+  margin-left: 10px;
+}
+
 #content {
   margin-top: 15px;
   width: 80%;
