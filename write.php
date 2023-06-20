@@ -144,7 +144,18 @@
             </tr>
             <tr>
               <th class="ttt" id="write_content" style="vertical-align: top; padding-top:24px;">글 내용<span class="star_mark">*</span></th>
-              <td><textarea rows="4" id="content" name="contents"></textarea></td>
+              <td>
+                <textarea rows="4" id="content" name="contents" maxlength="500" oninput="updateCharacterCount()" style="font-size: 14px; padding:10px;"></textarea>
+                <div id="characterCount" style="margin-bottom: 10px; color: #656565;">0/500</div>
+              </td>
+              <script>
+                function updateCharacterCount() {
+                  var textarea = document.getElementById("content");
+                  var characterCount = document.getElementById("characterCount");
+                  var count = textarea.value.length;
+                  characterCount.textContent = count + "/500";
+                }
+              </script>
               
             </tr>
             <tr>

@@ -9,7 +9,8 @@ body {
 }
 .title {
   font-size: 24px;
-  margin-right: 100%;
+
+  width: 100%;
 }
 
 .name_data {
@@ -44,6 +45,7 @@ body {
   /* margin-bottom: 112px; */
   font-size: 16px;
   color: #656565;
+  width: 100%;
 }
 
 #comment_num {
@@ -51,6 +53,7 @@ body {
   font-weight: bold;
   color: #656565;
   margin-bottom: 26px;
+  margin-top: 100px;
 }
 .comment_write {
   /* margin-top: 112px; */
