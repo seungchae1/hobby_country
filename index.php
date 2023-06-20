@@ -114,7 +114,6 @@
             }
         ?>
     </header>
-
         <?php
         if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) 
         {
