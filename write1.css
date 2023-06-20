@@ -116,6 +116,7 @@ body::-webkit-scrollbar {
 }
 
 input[type="file"] {
+  border-color: #ababab;
 }
 
 .file_btn {
@@ -165,13 +166,21 @@ input {
 #title {
   width: 55%;
   height: 30px;
+  border-color: #ababab;
 }
+
+/* #write_content {
+  margin-top: 26px;
+} */
 
 #content {
   margin-top: 15px;
   width: 80%;
-  height: 400px;
+  height: 340px;
   resize: none;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border-color: #ababab;
 }
 
 .i {
@@ -203,6 +212,8 @@ input {
   background-color: #d9d9d9;
   border-radius: 10px;
   font-size: 20px;
+  color: #000000;
+  text-decoration: none;
 }
 
 .btn-primary-check {

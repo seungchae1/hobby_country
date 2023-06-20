@@ -1,3 +1,5 @@
+<!-- 댓글 -->
+
 <?php
  include("db.php");
  if(!isset($_COOKIE['uid'])) echo "<script>alert('로그인이 필요합니다.'); history.go(-1);</script>";

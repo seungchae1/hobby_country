@@ -5,7 +5,7 @@ body {
 }
 #user_write {
   margin: 0% 19.27% 0% 19.27%;
-  width: 61.46%;
+  /* width: 61.46%; */
 }
 .title {
   font-size: 24px;
@@ -57,7 +57,7 @@ body {
 }
 #comment {
   resize: none;
-  width: 95%;
+  width: 1098px;
   border-radius: 12px;
   height: 41px;
   font-size: 12px;

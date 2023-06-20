@@ -1,3 +1,5 @@
+<!-- 글쓰기 -->
+
 <?php
   if(!isset($_COOKIE['uid'])) echo "<script>alert('로그인이 필요합니다.'); history.go(-1);</script>";
 ?>
@@ -56,25 +58,76 @@
               <th class="ttt"><div>카테고리<span class="star_mark">*</span></div></th>
               <td> 
                 <div class="select_div">
-                  <select name="select_h">
+                  <select id="category-select" onchange="showButtons()">
+                  <option>선택하세요</option>
                     <option value="예술">예술</option>
-                    <?php 
-                    
-                    ?>
                     <option value="운동">운동</option>
                     <option value="문화">문화</option>
                     <option value="여가">여가</option>
                   </select>
                   <?php 
-                  if($_COOKIE['uid']=='guck' || $_COOKIE['uid']=='park') echo "공지<input type='checkbox' name='rule' value=1>";
-                  
+                    if($_COOKIE['uid']=='guck' || $_COOKIE['uid']=='park') echo "공지<input type='checkbox' name='notice' value=1>";
+                    if($_COOKIE['uid']=='guck' || $_COOKIE['uid']=='park') echo "규칙<input type='checkbox' name='rule' value=1>";
                   ?>
                 </div>
+                <div id="예술-buttons" class="category-buttons" style="display: none">
+                  <button name="select_h" value="공예/만들기">공예/만들기</button>
+                  <button name="select_h" value="그림">그림</button>
+                  <button name="select_h" value="노래/작사/작곡">노래/작사/작곡</button>
+                  <button name="select_h" value="사진/촬영">사진/촬영</button>
+                  <button name="select_h" value="악기">악기</button>
+                  <button name="select_h" value="패션">패션</button>
+                </div>
+
+                <div id="운동-buttons" class="category-buttons" style="display: none">
+                  <button name="select_h" value="걷기/달리기">걷기/달리기</button>
+                  <button name="select_h" value="등산">등산</button>
+                  <button name="select_h" value="자전거">자전거</button>
+                  <button name="select_h" value="스포츠">스포츠</button>
+                  <button name="select_h" value="요가/필라테스">요가/필라테스</button>
+                 </div>
+
+                <div id="문화-buttons" class="category-buttons" style="display: none">
+                  <button name="select_h" value="독서">독서</button>
+                  <button name="select_h" value="영호/드라마">영화/드라마</button>
+                  <button name="select_h" value="음악/콘서트">음악/콘서트</button>
+                  <button name="select_h" value="뮤지컬/공연">뮤지컬/공연</button>
+                  <button name="select_h" value="박물관/미술관">박물관/미술관</button>
+                </div>
+
+                <div id="여가-buttons" class="category-buttons" style="display: none">
+                  <button name="select_h" value="일기/다이어리">일기/다이어리</button>
+                  <button name="select_h" value="여행/투어">여행/투어</button>
+                  <button name="select_h" value="게임">게임</button>
+                  <button name="select_h" value="요리">요리</button>
+                  <button name="select_h" value="수집">수집</button>
+                  <button name="select_h" value="식물/정원">식물/정원</button>
+                </div>
+
+                <script>
+                  function showButtons() {
+                    var select = document.getElementById("category-select");
+                    var category = select.options[select.selectedIndex].value;
+                    var buttons = document.getElementsByClassName("category-buttons");
+
+                    for (var i = 0; i < buttons.length; i++) {
+                      buttons[i].style.display = "none";
+                    }
+
+                    if (category !== "none") {
+                      var categoryButtons = document.getElementById(category + "-buttons");
+                      categoryButtons.style.display = "block";
+                    }
+                  }
+                  
+                  
+                </script>
               </td>
             </tr>
             <tr>
-              <th class="ttt" id="write_content" style="vertical-align: top;">글 내용<span class="star_mark">*</span></th>
+              <th class="ttt" id="write_content" style="vertical-align: top; padding-top:24px;">글 내용<span class="star_mark">*</span></th>
               <td><textarea rows="4" id="content" name="contents"></textarea></td>
+              
             </tr>
             <tr>
               <th class="ttt">파일/이미지</th>
@@ -83,8 +136,9 @@
             </tr>
           </table>
           <div class="write_btn">
-            <button type="submit" class="btn-primary-close">취소</button>
-            <button type="submit" class="btn-primary-check">확인</button>
+            <a href="./index.php" value="취소" class="btn-primary-close">취소</a>
+            <!-- <a href="./index.php" class="btn-primary-close">취소</a> -->
+            <button type="submit" value="확인" class="btn-primary-check">확인</button>
           </div>
         </form>
       </div>

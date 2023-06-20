@@ -3,9 +3,13 @@ include("db.php");
 $id=$_COOKIE['uid'];
 $date = date("Y-m-d"); //현재시간
 $title = $_POST['title'];
+if($title==null) echo "<script>alert('제목을 입력하세요.'); history.go(-1);</script>"; 
 $content = $_POST['contents'];
+if($content==null) echo "<script>alert('내용을 입력하세요.'); history.go(-1);</script>"; 
 if(isset($_POST['rule'])) $rule = $_POST['rule'];
 else $rule = 0;
+if(isset($_POST['notice'])) $rule = $_POST['notice'];
+else $notice = 0;
 $category =$_POST['select_h'];
 if($category=="0") echo"<script>alert('카테고리를 선택하세요.');history.go(-1);</script>";
 else{

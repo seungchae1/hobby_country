@@ -1,7 +1,7 @@
 <?php
 include('./db.php');
 //idx값 가져오기
-
+//글 자세히보기
 
 $num=$_GET['id'];
 $query = "select * from hobby_post where num = $num";
@@ -80,10 +80,9 @@ mysqli_query($conn, $query);
             <div class="comment_write">
                 <!-- <div>댓글</div> -->
                 <textarea name="comment" id="comment" placeholder="댓글 추가하기"></textarea>
-                <div>
-                    <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
-                    <button type="submit" class="btn_sub">댓글</button>
-                </div>
+                <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
+                <button type="submit" class="btn_sub">댓글</button>
+
             </div>
         </div>
     </form>
