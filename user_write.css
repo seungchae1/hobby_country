@@ -9,8 +9,9 @@ body {
 }
 .title {
   font-size: 24px;
-
   width: 100%;
+  display: block;
+  text-align: left !important;
 }
 
 .name_data {
