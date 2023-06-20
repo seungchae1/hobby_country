@@ -120,13 +120,21 @@
                     }
                   }
                   
+                  var previousButton = null;
                   function changeButtonColor(button) {
+                    if (previousButton !== null) {
+                      previousButton.style.backgroundColor = ""; // 이전에 선택된 버튼의 색상을 원래 상태로 변경
+                    }
+
                     var buttons = document.getElementsByName("category");
                     for (var i = 0; i < buttons.length; i++) {
                       buttons[i].style.backgroundColor = "";
                     }
+
                     button.style.backgroundColor = "yellow";
                     document.getElementById("select_h").value = button.value;
+
+                    previousButton = button; // 현재 버튼을 이전 버튼으로 저장
                   }
                   
                 </script>
@@ -175,11 +183,11 @@
         <div>
           <a>예술</a> <a>운동</a> <a>문화</a> <a>여가</a> <a>마이페이지</a> <a>회원탈퇴</a> <br>
             
-            개발팀 <div class="f_content">곽경희 (s2117@e-mirim.hs.kr)</div>
+            개발팀 <div class="f_content">-곽경희 (s2117@e-mirim.hs.kr)</div>
             <div class="f_content">박승채 (s2125@e-mirim.hs.kr)</div>
 
-            웹디자인 <div class="f_content">박하은 (d2109@e-mirim.hs.kr)</div>
-            취미테스트 그래픽 <div class="f_content">박승채 (s2125@e-mirim.hs.kr)</div>
+            웹디자인 <div class="f_content">-박하은 (d2109@e-mirim.hs.kr)</div>
+            취미테스트 그래픽 <div class="f_content">-박승채 (s2125@e-mirim.hs.kr)</div>
             
         </div>
     </footer>
