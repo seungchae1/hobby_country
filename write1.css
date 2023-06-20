@@ -241,8 +241,7 @@ input {
 
 .btn-primary-close {
   margin-top: 80px;
-  width: 341px;
-  height: 51px;
+  padding: 11px 152px 11px 152px;
   border: none;
   background-color: #d9d9d9;
   border-radius: 10px;
