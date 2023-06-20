@@ -31,7 +31,7 @@
               if($profile == "") $profile="./img/profile_img.png";
 
               echo "<div class='userid'>".$id."님</div>";
-              echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
+              echo "<div class='profile_img' onclick='uesr()'></div>";
                 echo "<div class='userdrop'>
                         <ul>
                           <li><a href='profile.php'>프로필</a></li>
@@ -67,41 +67,41 @@
                   </select>
                   <?php 
                     if($_COOKIE['uid']=='guck' || $_COOKIE['uid']=='park') echo "공지<input type='checkbox' name='notice' value=1>";
-                    if($_COOKIE['uid']=='guck' || $_COOKIE['uid']=='park') echo "규칙<input type='checkbox' name='rule' value=1>";
+                    if($_COOKIE['uid']=='guck' || $_COOKIE['uid']=='park') echo "규칙<input type='checkbox' name='rule' value=2>";
                   ?>
                 </div>
                 <div id="예술-buttons" class="category-buttons" style="display: none">
-                  <button name="select_h" value="공예/만들기">공예/만들기</button>
-                  <button name="select_h" value="그림">그림</button>
-                  <button name="select_h" value="노래/작사/작곡">노래/작사/작곡</button>
-                  <button name="select_h" value="사진/촬영">사진/촬영</button>
-                  <button name="select_h" value="악기">악기</button>
-                  <button name="select_h" value="패션">패션</button>
+                  <button type="button" name="select_h" value="공예/만들기" onclick="changeButtonColor(this)">공예/만들기</button>
+                  <button type="button" name="select_h" value="그림" onclick="changeButtonColor(this)">그림</button>
+                  <button type="button" name="select_h" value="노래/작사/작곡" onclick="changeButtonColor(this)">노래/작사/작곡</button>
+                  <button type="button" name="select_h" value="사진/촬영" onclick="changeButtonColor(this)">사진/촬영</button>
+                  <button type="button" name="select_h" value="악기" onclick="changeButtonColor(this)">악기</button>
+                  <button type="button" name="select_h" value="패션" onclick="changeButtonColor(this)">패션</button>
                 </div>
 
                 <div id="운동-buttons" class="category-buttons" style="display: none">
-                  <button name="select_h" value="걷기/달리기">걷기/달리기</button>
-                  <button name="select_h" value="등산">등산</button>
-                  <button name="select_h" value="자전거">자전거</button>
-                  <button name="select_h" value="스포츠">스포츠</button>
-                  <button name="select_h" value="요가/필라테스">요가/필라테스</button>
+                  <button type="button" name="select_h" value="걷기/달리기" onclick="changeButtonColor(this)">걷기/달리기</button>
+                  <button type="button" name="select_h" value="등산" onclick="changeButtonColor(this)">등산</button>
+                  <button type="button" name="select_h" value="자전거" onclick="changeButtonColor(this)">자전거</button>
+                  <button type="button" name="select_h" value="스포츠" onclick="changeButtonColor(this)">스포츠</button>
+                  <button type="button" name="select_h" value="요가/필라테스" onclick="changeButtonColor(this)">요가/필라테스</button>
                  </div>
 
                 <div id="문화-buttons" class="category-buttons" style="display: none">
-                  <button name="select_h" value="독서">독서</button>
-                  <button name="select_h" value="영호/드라마">영화/드라마</button>
-                  <button name="select_h" value="음악/콘서트">음악/콘서트</button>
-                  <button name="select_h" value="뮤지컬/공연">뮤지컬/공연</button>
-                  <button name="select_h" value="박물관/미술관">박물관/미술관</button>
+                  <button type="button" name="select_h" value="독서" onclick="changeButtonColor(this)">독서</button>
+                  <button type="button" name="select_h" value="영호/드라마" onclick="changeButtonColor(this)">영화/드라마</button>
+                  <button type="button" name="select_h" value="음악/콘서트" onclick="changeButtonColor(this)">음악/콘서트</button>
+                  <button type="button" name="select_h" value="뮤지컬/공연" onclick="changeButtonColor(this)">뮤지컬/공연</button>
+                  <button type="button" name="select_h" value="박물관/미술관" onclick="changeButtonColor(this)">박물관/미술관</button>
                 </div>
 
                 <div id="여가-buttons" class="category-buttons" style="display: none">
-                  <button name="select_h" value="일기/다이어리">일기/다이어리</button>
-                  <button name="select_h" value="여행/투어">여행/투어</button>
-                  <button name="select_h" value="게임">게임</button>
-                  <button name="select_h" value="요리">요리</button>
-                  <button name="select_h" value="수집">수집</button>
-                  <button name="select_h" value="식물/정원">식물/정원</button>
+                  <button type="button" name="select_h" value="일기/다이어리" onclick="changeButtonColor(this)">일기/다이어리</button>
+                  <button type="button" name="select_h" value="여행/투어" onclick="changeButtonColor(this)">여행/투어</button>
+                  <button type="button" name="select_h" value="게임" onclick="changeButtonColor(this)">게임</button>
+                  <button type="button" name="select_h" value="요리" onclick="changeButtonColor(this)">요리</button>
+                  <button type="button" name="select_h" value="수집" onclick="changeButtonColor(this)">수집</button>
+                  <button type="button" name="select_h" value="식물/정원" onclick="changeButtonColor(this)">식물/정원</button>
                 </div>
 
                 <script>
@@ -120,6 +120,14 @@
                     }
                   }
                   
+                  function changeButtonColor(button) {
+                    var buttons = document.getElementsByName("category");
+                    for (var i = 0; i < buttons.length; i++) {
+                      buttons[i].style.backgroundColor = "";
+                    }
+                    button.style.backgroundColor = "yellow";
+                    document.getElementById("select_h").value = button.value;
+                  }
                   
                 </script>
               </td>
@@ -135,6 +143,7 @@
               <td class="file_btn"><input type="file" name="userfile" /></td>
             </tr>
           </table>
+          <input type="hidden" name="select_h" id="select_h" value="0">
           <div class="write_btn">
             <a href="./index.php" value="취소" class="btn-primary-close">취소</a>
             <!-- <a href="./index.php" class="btn-primary-close">취소</a> -->
@@ -164,9 +173,14 @@
             <img src="./img/logo.png">
         </div>
         <div>
-            <div class="f_m_title">문의</div>
-            <div class="f_content">s2125@e-mirim.hs.kr</div>
-            <div class="f_content">s2117@e-mirim.hs.kr</div>
+          <a>예술</a> <a>운동</a> <a>문화</a> <a>여가</a> <a>마이페이지</a> <a>회원탈퇴</a> <br>
+            
+            개발팀 <div class="f_content">곽경희 (s2117@e-mirim.hs.kr)</div>
+            <div class="f_content">박승채 (s2125@e-mirim.hs.kr)</div>
+
+            웹디자인 <div class="f_content">박하은 (d2109@e-mirim.hs.kr)</div>
+            취미테스트 그래픽 <div class="f_content">박승채 (s2125@e-mirim.hs.kr)</div>
+            
         </div>
     </footer>
   </body>
