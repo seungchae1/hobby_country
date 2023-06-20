@@ -41,7 +41,7 @@ body {
   border-bottom: 1px solid rgb(121, 121, 121);
 } */
 #content {
-  margin-bottom: 112px;
+  /* margin-bottom: 112px; */
   font-size: 16px;
   color: #656565;
 }
@@ -53,20 +53,29 @@ body {
   margin-bottom: 26px;
 }
 .comment_write {
-  margin-top: 30px;
+  /* margin-top: 112px; */
+  margin-bottom: 36px;
 }
 #comment {
   resize: none;
   width: 1098px;
   border-radius: 12px;
-  height: 41px;
+  height: 15px;
   font-size: 12px;
-  padding-top: 12px;
+  /* padding-top: 12px;
+  padding-left: 12px; */
+  padding: 12px 0px 12px 12px;
+  color: #ababab;
 }
+
+#comm_line {
+  border: #ababab;
+}
+
 .btn_sub {
   background-color: #8dd38b;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 58px;
   height: 27px;
   font-size: 15px;
@@ -92,7 +101,7 @@ body {
   position: absolute;
 }
 .title {
-  margin-left: 45px;
+  margin-left: 0px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -230,10 +239,10 @@ a {
 
 .comm_content {
   width: 80%;
-  padding: 30px;
-  border: 1px solid black;
-  margin: 10px;
-  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #656565;
+  margin-bottom: 30px;
 }
 
 .btn_dt {
@@ -242,6 +251,11 @@ a {
   margin-right: 100px;
 }
 .user_img {
-  margin: 20px;
+  /* margin: 20px; */
   width: 80%;
+}
+
+#footer_img {
+  width: 100%;
+  margin-top: 200px;
 }

@@ -65,26 +65,31 @@ mysqli_query($conn, $query);
             <?php if($row[7]!="./write_img/") echo "<img src='$row[7]' class='user_img'>"; ?>
             
             <div id="comment_num">댓글 	&#8213;&#8213;&#8213;</div>
+            
+            <div class="comment_write">
+                <!-- <div>댓글</div> -->
+                <textarea name="comment" id="comment" placeholder="댓글 추가하기"></textarea>
+                <input type="hidden" name="num" id="comm_line" value="<?php echo $num;?>">
+                <button type="submit" class="btn_sub">댓글</button>
+            </div>
+
             <?php
                 $sql = "select * from hobby_comm where post_num=$num;";
                 $re = mysqli_query($conn, $sql);
                 $n = mysqli_num_rows($re);
                 for($i=0; $i<$n; $i++){
                     $r=mysqli_fetch_row($re);
-                    echo "<div class='comm_div'>".$r[2]."<div class='comm_content'>".$r[1]."</div>";
+                    echo "<div class='comm_div'>".$r[0]."<div class='comm_content'>".$r[3]."</div>";
                     if(isset($_COOKIE['uid']))
                         if($_COOKIE['uid']==$r[2]) echo "<button class='btn_dt'><a href='./delete_comm.php?num=$r[0]&con=$r[1]'>삭제</a></button>";
                     echo "</div>";
                 }
             ?>
-            <div class="comment_write">
-                <!-- <div>댓글</div> -->
-                <textarea name="comment" id="comment" placeholder="댓글 추가하기"></textarea>
-                <input type="hidden" name="num" value="<?php echo $num;?>">
-                <button type="submit" class="btn_sub">댓글</button>
 
-            </div>
         </div>
     </form>
+    <div id="footer">
+        <img src="./img/footer_img.png" id="footer_img"></img>
+    </div>
 </body>
 </html>
