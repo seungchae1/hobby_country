@@ -5,50 +5,9 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background-image: url("./img/back.png");
-    background-size: auto 85vh;
-    background-repeat: no-repeat;
-    background-position: center 50px;
-}
-.btn{
-  display: block;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 40px;
-  width: 100%;
-  text-align: center;
-}
-.btn>a{
-  padding: 5px 10vw 5px 10vw;
-  border-radius: 15px;
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-  background-color: #8DD38B;
-}
-.btn>a:hover{
-    background-color: #6cba69;
-    color: white;
 }
 *{
   font-family: 'Noto Sans KR', sans-serif;
-}
-
-
-.userdrop{
-  position: absolute;
-  left: 96%;
-  transform: translate(-70%, 0%);
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  background-image: url("./img/profile_drop.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  z-index: 10;
-  margin-top: 10px;
-  padding-top: 10px;
 }
 
 /*user*/
@@ -66,6 +25,18 @@ body{
   color: #5C86D7;
   text-decoration: underline #5C86D7;
 }
+.link_btn{
+  float: right;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+.logout{
+  margin-left: 20px;
+  color: #ABABAB;
+  font-size: 12px;
+}
+
 
 /*header*/
 header{
@@ -153,4 +124,37 @@ a:hover{
 /* 스크롤바 커스텀 */
 body::-webkit-scrollbar {
   width: 0;  /* 스크롤바의 너비 */
+}
+
+.backimg{
+  margin-top : 5vh;
+  width: 100vw;
+  height: auto;
+  text-align: center;
+}
+.backimg>img{
+  width: 60vw;
+  height: auto;
+}
+.btn{
+  display: block;
+  bottom: 0;
+  margin-bottom: 80px;
+  width: 100%;
+  text-align: center;
+}
+.btn>a{
+  padding: 8px 6.5vw 8px 6.5vw;
+  border-radius: 11px;
+  font-size: 13sp;
+  text-decoration: none;
+  color: black;
+  background-color: #8DD38B;
+}
+.btn>a:hover{
+  background-color: rgba(141, 211, 139, 0.8);
+  color: white;
+}
+#footer_img{
+  width: 100%;
 }

@@ -93,56 +93,36 @@
     </li>
   </ul>
 </nav>
-        <?php
-            include("db.php");
-            if(!isset($_COOKIE['uid']) || !isset($_COOKIE['upass'])) {
-              echo "<div class='p-3 link_btn'><a href='./join.html' id='join_btn'>회원가입</a>";
-              echo "<a href='./loginpage.html' id='login_btn'>로그인</a></div>";
-            }
-            else{
-              include("db.php");
-              $id = $_COOKIE['uid'];
-              $sql = "select name,profile from hobby_user where userid='$id';";
-              $sel = mysqli_query($conn, $sql);
-              $re=mysqli_fetch_row($sel);
-              $name = $re[0];
-              $profile=$re[1];
-              if($profile == null) $profile="./img/profile_img.png";
-
-              echo "<div class='p-3 link_btn username'><div class='userid1'><a href='./profile.php?update=no' class='userid'>".$name."</a>님 환영합니다.</div><a href='./logout.php' class='logout'>로그아웃</a></div>";
-              //echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
-            }
-        ?>
+    <div class='p-3 link_btn username'><div class='userid1'><a href='./profile.php?update=no' class='userid'>test</a>님 환영합니다.</div><a href='./logout.php' class='logout'>로그아웃</a></div>
     </header>
-        <?php
-        if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) 
-        {
-        echo '<a href="./test_main.php"><img class="test_img" src="./img/test_b.png"></div></a>';
+<a href="./test_main.php"><img class="test_img" src="./img/test_b.png"></div></a>
 
-        echo '<div class="notice_rule"> ';
-        echo '<h4 id="rule">공지사항/ 규칙<img src="./img/Line.png"> <a href="/rule_page.php" class="rule_more">전체 보기</a></h4>';
-     
-            include("db.php");
-            $query ="select * from hobby_post where isrule = 1 order by date";
-            $result=mysqli_query($conn, $query);
+        <div class="notice_rule">
+        <h4 id="rule">공지사항/ 규칙<img src="./img/Line.png"> <a href="/rule_page.php" class="rule_more">전체 보기</a></h4>
+              <div onClick='location.href="user_write.php?id=test"' class="list_tr">
 
-            $count=mysqli_num_rows($result);
-            if($count>=3) $count=3;
-            for($i=0; $i<$count; $i++){
-              $row= mysqli_fetch_array($result);
-              ?>
-              <div onClick='location.href="user_write.php?id=<?php echo $row[5];?>"' class="list_tr">
-
-                <div class="list_td1" id="rule1"><?php echo "공지";?></div>
-                <div class="list_td1" id="rule2"><?php echo $row[6]; ?></div>
-                <div class="list_td1" id="rule3"><?php if(isset($row[7])) echo'<img src="'.$row[7].'">'; ?></div>
-                <div class="list_td1" id="rule4"><?php echo $row[0]."/".$row[3]; ?></div>
+                <div class="list_td1" id="rule1">test</div>
+                <div class="list_td1" id="rule2">test</div>
+                <div class="list_td1" id="rule3">test</div>
+                <div class="list_td1" id="rule4">test</div>
               </div>
-            <?php } ?>
+              <div onClick='location.href="user_write.php?id=test"' class="list_tr">
+
+                <div class="list_td1" id="rule1">test</div>
+                <div class="list_td1" id="rule2">test</div>
+                <div class="list_td1" id="rule3">test</div>
+                <div class="list_td1" id="rule4">test</div>
+              </div>
+              <div onClick='location.href="user_write.php?id=test"' class="list_tr">
+
+                <div class="list_td1" id="rule1">test</div>
+                <div class="list_td1" id="rule2">test</div>
+                <div class="list_td1" id="rule3">test</div>
+                <div class="list_td1" id="rule4">test</div>
+              </div>
           </div>
-          <?php } ?>
         <div id="board_write">
-        <h3 id="c_name"><?php if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) echo '전체 게시판'; else echo $_COOKIE['page'];?><img src="./img/Line.png"></h3>
+        <h3 id="c_name">test<img src="./img/Line.png"></h3>
           
           <!-- 리스트 -->
           <table class="list_2">
@@ -153,32 +133,14 @@
               <th class="list2_name">작성일</th>
               <th class="list2_name" id="list2_r">게시판</th>
             </tr>
+            <tr onClick="location.href='user_write.php?id=test'"><!-- 첫번째 줄 시작 -->
 
-            <?php 
-            include('./db.php');
-
-            if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) $query ="select * from hobby_post where isrule=null or isrule=0 order by num desc";
-            else $query ="select * from hobby_post where category='".$_COOKIE['page']."' order by date";
-            $result=mysqli_query($conn, $query);
-            $count=mysqli_num_rows($result);
-/*
-            if (isset($_GET['len']))
-            $len = $_GET['len'];
-            if (!isset($len))
-            $len = ($count >= 10) ? $count - 10 : 0;*/
-
-            for($i=$count-1; $i>=0; $i--){
-              $row= mysqli_fetch_array($result);
-            ?>
-            <tr onClick="location.href='user_write.php?id=<?php echo $row[5]; ?>'"><!-- 첫번째 줄 시작 -->
-
-	            <td class="list_td2"><?php echo $i+1;?></td>
-	            <td class="list_td2"><?php echo $row[0]; ?></td>
-              <td class="list_td2"><?php echo $row[1]; ?></td>
-              <td class="list_td2"><?php echo $row[3]; ?></td>
-              <td class="list_td2" id="list_td2_r"><?php echo $row[2]; ?></td>
+	            <td class="list_td2">test</td>
+	            <td class="list_td2">test</td>
+              <td class="list_td2">test</td>
+              <td class="list_td2">test</td>
+              <td class="list_td2" id="list_td2_r">test</td>
 	          </tr><!-- 첫번째 줄 끝 -->
-            <?php }?>
           </table>
          <!-- <div class="post_page" ><?php for($i=0; $i<$count/10; $i++) { ?>
           <div onclick="location.href='changePost.php?cnt=<?php echo $count; ?>&num= <?php echo ($i+1);?>'" class="page1"> <?php echo ($i + 1) ; ?></div> <?php }?></div>-->
