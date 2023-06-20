@@ -80,7 +80,7 @@ mysqli_query($conn, $query);
             <div class="comment_write">
                 <!-- <div>댓글</div> -->
                 <textarea name="comment" id="comment" placeholder="댓글 추가하기"></textarea>
-                <input type="hidden" name="num" value="<?php echo $row[0]; ?>">
+                <input type="hidden" name="num" value="<?php echo $num; ?>">
                 <button type="submit" class="btn_sub">댓글</button>
 
             </div>
