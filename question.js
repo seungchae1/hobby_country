@@ -14,6 +14,7 @@
     let img = document.getElementsByClassName("test_img")[0];
     let pro = document.getElementById("pro");
     let pro_num = document.getElementsByClassName("p_num")[0];
+    let ops2 = document.getElementsByClassName("options")[1];
     let op3 = document.createElement('div');
     let op4 = document.createElement('div');
 
@@ -24,11 +25,11 @@
                 question.innerHTML="당신의 나이는?(선택지4)";
                 op3.setAttribute('class','option');
                 op3.setAttribute('onclick','Select_op(3)');
-                ops.appendChild(op3);
+                ops2.appendChild(op3);
                 
                 op4.setAttribute('class','option');
                 op4.setAttribute('onclick','Select_op(4)');
-                ops.appendChild(op4);
+                ops2.appendChild(op4);
 
                 op1.innerHTML="10대";
                 op2.innerHTML="20대";
@@ -46,8 +47,8 @@
                     }
                 break;
             case 2 : 
-                ops.removeChild(op3);
-                ops.removeChild(op4);
+                ops2.removeChild(op3);
+                ops2.removeChild(op4);
                 question.innerHTML="당신이 취미 생활을 할 때 선호하는 장소는?(밖 or 집)";
                 op1.innerHTML="밖";
                 op2.innerHTML="집";
