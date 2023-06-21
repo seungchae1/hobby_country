@@ -1,149 +1,156 @@
 @media screen and (min-width: 1024px) {
-  .test_img { height: 800px; }
+  .test_img {
+    height: 800px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
-  .test_img { height: 650px; }
+  .test_img {
+    height: 650px;
+  }
 }
- 
+
 @media screen and (max-width: 767px) {
-  .test_img { height: 500px; }
+  .test_img {
+    height: 500px;
+  }
 }
- 
+
 @media screen and (max-width: 639px) {
-  .test_img { height: 350px; }
+  .test_img {
+    height: 350px;
+  }
 }
-*{
-  font-family: 'Noto Sans KR', sans-serif;
+* {
+  font-family: "Noto Sans KR", sans-serif;
 }
-html{
-    margin: 0;
-    padding: 0;
+html {
+  margin: 0;
+  padding: 0;
 }
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /*user*/
-.userid1{
+.userid1 {
   display: inline-block;
 }
-.userid1>*{
+.userid1 > * {
   float: left;
 }
-.userid{
-  color: #5C86D7;
-  text-decoration: underline #5C86D7;
+.userid {
+  color: #5c86d7;
+  text-decoration: underline #5c86d7;
 }
-.userid:hover{
-  color: #5C86D7;
-  text-decoration: underline #5C86D7;
+.userid:hover {
+  color: #5c86d7;
+  text-decoration: underline #5c86d7;
 }
-.link_btn{
+.link_btn {
   float: right;
   text-decoration: none;
   color: black;
   font-size: 13px;
 }
-.logout{
+.logout {
   margin-left: 20px;
-  color: #ABABAB;
+  color: #ababab;
   font-size: 12px;
 }
 
-
 /*header*/
-header{
+header {
   padding-left: 290px;
   padding-right: 290px;
   width: 100%;
-  height:50px;
+  height: 50px;
   box-shadow: 0px 2px 5px rgb(235, 235, 235);
   background-color: #ffffff;
   position: relative;
 }
 
 /* ------------------------------------------------카테고리-------------------------------------------------- */
-nav{
+nav {
   float: left;
   margin-left: 110px;
 }
-nav>ul>li>a{
+nav > ul > li > a {
   font-size: 13px;
   margin: 0 30px 0 30px;
 }
-.dropdown-menu{
+.dropdown-menu {
   border: none;
-  background:none;
+  background: none;
   width: 100vw;
   text-align: center;
   margin-top: -2px;
 }
-#drop1{
+#drop1 {
   margin-left: -540px;
 }
-#drop2{
+#drop2 {
   margin-left: -640px;
 }
-#drop3{
+#drop3 {
   margin-left: -740px;
 }
-#drop4{
+#drop4 {
   margin-left: -840px;
 }
-.dropdown-item{
+.dropdown-item {
   background-color: rgba(141, 211, 139, 0.2);
-  padding:10px;
+  padding: 10px;
 }
-.dropdown-item>a{
-  margin:0 15px 0 15px;
+.dropdown-item > a {
+  margin: 0 15px 0 15px;
   color: #656565;
   font-size: 13px;
 }
-.dropdown-item:hover{
+.dropdown-item:hover {
   background-color: rgba(141, 211, 139, 0.2);
 }
-.logo_img{
+.logo_img {
   float: left;
   width: 95px;
 }
-#login_btn{
+#login_btn {
   padding: 2px 15px;
-  background-color: #8DD38B;
+  background-color: #8dd38b;
   margin-left: 20px;
   border: none;
   border-radius: 15px;
 }
 /* 스크롤바 커스텀 */
 body::-webkit-scrollbar {
-  width: 0;  /* 스크롤바의 너비 */
+  width: 0; /* 스크롤바의 너비 */
 }
 
-a{
+a {
   text-decoration-line: none;
   color: #000000;
 }
-a:hover{
+a:hover {
   text-decoration-line: none;
   color: #000000;
 }
 
 /* 배너 */
-.test_img{
+.test_img {
   width: 100vw;
   height: auto;
   margin-top: -10px;
 }
 
 /*공지 및 규칙*/
-.notice_rule{
+.notice_rule {
   padding-left: 18vw;
   padding-right: 18vw;
   margin-top: 100px;
   width: 100vw;
 }
-.list_tr{
+.list_tr {
   width: 20vw;
   height: 25vh;
   border-radius: 15px;
@@ -154,141 +161,157 @@ a:hover{
   float: left;
   position: relative;
 }
-#rule{
+#rule {
   font-size: 20px;
   font-weight: bold;
-  padding-bottom:30px;
+  padding-bottom: 30px;
 }
-.rule_more{
+.rule_more {
   float: right;
   color: #272727;
   font-size: 14px;
   font-weight: 400;
   margin-right: 15px;
 }
-#rule1{
+#rule1 {
   margin-top: 20px;
-  color: #ABABAB;
+  color: #ababab;
   font-weight: bold;
   font-size: 17px;
 }
-#rule2{
+#rule2 {
   margin-top: 10px;
   color: #656565;
   font-weight: 600;
 }
-#rule3{
+#rule3 {
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 10px;
 }
-#rule3>img{
+#rule3 > img {
   width: 100%;
 }
-#rule4{
-  color: #ABABAB;
+#rule4 {
+  color: #ababab;
   font-size: 14px;
   position: absolute;
   bottom: 0;
   margin-bottom: 20px;
 }
-#rule>img{
+#rule > img {
   margin-left: 10px;
 }
-#board_write{
+#board_write {
   float: left;
   width: 100%;
   padding-left: 37vmin;
   padding-right: 37vmin;
   margin-top: 100px;
 }
-.list_2{
+.list_2 {
   width: 100%;
 }
 
 /*전체게시판*/
 
-#writer{
+#writer {
   margin-left: 100px;
-  
 }
-#write_name{
+#write_name {
   /* padding-left: 500px;  */
 }
 
-#c_name{
+#c_name {
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 30px;
 }
-#c_name>img{
+#c_name > img {
   margin-left: 10px;
 }
-#list1_name{
+#list1_name {
   padding-bottom: 15px;
 }
-.list2_name{
+.list2_name {
   padding-bottom: 10px;
   font-size: 14px;
   font-weight: 500;
-  color: #ABABAB;
-  border-bottom: 2px solid #8DD38B;
+  color: #ababab;
+  border-bottom: 2px solid #8dd38b;
   text-align: left;
 }
-#list2_r{
+#list2_r {
   text-align: right;
 }
 
-.list_title1{
+.list_title1 {
   cursor: pointer;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
   background-color: #edf2f2;
 }
-.list_title2{
+.list_title2 {
   cursor: pointer;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
 }
 
-.list_td1{
+.list_td1 {
   cursor: pointer;
   padding-left: 20px;
 }
-.list_td2{
+.list_td2 {
   cursor: pointer;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
   font-size: 15px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
 }
-#list_td2_r{
+#list_td2_r {
   text-align: right;
 }
 
-#write{
+#write {
   margin-top: 50px;
- margin-right: 70px;
- margin-top: 120px;
+  margin-right: 70px;
+  margin-top: 120px;
 }
-#write>a>img{
+#write > a > img {
   width: 70px;
 }
-.post_page{
+.post_page {
   margin-top: 80px;
   font-size: 14px;
   text-align: center;
 }
-.page1{
+.page1 {
   display: inline-block;
   margin-right: 10px;
   cursor: pointer;
 }
 /*전체게시판*/
-#footer_img{
+#footer_img {
   width: 100%;
 }
 
+/* 슬라이드 쇼 컨테이너 스타일 */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+/* 이미지 슬라이드 스타일 */
+.slide {
+  display: none;
+}
+
+/* 현재 슬라이드에 대한 스타일 */
+.active {
+  display: block;
+}

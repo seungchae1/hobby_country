@@ -17,6 +17,22 @@
     <script type="text/javascript" defer src="index.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        /* 슬라이드 쇼 컨테이너 스타일 */
+      .slideshow-container {
+        position: relative;
+      }
+
+      /* 이미지 슬라이드 스타일 */
+      .slide {
+        display: none;
+        
+      }
+
+      /* 현재 슬라이드에 대한 스타일 */
+      .active {
+        display: block;
+        
+      }
     </style>
 </head>
 <body>
@@ -114,10 +130,56 @@
             }
         ?>
     </header>
+    <?php
+        if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) 
+        { 
+          ?>
+          <div class="slideshow-container">
+          <!-- 이미지 슬라이드 -->
+            <div class="slide active">
+              <a href="./test_main.php"><img class="test_img" src="./img/test_b.png" style="width: 100%" /><a>
+            </div>
+
+            <div class="slide">
+            <a href="./test_main.php"><img class="test_img" src="./img/event.png" style="width: 100%" /><a>
+            </div>
+          </div>
+      <?php } ?>
+    <script>
+      let slides = document.getElementsByClassName("slide");
+      let currentSlide = 0;
+
+      // 초기 슬라이드 표시
+      showSlide(currentSlide);
+
+      // 자동 슬라이드 함수
+      function autoSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+
+      // 5초마다 자동 슬라이드 실행
+      setInterval(autoSlide, 5000);
+
+      function showSlide(index) {
+        if (index < 0) {
+          currentSlide = slides.length - 1;
+        } else if (index >= slides.length) {
+          currentSlide = 0;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+        }
+
+        slides[currentSlide].classList.add("active");
+      }
+    </script>
         <?php
         if(!isset($_COOKIE['page']) || $_COOKIE['page']==0) 
         {
-        echo '<a href="./test_main.php"><img class="test_img" src="./img/test_b.png"></div></a>';
+        // echo '<a href="./test_main.php"><img class="test_img" src="./img/test_b.png"></div></a>';
+        
 
         echo '<div class="notice_rule"> ';
         echo '<h4 id="rule">공지사항/ 규칙<img src="./img/Line.png"> <a href="/rule_page.php" class="rule_more">전체 보기</a></h4>';
