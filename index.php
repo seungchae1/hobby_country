@@ -187,7 +187,7 @@
             <button type="button" id="write" class="btn btn-default" ><a href="write.php"><img src="./img/write_icon.png"></a></button>
           </span>
         <div id="footer">
-          <img src="./img/footer_img.png" id="footer_img"></img>
+          <img src="./img/footer_img2.png" id="footer_img"></img>
         </div>
 </body>
 </html>

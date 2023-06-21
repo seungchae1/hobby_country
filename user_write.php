@@ -40,7 +40,7 @@ mysqli_query($conn, $query);
               if($profile == "") $profile="./img/profile_img.png";
 
               echo "<div class='userid'>".$id."님</div>";
-              echo "<div class='profile_img' onclick='uesr()'><img src='$profile'></div>";
+              echo "<div class='profile_img' onclick='uesr()'></div>";
                 echo "<div class='userdrop'>
                         <ul>
                           <li><a href='profile.php'>프로필</a></li>
@@ -89,7 +89,7 @@ mysqli_query($conn, $query);
         </div>
     </form>
     <div id="footer">
-        <img src="./img/footer_img.png" id="footer_img"></img>
+        <img src="./img/footer_img2.png" id="footer_img"></img>
     </div>
 </body>
 </html>

@@ -174,35 +174,22 @@
       </div>
 
 <!-- 로그인 박스 --> 
-<div class="dialog">
-<div onclick="close_d()" class="close"></div>
-<h2 class="title">LOGIN</h2>
-<form method="post" action="./login.php">
-<table class="login_t">
-  <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
-  <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
-</table>
-<div class="btn"><button type="submit">login</button></div>
-<div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
-</form>
+      <div class="dialog">
+        <div onclick="close_d()" class="close"></div>
+          <h2 class="title">LOGIN</h2>
+          <form method="post" action="./login.php">
+            <table class="login_t">
+              <tr><td class="login_td">아이디</td><td class="login_td"><input type="text" name="uid"></td></tr>
+              <tr><td class="login_td">비밀번호</td><td class="login_td"><input type="password" name="upass"></td></tr>
+            </table>
+            <div class="btn"><button type="submit">login</button></div>
+            <div class="join">아직 회원이 아니신가요? <a href="./join.html">회원가입</a></div>
+          </form>
+        </div>
       </div>
-      
-  </div>
 
-  <footer>
-        <div>
-            <img src="./img/logo.png">
-        </div>
-        <div>
-          <a>예술</a> <a>운동</a> <a>문화</a> <a>여가</a> <a>마이페이지</a> <a>회원탈퇴</a> <br>
-            
-            개발팀 <div class="f_content">-곽경희 (s2117@e-mirim.hs.kr)</div>
-            <div class="f_content">박승채 (s2125@e-mirim.hs.kr)</div>
-
-            웹디자인 <div class="f_content">-박하은 (d2109@e-mirim.hs.kr)</div>
-            취미테스트 그래픽 <div class="f_content">-박승채 (s2125@e-mirim.hs.kr)</div>
-            
-        </div>
-    </footer>
+      <div id="footer">
+        <img src="./img/footer_img2.png" id="footer_img"></img>
+      </div>
   </body>
 </html>
