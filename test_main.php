@@ -120,7 +120,7 @@
   <div class="backimg" ><img src="./img/back.png"></div>
   <div class="btn"><a href="question.html">START</a></div>
   <div id="footer">
-    <img src="./img/footer_img.png" id="footer_img"></img>
+    <img src="./img/footer_img2.png" id="footer_img"></img>
   </div>
 </body>
 
