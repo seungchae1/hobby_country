@@ -158,8 +158,8 @@
         showSlide(currentSlide);
       }
 
-      // 5초마다 자동 슬라이드 실행
-      setInterval(autoSlide, 5000);
+      // 4초마다 자동 슬라이드 실행
+      setInterval(autoSlide, 4000);
 
       function showSlide(index) {
         if (index < 0) {
