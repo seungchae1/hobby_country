@@ -20,6 +20,7 @@
         /* 슬라이드 쇼 컨테이너 스타일 */
       .slideshow-container {
         position: relative;
+        margin-bottom:30%;
       }
 
       /* 이미지 슬라이드 스타일 */
